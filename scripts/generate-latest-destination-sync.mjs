@@ -100,20 +100,15 @@ function sqlValue(value, column) {
   return `'${String(value).replace(/'/g, "''")}'`;
 }
 
-function exactGoogleMapsUrl(row) {
-  const latitude = Number(row.latitude);
-  const longitude = Number(row.longitude);
-
-  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
-    return row.google_maps_url || '';
-  }
-
-  return `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+function googleMapsUrl(row) {
+  const query = row.name_id || row.name;
+  if (!query) return row.google_maps_url || '';
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
 const rows = parseCsv(fs.readFileSync(csvPath, 'utf8'));
 for (const row of rows) {
-  row.google_maps_url = exactGoogleMapsUrl(row);
+  row.google_maps_url = googleMapsUrl(row);
 }
 const updateColumns = columns.filter((column) => column !== 'id');
 const statements = rows.map((row) => {
@@ -150,7 +145,7 @@ COMMIT;
 
 fs.writeFileSync(nameIdOutputPath, nameIdSql);
 
-const mapUrlSql = `-- Generated from latest destinations CSV. Uses exact latitude/longitude only.
+const mapUrlSql = `-- Generated from latest destinations CSV. Uses name_id as the Google Maps search query.
 BEGIN;
 
 ${rows.map((row) => `UPDATE destinations SET google_maps_url = ${sqlValue(row.google_maps_url, 'google_maps_url')} WHERE id = ${sqlValue(row.id, 'id')};`).join('\n')}

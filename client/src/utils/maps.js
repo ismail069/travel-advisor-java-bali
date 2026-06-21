@@ -1,12 +1,7 @@
 export function exactGoogleMapsUrl(destination) {
-  const latitude = Number(destination?.latitude);
-  const longitude = Number(destination?.longitude);
-
-  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
-    return destination?.google_maps_url || '#';
-  }
-
-  return `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+  const query = destination?.name_id || destination?.name;
+  if (!query) return destination?.google_maps_url || '#';
+  return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(query)}`;
 }
 
 export function googleMapsEmbedUrl(destination) {
