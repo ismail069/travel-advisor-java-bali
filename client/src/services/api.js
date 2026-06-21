@@ -1,4 +1,9 @@
-const API_URL = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+function normalizeApiUrl(url) {
+  const cleanUrl = (url || 'http://localhost:5000/api').replace(/\/+$/, '');
+  return cleanUrl.endsWith('/api') ? cleanUrl : `${cleanUrl}/api`;
+}
+
+const API_URL = normalizeApiUrl(import.meta.env.VITE_API_URL);
 
 async function request(path, options = {}) {
   const response = await fetch(`${API_URL}${path}`, {
