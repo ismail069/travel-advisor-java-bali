@@ -5,7 +5,7 @@ import { fileURLToPath } from 'url';
 import { destinations } from './seed.js';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
-const dataDir = path.join(__dirname, '..', 'data');
+const dataDir = process.env.VERCEL ? '/tmp/jawabali-trip-ai' : path.join(__dirname, '..', 'data');
 const dbPath = path.join(dataDir, 'jawabali.sqlite');
 
 if (!fs.existsSync(dataDir)) fs.mkdirSync(dataDir, { recursive: true });
