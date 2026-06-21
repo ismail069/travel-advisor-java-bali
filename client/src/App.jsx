@@ -2,8 +2,10 @@ import { useEffect, useMemo, useState } from 'react';
 import Header from './components/Header.jsx';
 import DestinationModal from './components/DestinationModal.jsx';
 import LoadingSpinner from './components/LoadingSpinner.jsx';
+import WelcomeTravelerModal from './components/WelcomeTravelerModal.jsx';
 import { translations } from './i18n/translations.js';
 import { api } from './services/api.js';
+import { getTravelerFromCookies, saveTravelerToCookies } from './utils/traveler.js';
 import Home from './pages/Home.jsx';
 import Destinations from './pages/Destinations.jsx';
 import SavedPlaces from './pages/SavedPlaces.jsx';
@@ -19,6 +21,8 @@ export default function App() {
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(true);
   const [savingActions, setSavingActions] = useState({});
+  const [traveler, setTraveler] = useState(() => getTravelerFromCookies());
+  const [showWelcome, setShowWelcome] = useState(() => !getTravelerFromCookies() && !sessionStorage.getItem('jb_welcome_dismissed'));
   const [filters, setFilters] = useState({ search: '', island: '', category: '', sort: 'name_asc' });
   const t = translations[language];
 
@@ -98,6 +102,16 @@ export default function App() {
     setSaved((items) => items.map((item) => item.id === updated.id ? updated : item));
   }
 
+  function acceptTraveler(name) {
+    setTraveler(saveTravelerToCookies(name));
+    setShowWelcome(false);
+  }
+
+  function declineTraveler() {
+    sessionStorage.setItem('jb_welcome_dismissed', 'yes');
+    setShowWelcome(false);
+  }
+
   const allKnownDestinations = useMemo(() => {
     const map = new Map([...destinations, ...saved].map((item) => [item.id, item]));
     return [...map.values()];
@@ -112,11 +126,12 @@ export default function App() {
             {page === 'home' && <Home t={t} language={language} destinations={allKnownDestinations} setPage={setPage} onOpen={setSelected} onToggleSave={toggleSave} />}
             {page === 'destinations' && <Destinations t={t} language={language} destinations={destinations} categories={categories} filters={filters} setFilters={setFilters} onOpen={setSelected} onToggleSave={toggleSave} />}
             {page === 'saved' && <SavedPlaces t={t} language={language} saved={saved} onOpen={setSelected} onToggleSave={toggleSave} />}
-            {page === 'chat' && <Chat t={t} language={language} destinations={allKnownDestinations} onOpen={setSelected} onToggleSave={toggleSave} />}
+            {page === 'chat' && <Chat t={t} language={language} traveler={traveler} destinations={allKnownDestinations} onOpen={setSelected} onToggleSave={toggleSave} />}
           </>
         )}
       </main>
       <DestinationModal destination={selected} language={language} t={t} savingAction={selected ? savingActions[selected.id] : null} onClose={() => setSelected(null)} onChanged={updateDestination} onToggleSave={toggleSave} />
+      {showWelcome && <WelcomeTravelerModal t={t} onAccept={acceptTraveler} onDecline={declineTraveler} />}
     </>
   );
 }

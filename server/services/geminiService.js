@@ -8,7 +8,7 @@ const fallback = {
   en: 'Sorry, TripAssistant AI is not available right now. You can still explore local recommendations in the destination dashboard.'
 };
 
-export async function askGemini({ message, language = 'id', history = [] }) {
+export async function askGemini({ message, language = 'id', travelerName = 'Traveler', history = [] }) {
   const context = await getDestinationContext(message);
   if (!process.env.GEMINI_API_KEY) {
     return { reply: fallback[language] || fallback.id, recommendedDestinationIds: context.slice(0, 3).map((d) => d.id) };
@@ -23,6 +23,7 @@ export async function askGemini({ message, language = 'id', history = [] }) {
   const contextText = context.map((d) => `ID ${d.id}: ${d.name}, ${d.city}, ${d.province}, ${d.island}, ${d.category_en}/${d.category_id}. ${language === 'id' ? d.short_description_id : d.short_description_en}. Source: ${d.source_name || 'trusted travel source'} ${d.source_url || ''}`).join('\n');
   const prompt = `
 Selected language: ${language}
+Traveler name: ${travelerName || 'Traveler'}
 Destination context from Supabase PostgreSQL, seeded from reputable tourism/heritage sources:
 ${contextText || 'No direct local match. Recommend only Java and Bali destinations and ask follow-up questions if needed.'}
 

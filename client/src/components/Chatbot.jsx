@@ -1,15 +1,28 @@
 import { Send } from 'lucide-react';
-import { useMemo, useState } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import { api } from '../services/api.js';
 import DestinationCard from './DestinationCard.jsx';
 
-export default function Chatbot({ language, t, destinations, onOpen, onToggleSave }) {
-  const [messages, setMessages] = useState([{ role: 'assistant', content: t.chatGreeting, createdAt: new Date().toISOString() }]);
+export default function Chatbot({ language, t, traveler, destinations, onOpen, onToggleSave }) {
+  const chatKey = traveler?.id ? `chat_history_${traveler.id}` : null;
+  const greeting = t.chatGreeting.replace('{name}', traveler?.name || 'Traveler');
+  const [messages, setMessages] = useState(() => {
+    if (!chatKey) return [{ role: 'assistant', content: greeting, createdAt: new Date().toISOString() }];
+    return loadChatHistory(chatKey, greeting);
+  });
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [recommendedIds, setRecommendedIds] = useState([]);
   const suggested = [t.prompt1, t.prompt2, t.prompt3];
   const recommended = useMemo(() => destinations.filter((item) => recommendedIds.includes(item.id)), [destinations, recommendedIds]);
+
+  useEffect(() => {
+    if (chatKey) localStorage.setItem(chatKey, JSON.stringify(messages));
+  }, [chatKey, messages]);
+
+  useEffect(() => {
+    setMessages(chatKey ? loadChatHistory(chatKey, greeting) : [{ role: 'assistant', content: greeting, createdAt: new Date().toISOString() }]);
+  }, [chatKey]);
 
   async function send(text = input) {
     const message = text.trim();
@@ -19,7 +32,7 @@ export default function Chatbot({ language, t, destinations, onOpen, onToggleSav
     setInput('');
     setLoading(true);
     try {
-      const data = await api.chat({ message, language, history });
+      const data = await api.chat({ message, language, travelerName: traveler?.name, history });
       setMessages((items) => [...items, { role: 'assistant', content: data.reply, createdAt: new Date().toISOString() }]);
       setRecommendedIds(data.recommendedDestinationIds || []);
     } catch {
@@ -64,4 +77,13 @@ export default function Chatbot({ language, t, destinations, onOpen, onToggleSav
       </aside>
     </div>
   );
+}
+
+function loadChatHistory(chatKey, greeting) {
+  try {
+    const saved = localStorage.getItem(chatKey);
+    return saved ? JSON.parse(saved) : [{ role: 'assistant', content: greeting, createdAt: new Date().toISOString() }];
+  } catch {
+    return [{ role: 'assistant', content: greeting, createdAt: new Date().toISOString() }];
+  }
 }
