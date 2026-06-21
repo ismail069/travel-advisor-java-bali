@@ -8,6 +8,36 @@ const fallback = {
   en: 'Sorry, TripAssistant AI is not available right now. You can still explore local recommendations in the destination dashboard.'
 };
 
+function displayName(destination, language) {
+  return language === 'id' && destination.name_id ? destination.name_id : destination.name;
+}
+
+function normalizeText(value) {
+  return String(value || '')
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, ' ')
+    .trim();
+}
+
+function extractMentionedDestinationIds(reply, context, language) {
+  const normalizedReply = ` ${normalizeText(reply)} `;
+  const matches = context
+    .map((destination) => {
+      const names = [displayName(destination, language), destination.name, destination.name_id].filter(Boolean);
+      const matchedName = names.find((name) => {
+        const normalizedName = normalizeText(name);
+        return normalizedName.length > 2 && normalizedReply.includes(` ${normalizedName} `);
+      });
+      return matchedName ? { id: destination.id, index: normalizedReply.indexOf(` ${normalizeText(matchedName)} `) } : null;
+    })
+    .filter(Boolean)
+    .sort((a, b) => a.index - b.index);
+
+  return [...new Set(matches.map((match) => match.id))];
+}
+
 export async function askGemini({ message, language = 'id', travelerName = 'Traveler', history = [] }) {
   const context = await getDestinationContext(message);
   if (!process.env.GEMINI_API_KEY) {
@@ -21,7 +51,7 @@ export async function askGemini({ message, language = 'id', travelerName = 'Trav
   });
 
   const contextText = context.map((d) => {
-    const name = language === 'id' && d.name_id ? d.name_id : d.name;
+    const name = displayName(d, language);
     const alternateName = d.name_id && d.name_id !== d.name ? ` / English name: ${d.name}` : '';
     return `ID ${d.id}: ${name}${alternateName}, ${d.city}, ${d.province}, ${d.island}, ${d.category_en}/${d.category_id}. ${language === 'id' ? d.short_description_id : d.short_description_en}. Source: ${d.source_name || 'trusted travel source'} ${d.source_url || ''}`;
   }).join('\n');
@@ -38,14 +68,21 @@ User message: ${message}
 
 Reply naturally. At the end include a machine-readable line exactly like:
 DESTINATION_IDS: [1,2,3]
-Only include IDs from the local context when clearly recommended.`;
+Only include IDs from the local context when clearly recommended.
+Important: every destination you recommend in the visible reply must appear in DESTINATION_IDS, and every ID in DESTINATION_IDS must be mentioned by name in the visible reply.`;
 
   const result = await model.generateContent(prompt);
   const text = result.response.text();
+  const reply = text.replace(/DESTINATION_IDS:\s*\[[^\]]*\]/i, '').trim();
   const idsMatch = text.match(/DESTINATION_IDS:\s*\[([^\]]*)\]/i);
-  const recommendedDestinationIds = idsMatch
+  const parsedIds = idsMatch
     ? idsMatch[1].split(',').map((id) => Number(id.trim())).filter(Boolean)
     : [];
-  const reply = text.replace(/DESTINATION_IDS:\s*\[[^\]]*\]/i, '').trim();
+  const contextIds = new Set(context.map((destination) => destination.id));
+  const mentionedIds = extractMentionedDestinationIds(reply, context, language);
+  const recommendedDestinationIds = mentionedIds.length
+    ? mentionedIds
+    : parsedIds.filter((id) => contextIds.has(id));
+
   return { reply, recommendedDestinationIds };
 }

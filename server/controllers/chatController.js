@@ -2,14 +2,15 @@ import { askGemini } from '../services/geminiService.js';
 import { getDestinationContext } from '../services/destinationService.js';
 
 function buildFallbackReply(language, destinations) {
+  const displayName = (destination) => language === 'id' && destination.name_id ? destination.name_id : destination.name;
   if (language === 'en') {
-    const names = destinations.map((item) => item.name).join(', ');
+    const names = destinations.map(displayName).join(', ');
     return destinations.length
       ? `TripAssistant AI is having trouble reaching Gemini right now, but I can still suggest options from our destination database: ${names}. Tell me your travel duration, starting location, budget, and travel style so I can narrow this down.`
       : 'TripAssistant AI is having trouble reaching Gemini right now. Please try again soon, or explore the destination dashboard while the AI service recovers.';
   }
 
-  const names = destinations.map((item) => item.name).join(', ');
+  const names = destinations.map(displayName).join(', ');
   return destinations.length
     ? `TripAssistant AI sedang sulit menghubungi Gemini, tetapi saya tetap bisa memberi rekomendasi dari database destinasi: ${names}. Ceritakan durasi perjalanan, titik berangkat, budget, dan gaya liburan agar saya bisa mempersempit pilihan.`
     : 'TripAssistant AI sedang sulit menghubungi Gemini. Silakan coba lagi sebentar lagi, atau jelajahi dashboard destinasi terlebih dahulu.';
