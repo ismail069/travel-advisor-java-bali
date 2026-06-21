@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react';
 import { api } from '../services/api.js';
 import RatingStars from './RatingStars.jsx';
 import LoadingSpinner from './LoadingSpinner.jsx';
+import { destinationImageUrl } from '../utils/images.js';
 
 export default function DestinationModal({ destination, language, t, savingAction, onClose, onChanged, onToggleSave }) {
   const [reviews, setReviews] = useState([]);
@@ -55,7 +56,15 @@ export default function DestinationModal({ destination, language, t, savingActio
           <button onClick={onClose} className="rounded-full p-2 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label={t.close}><X /></button>
         </div>
         <div className="overflow-y-auto p-4">
-          <img src={destination.image_url} alt={destination.name} className="mb-4 h-56 w-full rounded-lg object-cover" />
+          <img
+            src={destination.image_url || destinationImageUrl(destination)}
+            alt={destination.name}
+            className="mb-4 h-56 w-full rounded-lg object-cover"
+            onError={(event) => {
+              event.currentTarget.onerror = null;
+              event.currentTarget.src = destinationImageUrl(destination);
+            }}
+          />
           <div className="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">
             <section className="space-y-4">
               <p className="text-sm leading-6 text-slate-700 dark:text-slate-200">{detail}</p>

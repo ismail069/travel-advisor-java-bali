@@ -1,12 +1,21 @@
 import { Bookmark, MapPin } from 'lucide-react';
 import RatingStars from './RatingStars.jsx';
+import { destinationImageUrl } from '../utils/images.js';
 
 export default function DestinationCard({ destination, language, t, onOpen, onToggleSave }) {
   const category = language === 'id' ? destination.category_id : destination.category_en;
   const desc = language === 'id' ? destination.short_description_id : destination.short_description_en;
   return (
     <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
-      <img src={destination.image_url} alt={destination.name} className="h-44 w-full object-cover" />
+      <img
+        src={destination.image_url || destinationImageUrl(destination, 900, 600)}
+        alt={destination.name}
+        className="h-44 w-full object-cover"
+        onError={(event) => {
+          event.currentTarget.onerror = null;
+          event.currentTarget.src = destinationImageUrl(destination, 900, 600);
+        }}
+      />
       <div className="space-y-3 p-4">
         <div className="flex items-start justify-between gap-3">
           <div>
