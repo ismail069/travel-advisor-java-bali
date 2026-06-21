@@ -1,6 +1,7 @@
 CREATE TABLE IF NOT EXISTS destinations (
   id INTEGER PRIMARY KEY,
   name TEXT NOT NULL,
+  name_id TEXT,
   island TEXT NOT NULL,
   province TEXT NOT NULL,
   city TEXT NOT NULL,

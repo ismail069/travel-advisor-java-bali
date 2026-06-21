@@ -20,7 +20,11 @@ export async function askGemini({ message, language = 'id', travelerName = 'Trav
     systemInstruction
   });
 
-  const contextText = context.map((d) => `ID ${d.id}: ${d.name}, ${d.city}, ${d.province}, ${d.island}, ${d.category_en}/${d.category_id}. ${language === 'id' ? d.short_description_id : d.short_description_en}. Source: ${d.source_name || 'trusted travel source'} ${d.source_url || ''}`).join('\n');
+  const contextText = context.map((d) => {
+    const name = language === 'id' && d.name_id ? d.name_id : d.name;
+    const alternateName = d.name_id && d.name_id !== d.name ? ` / English name: ${d.name}` : '';
+    return `ID ${d.id}: ${name}${alternateName}, ${d.city}, ${d.province}, ${d.island}, ${d.category_en}/${d.category_id}. ${language === 'id' ? d.short_description_id : d.short_description_en}. Source: ${d.source_name || 'trusted travel source'} ${d.source_url || ''}`;
+  }).join('\n');
   const prompt = `
 Selected language: ${language}
 Traveler name: ${travelerName || 'Traveler'}

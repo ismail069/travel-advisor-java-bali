@@ -4,6 +4,7 @@ import { api } from '../services/api.js';
 import RatingStars from './RatingStars.jsx';
 import LoadingSpinner from './LoadingSpinner.jsx';
 import { destinationImageUrl } from '../utils/images.js';
+import { destinationDisplayName } from '../utils/destinations.js';
 
 export default function DestinationModal({ destination, language, t, savingAction, onClose, onChanged, onToggleSave }) {
   const [reviews, setReviews] = useState([]);
@@ -19,6 +20,7 @@ export default function DestinationModal({ destination, language, t, savingActio
 
   if (!destination) return null;
 
+  const displayName = destinationDisplayName(destination, language);
   const detail = language === 'id' ? destination.description_id : destination.description_en;
   const category = language === 'id' ? destination.category_id : destination.category_en;
 
@@ -50,7 +52,7 @@ export default function DestinationModal({ destination, language, t, savingActio
       <div className="mx-auto flex max-h-[95vh] max-w-4xl flex-col overflow-hidden rounded-lg bg-white dark:bg-slate-900">
         <div className="flex items-center justify-between border-b border-slate-200 p-4 dark:border-slate-800">
           <div>
-            <h2 className="text-xl font-bold">{destination.name}</h2>
+            <h2 className="text-xl font-bold">{displayName}</h2>
             <p className="text-sm text-slate-600 dark:text-slate-300">{category} · {destination.city}, {destination.province}</p>
           </div>
           <button onClick={onClose} className="rounded-full p-2 hover:bg-slate-100 dark:hover:bg-slate-800" aria-label={t.close}><X /></button>
@@ -58,7 +60,7 @@ export default function DestinationModal({ destination, language, t, savingActio
         <div className="overflow-y-auto p-4">
           <img
             src={destination.image_url || destinationImageUrl(destination)}
-            alt={destination.name}
+            alt={displayName}
             className="mb-4 h-56 w-full rounded-lg object-cover"
             onError={(event) => {
               event.currentTarget.onerror = null;
@@ -79,7 +81,7 @@ export default function DestinationModal({ destination, language, t, savingActio
               </div>
               <div>
                 <h3 className="mb-2 font-semibold">{t.map}</h3>
-                <iframe title={destination.name} className="h-56 w-full rounded-lg border border-slate-200 dark:border-slate-700" loading="lazy" src={`https://maps.google.com/maps?q=${destination.latitude},${destination.longitude}&z=12&output=embed`} />
+                <iframe title={displayName} className="h-56 w-full rounded-lg border border-slate-200 dark:border-slate-700" loading="lazy" src={`https://maps.google.com/maps?q=${destination.latitude},${destination.longitude}&z=12&output=embed`} />
                 <a href={destination.google_maps_url} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm font-semibold text-primary">{destination.google_maps_url}</a>
               </div>
             </section>

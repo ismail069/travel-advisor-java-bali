@@ -29,6 +29,29 @@ const fields = [
   'travel_notes_en', 'seed_rating', 'seed_review_count'
 ];
 
+const nameIdByName = {
+  Borobudur: 'Candi Borobudur',
+  Prambanan: 'Candi Prambanan',
+  'Mount Bromo': 'Gunung Bromo',
+  'Kawah Ijen': 'Kawah Ijen',
+  'Tangkuban Perahu': 'Tangkuban Perahu',
+  'Pantai Pangandaran': 'Pantai Pangandaran',
+  'Kota Tua Jakarta': 'Kota Tua Jakarta',
+  Malioboro: 'Jalan Malioboro',
+  'Dieng Plateau': 'Dataran Tinggi Dieng',
+  Karimunjawa: 'Karimunjawa',
+  Ubud: 'Ubud',
+  'Kuta Beach': 'Pantai Kuta',
+  'Tanah Lot': 'Tanah Lot',
+  Uluwatu: 'Pura Uluwatu',
+  'Nusa Penida': 'Nusa Penida',
+  Sanur: 'Pantai Sanur',
+  Bedugul: 'Bedugul',
+  'Mount Batur': 'Gunung Batur',
+  'Tirta Empul': 'Pura Tirta Empul',
+  'Garuda Wisnu Kencana': 'Garuda Wisnu Kencana'
+};
+
 const sourceByName = {
   Borobudur: ['UNESCO World Heritage Centre', 'https://whc.unesco.org/en/list/592/'],
   Prambanan: ['UNESCO World Heritage Centre', 'https://whc.unesco.org/en/list/642/'],
@@ -58,6 +81,7 @@ export const seedDestinations = destinations.map((row, index) => {
   return {
     id: index + 1,
     ...item,
+    name_id: nameIdByName[item.name] || item.name,
     source_name: sourceName,
     source_url: sourceUrl
   };

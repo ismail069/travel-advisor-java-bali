@@ -29,7 +29,7 @@ async function loadDecorators() {
 export async function listDestinations({ search = '', island = '', category = '', sort = 'name_asc' }) {
   let query = supabase.from('destinations').select('*');
   if (search) {
-    query = query.ilike('name', `%${search}%`);
+    query = query.or(`name.ilike.%${search}%,name_id.ilike.%${search}%`);
   }
   if (island) {
     query = query.eq('island', island);
@@ -66,7 +66,7 @@ export async function getDestinationContext(message) {
   const words = String(message || '').toLowerCase().split(/\W+/).filter((word) => word.length > 3).slice(0, 8);
   const rows = await listDestinations({});
   return rows.filter((destination) => {
-    const haystack = `${destination.name} ${destination.island} ${destination.province} ${destination.city} ${destination.category_key} ${destination.description_id} ${destination.description_en}`.toLowerCase();
+    const haystack = `${destination.name} ${destination.name_id || ''} ${destination.island} ${destination.province} ${destination.city} ${destination.category_key} ${destination.description_id} ${destination.description_en}`.toLowerCase();
     return words.length === 0 || words.some((word) => haystack.includes(word));
   }).slice(0, 8);
 }

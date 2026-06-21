@@ -1,15 +1,17 @@
 import { Bookmark, MapPin } from 'lucide-react';
 import RatingStars from './RatingStars.jsx';
 import { destinationImageUrl } from '../utils/images.js';
+import { destinationDisplayName } from '../utils/destinations.js';
 
 export default function DestinationCard({ destination, language, t, highlighted, onOpen, onToggleSave }) {
+  const displayName = destinationDisplayName(destination, language);
   const category = language === 'id' ? destination.category_id : destination.category_en;
   const desc = language === 'id' ? destination.short_description_id : destination.short_description_en;
   return (
     <article className={`overflow-hidden rounded-lg border bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:bg-slate-900 ${highlighted ? 'border-primary ring-2 ring-primary/25' : 'border-slate-200 dark:border-slate-800'}`}>
       <img
         src={destination.image_url || destinationImageUrl(destination, 900, 600)}
-        alt={destination.name}
+        alt={displayName}
         className="h-44 w-full object-cover"
         onError={(event) => {
           event.currentTarget.onerror = null;
@@ -19,7 +21,7 @@ export default function DestinationCard({ destination, language, t, highlighted,
       <div className="space-y-3 p-4">
         <div className="flex items-start justify-between gap-3">
           <div>
-            <h3 className="text-lg font-semibold">{destination.name}</h3>
+            <h3 className="text-lg font-semibold">{displayName}</h3>
             <p className="flex items-center gap-1 text-sm text-slate-600 dark:text-slate-300"><MapPin size={14} /> {destination.city}, {destination.province}</p>
           </div>
           <button onClick={() => onToggleSave(destination)} className={`rounded-full p-2 ${destination.is_saved ? 'bg-primary text-white' : 'bg-slate-100 dark:bg-slate-800'}`} aria-label={destination.is_saved ? t.unsave : t.save}>
