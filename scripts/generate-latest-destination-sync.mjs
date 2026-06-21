@@ -10,6 +10,7 @@ if (!csvPath) {
 
 const outputPath = path.join('server', 'db', 'sync_latest_destinations.sql');
 const nameIdOutputPath = path.join('server', 'db', 'add_name_id.sql');
+const mapUrlOutputPath = path.join('server', 'db', 'update_google_maps_urls.sql');
 const textColumns = [
   'name',
   'name_id',
@@ -99,7 +100,21 @@ function sqlValue(value, column) {
   return `'${String(value).replace(/'/g, "''")}'`;
 }
 
+function exactGoogleMapsUrl(row) {
+  const latitude = Number(row.latitude);
+  const longitude = Number(row.longitude);
+
+  if (!Number.isFinite(latitude) || !Number.isFinite(longitude)) {
+    return row.google_maps_url || '';
+  }
+
+  return `https://www.google.com/maps/search/?api=1&query=${latitude},${longitude}`;
+}
+
 const rows = parseCsv(fs.readFileSync(csvPath, 'utf8'));
+for (const row of rows) {
+  row.google_maps_url = exactGoogleMapsUrl(row);
+}
 const updateColumns = columns.filter((column) => column !== 'id');
 const statements = rows.map((row) => {
   const values = columns.map((column) => sqlValue(row[column], column)).join(', ');
@@ -134,5 +149,16 @@ COMMIT;
 `;
 
 fs.writeFileSync(nameIdOutputPath, nameIdSql);
+
+const mapUrlSql = `-- Generated from latest destinations CSV. Uses exact latitude/longitude only.
+BEGIN;
+
+${rows.map((row) => `UPDATE destinations SET google_maps_url = ${sqlValue(row.google_maps_url, 'google_maps_url')} WHERE id = ${sqlValue(row.id, 'id')};`).join('\n')}
+
+COMMIT;
+`;
+
+fs.writeFileSync(mapUrlOutputPath, mapUrlSql);
 console.log(`Generated ${outputPath} with ${rows.length} rows.`);
 console.log(`Generated ${nameIdOutputPath} with ${rows.length} name_id updates.`);
+console.log(`Generated ${mapUrlOutputPath} with ${rows.length} Google Maps URL updates.`);

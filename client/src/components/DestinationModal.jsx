@@ -5,6 +5,7 @@ import RatingStars from './RatingStars.jsx';
 import LoadingSpinner from './LoadingSpinner.jsx';
 import { destinationImageUrl } from '../utils/images.js';
 import { destinationDisplayName } from '../utils/destinations.js';
+import { exactGoogleMapsUrl, googleMapsEmbedUrl } from '../utils/maps.js';
 
 export default function DestinationModal({ destination, language, t, savingAction, onClose, onChanged, onToggleSave }) {
   const [reviews, setReviews] = useState([]);
@@ -23,6 +24,8 @@ export default function DestinationModal({ destination, language, t, savingActio
   const displayName = destinationDisplayName(destination, language);
   const detail = language === 'id' ? destination.description_id : destination.description_en;
   const category = language === 'id' ? destination.category_id : destination.category_en;
+  const mapUrl = exactGoogleMapsUrl(destination);
+  const mapEmbedUrl = googleMapsEmbedUrl(destination);
 
   async function submitReview(event) {
     event.preventDefault();
@@ -81,8 +84,8 @@ export default function DestinationModal({ destination, language, t, savingActio
               </div>
               <div>
                 <h3 className="mb-2 font-semibold">{t.map}</h3>
-                <iframe title={displayName} className="h-56 w-full rounded-lg border border-slate-200 dark:border-slate-700" loading="lazy" src={`https://maps.google.com/maps?q=${destination.latitude},${destination.longitude}&z=12&output=embed`} />
-                <a href={destination.google_maps_url} target="_blank" rel="noreferrer" className="mt-2 inline-block text-sm font-semibold text-primary">{destination.google_maps_url}</a>
+                {mapEmbedUrl && <iframe title={displayName} className="h-56 w-full rounded-lg border border-slate-200 dark:border-slate-700" loading="lazy" src={mapEmbedUrl} />}
+                <a href={mapUrl} target="_blank" rel="noreferrer" className="mt-2 inline-block break-all text-sm font-semibold text-primary">{mapUrl}</a>
               </div>
             </section>
             <aside className="space-y-4">
