@@ -62,7 +62,7 @@ export default function DestinationModal({ destination, language, t, savingActio
             className="mb-4 h-56 w-full rounded-lg object-cover"
             onError={(event) => {
               event.currentTarget.onerror = null;
-              event.currentTarget.src = destinationImageUrl(destination);
+              event.currentTarget.src = destinationImageUrl(destination, 'svg');
             }}
           />
           <div className="grid gap-4 md:grid-cols-[1.2fr_0.8fr]">

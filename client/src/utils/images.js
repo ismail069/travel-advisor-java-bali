@@ -1,24 +1,11 @@
-export function destinationImageUrl(destination, width = 1200, height = 800) {
-  const prompt = [
-    'realistic travel photography',
-    destination.name,
-    destination.city,
-    destination.province,
-    destination.island,
-    'Indonesia',
-    destination.category_en || destination.category_key,
-    'clear daylight',
-    'wide angle',
-    'no text'
-  ].filter(Boolean).join(', ');
+export function destinationImageUrl(destination, extension = 'jpg') {
+  const slug = String(destination.name || 'destination')
+    .toLowerCase()
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '')
+    .slice(0, 80);
 
-  const params = new URLSearchParams({
-    width: String(width),
-    height: String(height),
-    seed: String(destination.id || destination.name.length),
-    model: 'flux',
-    nologo: 'true'
-  });
-
-  return `https://image.pollinations.ai/prompt/${encodeURIComponent(prompt)}?${params.toString()}`;
+  return `/images/destinations/${destination.id || slug}-${slug}.${extension}`;
 }

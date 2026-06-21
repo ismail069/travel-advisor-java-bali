@@ -13,7 +13,7 @@ export default function DestinationCard({ destination, language, t, highlighted,
         className="h-44 w-full object-cover"
         onError={(event) => {
           event.currentTarget.onerror = null;
-          event.currentTarget.src = destinationImageUrl(destination, 900, 600);
+          event.currentTarget.src = destinationImageUrl(destination, 'svg');
         }}
       />
       <div className="space-y-3 p-4">
