@@ -1,7 +1,8 @@
 import DestinationCard from '../components/DestinationCard.jsx';
 import EmptyState from '../components/EmptyState.jsx';
+import LoadingSpinner from '../components/LoadingSpinner.jsx';
 
-export default function Destinations({ t, language, destinations, categories, filters, setFilters, recommendationIds = [], clearRecommendations, onOpen, onToggleSave }) {
+export default function Destinations({ t, language, destinations, categories, filters, setFilters, loading, recommendationIds = [], clearRecommendations, onOpen, onToggleSave }) {
   const showingRecommendations = recommendationIds.length > 0;
   const recommendationSet = new Set(recommendationIds);
   const visibleDestinations = showingRecommendations
@@ -38,11 +39,19 @@ export default function Destinations({ t, language, destinations, categories, fi
           <option value="review_count_desc">{t.reviewsDesc}</option>
         </select>
       </div>
-      {!visibleDestinations.length ? <EmptyState title={t.noResults} message={t.emptyMessage} /> : (
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {visibleDestinations.map((destination) => <DestinationCard key={destination.id} destination={destination} language={language} t={t} onOpen={onOpen} onToggleSave={onToggleSave} highlighted={recommendationSet.has(destination.id)} />)}
+      <div className="relative min-h-48">
+        {loading && visibleDestinations.length > 0 && (
+          <div className="mb-3 inline-flex items-center gap-2 rounded-full bg-white px-4 py-2 text-sm font-semibold text-primary shadow-sm dark:bg-slate-900">
+            <span className="h-4 w-4 animate-spin rounded-full border-2 border-primary border-t-transparent" />
+            {t.loading}
+          </div>
+        )}
+        {loading && !visibleDestinations.length ? <LoadingSpinner label={t.loading} /> : !visibleDestinations.length ? <EmptyState title={t.noResults} message={t.emptyMessage} /> : (
+          <div className={`grid gap-4 transition-opacity sm:grid-cols-2 lg:grid-cols-3 ${loading ? 'opacity-60' : 'opacity-100'}`}>
+            {visibleDestinations.map((destination) => <DestinationCard key={destination.id} destination={destination} language={language} t={t} onOpen={onOpen} onToggleSave={onToggleSave} highlighted={recommendationSet.has(destination.id)} />)}
+          </div>
+        )}
         </div>
-      )}
     </div>
   );
 }
