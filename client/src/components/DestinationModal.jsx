@@ -4,7 +4,7 @@ import { api } from '../services/api.js';
 import RatingStars from './RatingStars.jsx';
 import LoadingSpinner from './LoadingSpinner.jsx';
 
-export default function DestinationModal({ destination, language, t, onClose, onChanged, onToggleSave }) {
+export default function DestinationModal({ destination, language, t, savingAction, onClose, onChanged, onToggleSave }) {
   const [reviews, setReviews] = useState([]);
   const [rating, setRating] = useState(5);
   const [text, setText] = useState('');
@@ -38,6 +38,12 @@ export default function DestinationModal({ destination, language, t, onClose, on
     }
   }
 
+  function saveLabel() {
+    if (savingAction === 'saving') return t.saving;
+    if (savingAction === 'removing') return t.removing;
+    return destination.is_saved ? t.unsave : t.save;
+  }
+
   return (
     <div className="fixed inset-0 z-50 bg-slate-950/70 p-3 backdrop-blur-sm">
       <div className="mx-auto flex max-h-[95vh] max-w-4xl flex-col overflow-hidden rounded-lg bg-white dark:bg-slate-900">
@@ -69,7 +75,13 @@ export default function DestinationModal({ destination, language, t, onClose, on
               </div>
             </section>
             <aside className="space-y-4">
-              <button onClick={() => onToggleSave(destination)} className="w-full rounded-md bg-primary px-4 py-3 font-semibold text-white">{destination.is_saved ? t.unsave : t.save}</button>
+              <button
+                onClick={() => onToggleSave(destination)}
+                disabled={Boolean(savingAction)}
+                className="w-full rounded-md bg-primary px-4 py-3 font-semibold text-white transition hover:brightness-110 disabled:cursor-wait disabled:opacity-70"
+              >
+                {saveLabel()}
+              </button>
               <form onSubmit={submitReview} className="space-y-3 rounded-lg border border-slate-200 p-4 dark:border-slate-800">
                 <h3 className="font-semibold">{t.reviewForm}</h3>
                 <RatingStars value={rating} onChange={setRating} size={20} />

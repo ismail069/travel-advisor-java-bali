@@ -18,6 +18,7 @@ export default function App() {
   const [categories, setCategories] = useState([]);
   const [selected, setSelected] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [savingActions, setSavingActions] = useState({});
   const [filters, setFilters] = useState({ search: '', island: '', category: '', sort: 'name_asc' });
   const t = translations[language];
 
@@ -54,12 +55,41 @@ export default function App() {
     setSaved(data.destinations);
   }
 
+  function setSaving(id, action) {
+    setSavingActions((current) => {
+      const next = { ...current };
+      if (action) next[id] = action;
+      else delete next[id];
+      return next;
+    });
+  }
+
+  function setSavedFlag(destination, isSaved) {
+    const updated = { ...destination, is_saved: isSaved ? 1 : 0 };
+    setSelected((current) => current?.id === destination.id ? { ...current, is_saved: updated.is_saved } : current);
+    setDestinations((items) => items.map((item) => item.id === destination.id ? { ...item, is_saved: updated.is_saved } : item));
+    setSaved((items) => {
+      if (isSaved) return items.some((item) => item.id === destination.id) ? items.map((item) => item.id === destination.id ? updated : item) : [updated, ...items];
+      return items.filter((item) => item.id !== destination.id);
+    });
+  }
+
   async function toggleSave(destination) {
-    if (destination.is_saved) await api.unsave(destination.id);
-    else await api.save(destination.id);
-    await refreshSaved();
-    await loadDestinations();
-    setSelected((current) => current?.id === destination.id ? { ...current, is_saved: destination.is_saved ? 0 : 1 } : current);
+    const nextSaved = !destination.is_saved;
+    setSaving(destination.id, nextSaved ? 'saving' : 'removing');
+    setSavedFlag(destination, nextSaved);
+    try {
+      if (nextSaved) await api.save(destination.id);
+      else await api.unsave(destination.id);
+      await refreshSaved();
+      await loadDestinations();
+      setSelected((current) => current?.id === destination.id ? { ...current, is_saved: nextSaved ? 1 : 0 } : current);
+    } catch (error) {
+      setSavedFlag(destination, !nextSaved);
+      console.error('Failed to update saved destination:', error.message);
+    } finally {
+      setSaving(destination.id, null);
+    }
   }
 
   function updateDestination(updated) {
@@ -86,7 +116,7 @@ export default function App() {
           </>
         )}
       </main>
-      <DestinationModal destination={selected} language={language} t={t} onClose={() => setSelected(null)} onChanged={updateDestination} onToggleSave={toggleSave} />
+      <DestinationModal destination={selected} language={language} t={t} savingAction={selected ? savingActions[selected.id] : null} onClose={() => setSelected(null)} onChanged={updateDestination} onToggleSave={toggleSave} />
     </>
   );
 }
