@@ -38,21 +38,6 @@ function extractMentionedDestinationIds(reply, context, language) {
   return [...new Set(matches.map((match) => match.id))];
 }
 
-function extractVisibleDestinationIds(reply, context) {
-  const contextIds = new Set(context.map((destination) => destination.id));
-  const ids = [];
-  const regex = /\bID\s*[:#-]?\s*(\d+)\b/gi;
-  let match = regex.exec(reply);
-
-  while (match) {
-    const id = Number(match[1]);
-    if (contextIds.has(id)) ids.push(id);
-    match = regex.exec(reply);
-  }
-
-  return [...new Set(ids)];
-}
-
 export async function askGemini({ message, language = 'id', travelerName = 'Traveler', history = [] }) {
   const context = await getDestinationContext(message);
   if (!process.env.GEMINI_API_KEY) {
@@ -84,7 +69,12 @@ User message: ${message}
 Reply naturally. At the end include a machine-readable line exactly like:
 DESTINATION_IDS: [1,2,3]
 Only include IDs from the local context when clearly recommended.
-Important: every destination you recommend in the visible reply must appear in DESTINATION_IDS, and every ID in DESTINATION_IDS must be mentioned by name in the visible reply.`;
+Important rules:
+- Recommend ONLY destinations listed in the Destination context above.
+- Use the exact destination names and exact IDs from the Destination context.
+- Do not invent destinations or reuse IDs from memory.
+- Every destination you recommend in the visible reply must appear in DESTINATION_IDS.
+- Every ID in DESTINATION_IDS must be mentioned by exact name in the visible reply.`;
 
   const result = await model.generateContent(prompt);
   const text = result.response.text();
@@ -95,12 +85,9 @@ Important: every destination you recommend in the visible reply must appear in D
     : [];
   const contextIds = new Set(context.map((destination) => destination.id));
   const mentionedIds = extractMentionedDestinationIds(reply, context, language);
-  const visibleIds = extractVisibleDestinationIds(reply, context);
   const recommendedDestinationIds = mentionedIds.length
     ? mentionedIds
-    : visibleIds.length
-      ? visibleIds
-      : parsedIds.filter((id) => contextIds.has(id));
+    : parsedIds.filter((id) => contextIds.has(id));
 
   return { reply, recommendedDestinationIds };
 }
