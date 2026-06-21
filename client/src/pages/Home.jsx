@@ -81,6 +81,14 @@ export default function Home({ t, language, destinations, setPage, onOpen, onTog
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {featured.map((destination) => <DestinationCard key={destination.id} destination={destination} language={language} t={t} onOpen={onOpen} onToggleSave={onToggleSave} />)}
         </div>
+        <div className="mt-6 flex justify-center">
+          <button
+            onClick={() => setPage('destinations')}
+            className="rounded-full bg-primary px-6 py-3 font-bold text-white shadow-lg shadow-primary/20 transition hover:-translate-y-0.5 hover:brightness-110"
+          >
+            {t.viewMore}
+          </button>
+        </div>
       </section>
     </div>
   );
