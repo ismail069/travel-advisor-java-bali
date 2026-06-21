@@ -1,13 +1,20 @@
-import { all, run } from '../db/db.js';
+import { supabase } from '../db/supabase.js';
 
-export function getReviews(destinationId) {
-  return all('SELECT * FROM reviews WHERE destination_id = ? ORDER BY created_at DESC', [destinationId]);
+export async function getReviews(destinationId) {
+  const { data, error } = await supabase
+    .from('reviews')
+    .select('*')
+    .eq('destination_id', destinationId)
+    .order('created_at', { ascending: false });
+  if (error) throw error;
+  return data || [];
 }
 
-export function createReview(destinationId, { rating, review_text }) {
-  return run('INSERT INTO reviews (destination_id, rating, review_text) VALUES (?, ?, ?)', [
-    destinationId,
+export async function createReview(destinationId, { rating, review_text }) {
+  const { error } = await supabase.from('reviews').insert({
+    destination_id: destinationId,
     rating,
-    review_text.trim()
-  ]);
+    review_text: review_text.trim()
+  });
+  if (error) throw error;
 }

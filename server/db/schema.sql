@@ -13,8 +13,8 @@ CREATE TABLE IF NOT EXISTS destinations (
   description_en TEXT NOT NULL,
   image_url TEXT,
   address TEXT,
-  latitude REAL,
-  longitude REAL,
+  latitude DOUBLE PRECISION,
+  longitude DOUBLE PRECISION,
   google_maps_url TEXT,
   activities_id TEXT,
   activities_en TEXT,
@@ -22,23 +22,27 @@ CREATE TABLE IF NOT EXISTS destinations (
   best_time_to_visit_en TEXT,
   travel_notes_id TEXT,
   travel_notes_en TEXT,
-  seed_rating REAL DEFAULT 0,
+  source_name TEXT,
+  source_url TEXT,
+  seed_rating NUMERIC DEFAULT 0,
   seed_review_count INTEGER DEFAULT 0,
-  created_at TEXT DEFAULT CURRENT_TIMESTAMP
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 CREATE TABLE IF NOT EXISTS reviews (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  destination_id INTEGER NOT NULL,
-  rating INTEGER NOT NULL,
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  destination_id INTEGER NOT NULL REFERENCES destinations(id) ON DELETE CASCADE,
+  rating INTEGER NOT NULL CHECK (rating BETWEEN 1 AND 5),
   review_text TEXT NOT NULL,
-  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY(destination_id) REFERENCES destinations(id) ON DELETE CASCADE
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
 
 CREATE TABLE IF NOT EXISTS saved_places (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  destination_id INTEGER NOT NULL UNIQUE,
-  created_at TEXT DEFAULT CURRENT_TIMESTAMP,
-  FOREIGN KEY(destination_id) REFERENCES destinations(id) ON DELETE CASCADE
+  id BIGINT GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+  destination_id INTEGER NOT NULL UNIQUE REFERENCES destinations(id) ON DELETE CASCADE,
+  created_at TIMESTAMPTZ DEFAULT NOW()
 );
+
+ALTER TABLE destinations ENABLE ROW LEVEL SECURITY;
+ALTER TABLE reviews ENABLE ROW LEVEL SECURITY;
+ALTER TABLE saved_places ENABLE ROW LEVEL SECURITY;

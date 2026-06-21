@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
 import cors from 'cors';
-import { initDatabase } from './db/db.js';
+import { initDatabase } from './db/supabase.js';
 import destinationRoutes from './routes/destinationRoutes.js';
 import reviewRoutes from './routes/reviewRoutes.js';
 import savedRoutes from './routes/savedRoutes.js';
@@ -35,6 +35,7 @@ app.use(cors({
   }
 }));
 app.use(express.json({ limit: '1mb' }));
+app.use('/api/health', healthRoutes);
 app.use(async (_req, _res, next) => {
   try {
     await ensureDatabase();
@@ -44,7 +45,6 @@ app.use(async (_req, _res, next) => {
   }
 });
 
-app.use('/api/health', healthRoutes);
 app.use('/api/destinations', destinationRoutes);
 app.use('/api/destinations', reviewRoutes);
 app.use('/api/saved', savedRoutes);

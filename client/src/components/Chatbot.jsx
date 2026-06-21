@@ -4,7 +4,7 @@ import { api } from '../services/api.js';
 import DestinationCard from './DestinationCard.jsx';
 
 export default function Chatbot({ language, t, destinations, onOpen, onToggleSave }) {
-  const [messages, setMessages] = useState([{ role: 'assistant', content: t.chatGreeting }]);
+  const [messages, setMessages] = useState([{ role: 'assistant', content: t.chatGreeting, createdAt: new Date().toISOString() }]);
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
   const [recommendedIds, setRecommendedIds] = useState([]);
@@ -15,15 +15,15 @@ export default function Chatbot({ language, t, destinations, onOpen, onToggleSav
     const message = text.trim();
     if (!message) return;
     const history = messages.map(({ role, content }) => ({ role, content }));
-    setMessages((items) => [...items, { role: 'user', content: message }]);
+    setMessages((items) => [...items, { role: 'user', content: message, createdAt: new Date().toISOString() }]);
     setInput('');
     setLoading(true);
     try {
       const data = await api.chat({ message, language, history });
-      setMessages((items) => [...items, { role: 'assistant', content: data.reply }]);
+      setMessages((items) => [...items, { role: 'assistant', content: data.reply, createdAt: new Date().toISOString() }]);
       setRecommendedIds(data.recommendedDestinationIds || []);
     } catch {
-      setMessages((items) => [...items, { role: 'assistant', content: t.chatError }]);
+      setMessages((items) => [...items, { role: 'assistant', content: t.chatError, createdAt: new Date().toISOString() }]);
       setRecommendedIds([]);
     } finally {
       setLoading(false);
@@ -36,7 +36,13 @@ export default function Chatbot({ language, t, destinations, onOpen, onToggleSav
         <div className="h-[58vh] space-y-3 overflow-y-auto p-4">
           {messages.map((message, index) => (
             <div key={index} className={`flex ${message.role === 'user' ? 'justify-end' : 'justify-start'}`}>
-              <div className={`max-w-[85%] whitespace-pre-wrap rounded-lg px-4 py-3 text-sm ${message.role === 'user' ? 'bg-primary text-white' : 'bg-slate-100 dark:bg-slate-800'}`}>{message.content}</div>
+              <div className={`max-w-[85%] rounded-lg px-4 py-3 text-sm shadow-sm ${message.role === 'user' ? 'bg-primary text-white' : 'bg-slate-100 dark:bg-slate-800'}`}>
+                <div className={`mb-1 flex items-center justify-between gap-4 text-[11px] font-bold uppercase tracking-wide ${message.role === 'user' ? 'text-white/80' : 'text-primary'}`}>
+                  <span>{message.role === 'user' ? t.you : t.advisor}</span>
+                  <time className="font-medium normal-case tracking-normal">{new Date(message.createdAt).toLocaleString()}</time>
+                </div>
+                <div className="whitespace-pre-wrap">{message.content}</div>
+              </div>
             </div>
           ))}
           {loading && <div className="text-sm text-slate-500">{t.aiLoading}</div>}

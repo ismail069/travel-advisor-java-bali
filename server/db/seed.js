@@ -20,3 +20,45 @@ export const destinations = [
   ['Tirta Empul','Bali','Bali','Gianyar','culture','Budaya','Culture','Pura air suci untuk pengalaman budaya Bali.','A holy water temple for Balinese cultural experience.','Tirta Empul cocok untuk memahami tradisi Bali dengan suasana spiritual dan arsitektur pura.','Tirta Empul is good for understanding Balinese tradition through spiritual atmosphere and temple architecture.','https://images.unsplash.com/photo-1604841956658-7f5c372a07bf?auto=format&fit=crop&w=900&q=80','Tampaksiring, Gianyar, Bali',-8.4158,115.3152,'https://maps.google.com/?q=-8.4158,115.3152','Melihat pura, ritual melukat, fotografi budaya.','Temple viewing, purification ritual, cultural photography.','Pagi hari.','Morning.','Hormati aturan pakaian dan area sembahyang.','Respect dress rules and prayer areas.',4.6,69],
   ['Garuda Wisnu Kencana','Bali','Bali','Badung','culture','Budaya','Culture','Taman budaya dengan patung raksasa GWK.','A cultural park with the giant GWK statue.','GWK cocok untuk keluarga, pertunjukan budaya, dan kunjungan mudah di Bali selatan.','GWK suits families, cultural shows, and an easy visit in south Bali.','https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?auto=format&fit=crop&w=900&q=80','Ungasan, Badung, Bali',-8.8104,115.1676,'https://maps.google.com/?q=-8.8104,115.1676','Patung GWK, pertunjukan budaya, foto, taman.','GWK statue, cultural shows, photos, park walk.','Sore hari.','Late afternoon.','Cek jadwal pertunjukan untuk kunjungan terbaik.','Check show schedules for the best visit.',4.4,82]
 ];
+
+const fields = [
+  'name', 'island', 'province', 'city', 'category_key', 'category_id', 'category_en',
+  'short_description_id', 'short_description_en', 'description_id', 'description_en',
+  'image_url', 'address', 'latitude', 'longitude', 'google_maps_url', 'activities_id',
+  'activities_en', 'best_time_to_visit_id', 'best_time_to_visit_en', 'travel_notes_id',
+  'travel_notes_en', 'seed_rating', 'seed_review_count'
+];
+
+const sourceByName = {
+  Borobudur: ['UNESCO World Heritage Centre', 'https://whc.unesco.org/en/list/592/'],
+  Prambanan: ['UNESCO World Heritage Centre', 'https://whc.unesco.org/en/list/642/'],
+  'Mount Bromo': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/java/bromo-tengger-semeru-national-park'],
+  'Kawah Ijen': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/java/banyuwangi/ijen-crater'],
+  'Tangkuban Perahu': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/java/bandung'],
+  'Pantai Pangandaran': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/java/pangandaran'],
+  'Kota Tua Jakarta': ['Jakarta Tourism', 'https://www.jakarta-tourism.go.id/'],
+  Malioboro: ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/java/yogyakarta'],
+  'Dieng Plateau': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/java/dieng-plateau'],
+  Karimunjawa: ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/java/karimunjawa'],
+  Ubud: ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/ubud'],
+  'Kuta Beach': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/kuta'],
+  'Tanah Lot': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/tanah-lot'],
+  Uluwatu: ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/uluwatu'],
+  'Nusa Penida': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/nusa-penida'],
+  Sanur: ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/sanur'],
+  Bedugul: ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/bedugul'],
+  'Mount Batur': ['UNESCO Global Geoparks', 'https://www.unesco.org/en/iggp/geoparks/batur'],
+  'Tirta Empul': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/tampaksiring'],
+  'Garuda Wisnu Kencana': ['Indonesia Travel', 'https://www.indonesia.travel/gb/en/destinations/bali-nusa-tenggara/garuda-wisnu-kencana']
+};
+
+export const seedDestinations = destinations.map((row, index) => {
+  const item = Object.fromEntries(fields.map((field, fieldIndex) => [field, row[fieldIndex]]));
+  const [sourceName, sourceUrl] = sourceByName[item.name] || ['Indonesia Travel', 'https://www.indonesia.travel/'];
+  return {
+    id: index + 1,
+    ...item,
+    source_name: sourceName,
+    source_url: sourceUrl
+  };
+});

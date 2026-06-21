@@ -1,26 +1,22 @@
-import { all, run } from '../db/db.js';
+import { supabase } from '../db/supabase.js';
+import { getDestinationById } from './destinationService.js';
 
 export async function listSaved() {
-  return all(`
-    SELECT d.*, sp.created_at AS saved_at,
-      ROUND(CASE
-        WHEN COUNT(r.id) = 0 THEN d.seed_rating
-        ELSE ((d.seed_rating * d.seed_review_count) + COALESCE(SUM(r.rating), 0)) / (d.seed_review_count + COUNT(r.id))
-      END, 1) AS rating,
-      (d.seed_review_count + COUNT(r.id)) AS review_count,
-      1 AS is_saved
-    FROM saved_places sp
-    JOIN destinations d ON d.id = sp.destination_id
-    LEFT JOIN reviews r ON r.destination_id = d.id
-    GROUP BY d.id
-    ORDER BY sp.created_at DESC
-  `);
+  const { data, error } = await supabase
+    .from('saved_places')
+    .select('destination_id,created_at')
+    .order('created_at', { ascending: false });
+  if (error) throw error;
+  const rows = await Promise.all((data || []).map((item) => getDestinationById(item.destination_id)));
+  return rows.filter(Boolean);
 }
 
-export function saveDestination(destinationId) {
-  return run('INSERT OR IGNORE INTO saved_places (destination_id) VALUES (?)', [destinationId]);
+export async function saveDestination(destinationId) {
+  const { error } = await supabase.from('saved_places').upsert({ destination_id: destinationId }, { onConflict: 'destination_id' });
+  if (error) throw error;
 }
 
-export function removeSaved(destinationId) {
-  return run('DELETE FROM saved_places WHERE destination_id = ?', [destinationId]);
+export async function removeSaved(destinationId) {
+  const { error } = await supabase.from('saved_places').delete().eq('destination_id', destinationId);
+  if (error) throw error;
 }

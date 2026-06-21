@@ -1,11 +1,11 @@
 import { GoogleGenerativeAI } from '@google/generative-ai';
 import { getDestinationContext } from './destinationService.js';
 
-const systemInstruction = `You are an AI travel assistant for tourist destinations in Java and Bali, Indonesia. Help users find suitable travel recommendations based on their preferences, budget, travel duration, starting location, trip type, number of travelers, and interests. Only recommend destinations in Java and Bali. Use the destination context provided by the application when available. If the selected language is Indonesian, respond in friendly, concise, and informative Bahasa Indonesia. If the selected language is English, respond in friendly, concise, and informative English. If the user's information is incomplete, ask helpful follow-up questions. Do not provide irrelevant information outside Java and Bali tourism. Do not claim ratings or reviews are from the internet.`;
+const systemInstruction = `You are an AI travel assistant for tourist destinations in Java and Bali, Indonesia. Help users find suitable travel recommendations based on their preferences, budget, travel duration, starting location, trip type, number of travelers, and interests. Also you may ask trip itenary when the user provide destination and how long they stay. Only recommend destinations in Java and Bali. Use the destination context only good reputation source in the internet. If the selected language is Indonesian, respond in friendly, concise, and informative Bahasa Indonesia. If the selected language is English, respond in friendly, concise, and informative English. If the user's information is incomplete, ask helpful follow-up questions. Do not provide irrelevant information outside Java and Bali tourism.`;
 
 const fallback = {
-  id: 'Maaf, chatbot AI sedang belum tersedia. Kamu tetap bisa jelajahi rekomendasi lokal di dashboard destinasi.',
-  en: 'Sorry, the AI chatbot is not available right now. You can still explore local recommendations in the destination dashboard.'
+  id: 'Maaf, TripAssistant AI sedang belum tersedia. Kamu tetap bisa jelajahi rekomendasi lokal di dashboard destinasi.',
+  en: 'Sorry, TripAssistant AI is not available right now. You can still explore local recommendations in the destination dashboard.'
 };
 
 export async function askGemini({ message, language = 'id', history = [] }) {
@@ -20,10 +20,10 @@ export async function askGemini({ message, language = 'id', history = [] }) {
     systemInstruction
   });
 
-  const contextText = context.map((d) => `ID ${d.id}: ${d.name}, ${d.city}, ${d.province}, ${d.island}, ${d.category_en}/${d.category_id}. ${language === 'id' ? d.short_description_id : d.short_description_en}`).join('\n');
+  const contextText = context.map((d) => `ID ${d.id}: ${d.name}, ${d.city}, ${d.province}, ${d.island}, ${d.category_en}/${d.category_id}. ${language === 'id' ? d.short_description_id : d.short_description_en}. Source: ${d.source_name || 'trusted travel source'} ${d.source_url || ''}`).join('\n');
   const prompt = `
 Selected language: ${language}
-Destination context from local SQLite:
+Destination context from Supabase PostgreSQL, seeded from reputable tourism/heritage sources:
 ${contextText || 'No direct local match. Recommend only Java and Bali destinations and ask follow-up questions if needed.'}
 
 Recent conversation:

@@ -60,6 +60,7 @@ export default function DestinationModal({ destination, language, t, onClose, on
                 <Info label={t.bestTime}>{language === 'id' ? destination.best_time_to_visit_id : destination.best_time_to_visit_en}</Info>
                 <Info label={t.travelNotes}>{language === 'id' ? destination.travel_notes_id : destination.travel_notes_en}</Info>
                 <Info label={t.address}>{destination.address}</Info>
+                {destination.source_url && <Info label={t.source}><a href={destination.source_url} target="_blank" rel="noreferrer" className="font-semibold text-primary">{destination.source_name}</a></Info>}
               </div>
               <div>
                 <h3 className="mb-2 font-semibold">{t.map}</h3>

@@ -1,62 +1,65 @@
-import { all, get } from '../db/db.js';
+import { supabase } from '../db/supabase.js';
 
-const ratingSelect = `
-  d.*,
-  ROUND(CASE
-    WHEN COUNT(r.id) = 0 THEN d.seed_rating
-    ELSE ((d.seed_rating * d.seed_review_count) + COALESCE(SUM(r.rating), 0)) / (d.seed_review_count + COUNT(r.id))
-  END, 1) AS rating,
-  (d.seed_review_count + COUNT(r.id)) AS review_count,
-  CASE WHEN sp.id IS NULL THEN 0 ELSE 1 END AS is_saved
-`;
+function withStats(destination, reviews = [], savedIds = new Set()) {
+  const localReviews = reviews.filter((review) => review.destination_id === destination.id);
+  const localTotal = localReviews.reduce((sum, review) => sum + Number(review.rating), 0);
+  const seedTotal = Number(destination.seed_rating || 0) * Number(destination.seed_review_count || 0);
+  const count = Number(destination.seed_review_count || 0) + localReviews.length;
+  return {
+    ...destination,
+    rating: count ? Number(((seedTotal + localTotal) / count).toFixed(1)) : 0,
+    review_count: count,
+    is_saved: savedIds.has(destination.id) ? 1 : 0
+  };
+}
+
+async function loadDecorators() {
+  const [{ data: reviews, error: reviewError }, { data: saved, error: savedError }] = await Promise.all([
+    supabase.from('reviews').select('destination_id,rating'),
+    supabase.from('saved_places').select('destination_id')
+  ]);
+  if (reviewError) throw reviewError;
+  if (savedError) throw savedError;
+  return {
+    reviews: reviews || [],
+    savedIds: new Set((saved || []).map((item) => item.destination_id))
+  };
+}
 
 export async function listDestinations({ search = '', island = '', category = '', sort = 'name_asc' }) {
-  const filters = [];
-  const params = [];
+  let query = supabase.from('destinations').select('*');
   if (search) {
-    filters.push('LOWER(d.name) LIKE ?');
-    params.push(`%${search.toLowerCase()}%`);
+    query = query.ilike('name', `%${search}%`);
   }
   if (island) {
-    filters.push('LOWER(d.island) = ?');
-    params.push(island.toLowerCase());
+    query = query.eq('island', island);
   }
   if (category) {
-    filters.push('d.category_key = ?');
-    params.push(category);
+    query = query.eq('category_key', category);
   }
-  const order = {
-    rating_desc: 'rating DESC, d.name ASC',
-    review_count_desc: 'review_count DESC, d.name ASC',
-    name_asc: 'd.name ASC'
-  }[sort] || 'd.name ASC';
-
-  return all(
-    `SELECT ${ratingSelect}
-     FROM destinations d
-     LEFT JOIN reviews r ON r.destination_id = d.id
-     LEFT JOIN saved_places sp ON sp.destination_id = d.id
-     ${filters.length ? `WHERE ${filters.join(' AND ')}` : ''}
-     GROUP BY d.id
-     ORDER BY ${order}`,
-    params
-  );
+  const { data, error } = await query.order('name');
+  if (error) throw error;
+  const { reviews, savedIds } = await loadDecorators();
+  const rows = (data || []).map((destination) => withStats(destination, reviews, savedIds));
+  if (sort === 'rating_desc') return rows.sort((a, b) => b.rating - a.rating || a.name.localeCompare(b.name));
+  if (sort === 'review_count_desc') return rows.sort((a, b) => b.review_count - a.review_count || a.name.localeCompare(b.name));
+  return rows;
 }
 
 export async function getDestinationById(id) {
-  return get(
-    `SELECT ${ratingSelect}
-     FROM destinations d
-     LEFT JOIN reviews r ON r.destination_id = d.id
-     LEFT JOIN saved_places sp ON sp.destination_id = d.id
-     WHERE d.id = ?
-     GROUP BY d.id`,
-    [id]
-  );
+  const { data, error } = await supabase.from('destinations').select('*').eq('id', id).maybeSingle();
+  if (error) throw error;
+  if (!data) return null;
+  const { reviews, savedIds } = await loadDecorators();
+  return withStats(data, reviews, savedIds);
 }
 
 export async function getCategories() {
-  return all('SELECT DISTINCT category_key, category_id, category_en FROM destinations ORDER BY category_key');
+  const { data, error } = await supabase.from('destinations').select('category_key,category_id,category_en').order('category_key');
+  if (error) throw error;
+  const map = new Map();
+  for (const item of data || []) map.set(item.category_key, item);
+  return [...map.values()];
 }
 
 export async function getDestinationContext(message) {
