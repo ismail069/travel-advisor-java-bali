@@ -1,14 +1,34 @@
 import { askGemini } from '../services/geminiService.js';
+import { getDestinationContext } from '../services/destinationService.js';
+
+function buildFallbackReply(language, destinations) {
+  if (language === 'en') {
+    const names = destinations.map((item) => item.name).join(', ');
+    return destinations.length
+      ? `TripAssistant AI is having trouble reaching Gemini right now, but I can still suggest options from our destination database: ${names}. Tell me your travel duration, starting location, budget, and travel style so I can narrow this down.`
+      : 'TripAssistant AI is having trouble reaching Gemini right now. Please try again soon, or explore the destination dashboard while the AI service recovers.';
+  }
+
+  const names = destinations.map((item) => item.name).join(', ');
+  return destinations.length
+    ? `TripAssistant AI sedang sulit menghubungi Gemini, tetapi saya tetap bisa memberi rekomendasi dari database destinasi: ${names}. Ceritakan durasi perjalanan, titik berangkat, budget, dan gaya liburan agar saya bisa mempersempit pilihan.`
+    : 'TripAssistant AI sedang sulit menghubungi Gemini. Silakan coba lagi sebentar lagi, atau jelajahi dashboard destinasi terlebih dahulu.';
+}
 
 export async function create(req, res) {
   try {
     res.json(await askGemini(req.body));
-  } catch (_error) {
-    res.status(503).json({
-      reply: req.body.language === 'en'
-        ? 'The AI service is temporarily unavailable. Please try again soon.'
-        : 'Layanan AI sedang tidak tersedia. Silakan coba lagi nanti.',
-      recommendedDestinationIds: []
+  } catch (error) {
+    console.error('TripAssistant AI error:', {
+      message: error.message,
+      status: error.status,
+      details: error.details
+    });
+
+    const destinations = await getDestinationContext(req.body.message).catch(() => []);
+    res.status(200).json({
+      reply: buildFallbackReply(req.body.language, destinations.slice(0, 3)),
+      recommendedDestinationIds: destinations.slice(0, 3).map((item) => item.id)
     });
   }
 }
