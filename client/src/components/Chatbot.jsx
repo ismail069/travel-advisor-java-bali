@@ -12,11 +12,13 @@ export default function Chatbot({ language, t, traveler, destinations, recommend
   });
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
+  const [loadingRecommendations, setLoadingRecommendations] = useState(false);
+  const [fetchedRecommendations, setFetchedRecommendations] = useState([]);
   const suggested = [t.prompt1, t.prompt2, t.prompt3];
   const recommended = useMemo(() => {
-    const byId = new Map(destinations.map((item) => [item.id, item]));
+    const byId = new Map([...destinations, ...fetchedRecommendations].map((item) => [item.id, item]));
     return recommendationIds.map((id) => byId.get(id)).filter(Boolean);
-  }, [destinations, recommendationIds]);
+  }, [destinations, fetchedRecommendations, recommendationIds]);
   const visibleRecommended = recommended.slice(0, 3);
 
   useEffect(() => {
@@ -26,6 +28,46 @@ export default function Chatbot({ language, t, traveler, destinations, recommend
   useEffect(() => {
     setMessages(chatKey ? loadChatHistory(chatKey, greeting) : [{ role: 'assistant', content: greeting, createdAt: new Date().toISOString() }]);
   }, [chatKey]);
+
+  useEffect(() => {
+    let ignore = false;
+    const knownIds = new Set([...destinations, ...fetchedRecommendations].map((item) => item.id));
+    const missingIds = [...new Set(recommendationIds)].filter((id) => !knownIds.has(id));
+
+    if (!recommendationIds.length) {
+      setFetchedRecommendations([]);
+      return undefined;
+    }
+
+    if (!missingIds.length) {
+      setFetchedRecommendations((items) => {
+        const next = items.filter((item) => recommendationIds.includes(item.id));
+        const sameIds = next.length === items.length && next.every((item, index) => item.id === items[index].id);
+        return sameIds ? items : next;
+      });
+      return undefined;
+    }
+
+    setLoadingRecommendations(true);
+    Promise.all(missingIds.map((id) => api.destination(id).then((data) => data.destination).catch(() => null)))
+      .then((items) => {
+        if (ignore) return;
+        const found = items.filter(Boolean);
+        setFetchedRecommendations((current) => {
+          const byId = new Map([...current, ...found].map((item) => [item.id, item]));
+          const next = recommendationIds.map((id) => byId.get(id)).filter(Boolean);
+          const sameIds = next.length === current.length && next.every((item, index) => item.id === current[index].id);
+          return sameIds ? current : next;
+        });
+      })
+      .finally(() => {
+        if (!ignore) setLoadingRecommendations(false);
+      });
+
+    return () => {
+      ignore = true;
+    };
+  }, [destinations, fetchedRecommendations, recommendationIds]);
 
   async function send(text = input) {
     const message = text.trim();
@@ -80,6 +122,7 @@ export default function Chatbot({ language, t, traveler, destinations, recommend
         )}
         <div className="space-y-4">
           {visibleRecommended.map((destination) => <DestinationCard key={destination.id} destination={destination} language={language} t={t} onOpen={onOpen} onToggleSave={onToggleSave} />)}
+          {loadingRecommendations && <p className="rounded-lg bg-white p-4 text-sm text-slate-500 dark:bg-slate-900">{t.loading}</p>}
           {recommended.length > 3 && (
             <button
               onClick={() => onViewRecommendations(recommendationIds)}
@@ -88,7 +131,7 @@ export default function Chatbot({ language, t, traveler, destinations, recommend
               {t.viewMoreRecommendations}
             </button>
           )}
-          {!recommended.length && <p className="rounded-lg bg-white p-4 text-sm text-slate-500 dark:bg-slate-900">{t.emptyMessage}</p>}
+          {!recommended.length && !loadingRecommendations && <p className="rounded-lg bg-white p-4 text-sm text-slate-500 dark:bg-slate-900">{t.emptyMessage}</p>}
         </div>
       </aside>
     </div>

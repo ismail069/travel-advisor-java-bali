@@ -38,6 +38,21 @@ function extractMentionedDestinationIds(reply, context, language) {
   return [...new Set(matches.map((match) => match.id))];
 }
 
+function extractVisibleDestinationIds(reply, context) {
+  const contextIds = new Set(context.map((destination) => destination.id));
+  const ids = [];
+  const regex = /\bID\s*[:#-]?\s*(\d+)\b/gi;
+  let match = regex.exec(reply);
+
+  while (match) {
+    const id = Number(match[1]);
+    if (contextIds.has(id)) ids.push(id);
+    match = regex.exec(reply);
+  }
+
+  return [...new Set(ids)];
+}
+
 export async function askGemini({ message, language = 'id', travelerName = 'Traveler', history = [] }) {
   const context = await getDestinationContext(message);
   if (!process.env.GEMINI_API_KEY) {
@@ -80,9 +95,12 @@ Important: every destination you recommend in the visible reply must appear in D
     : [];
   const contextIds = new Set(context.map((destination) => destination.id));
   const mentionedIds = extractMentionedDestinationIds(reply, context, language);
+  const visibleIds = extractVisibleDestinationIds(reply, context);
   const recommendedDestinationIds = mentionedIds.length
     ? mentionedIds
-    : parsedIds.filter((id) => contextIds.has(id));
+    : visibleIds.length
+      ? visibleIds
+      : parsedIds.filter((id) => contextIds.has(id));
 
   return { reply, recommendedDestinationIds };
 }
