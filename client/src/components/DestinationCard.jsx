@@ -2,11 +2,11 @@ import { Bookmark, MapPin } from 'lucide-react';
 import RatingStars from './RatingStars.jsx';
 import { destinationImageUrl } from '../utils/images.js';
 
-export default function DestinationCard({ destination, language, t, onOpen, onToggleSave }) {
+export default function DestinationCard({ destination, language, t, highlighted, onOpen, onToggleSave }) {
   const category = language === 'id' ? destination.category_id : destination.category_en;
   const desc = language === 'id' ? destination.short_description_id : destination.short_description_en;
   return (
-    <article className="overflow-hidden rounded-lg border border-slate-200 bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:border-slate-800 dark:bg-slate-900">
+    <article className={`overflow-hidden rounded-lg border bg-white shadow-sm transition hover:-translate-y-0.5 hover:shadow-md dark:bg-slate-900 ${highlighted ? 'border-primary ring-2 ring-primary/25' : 'border-slate-200 dark:border-slate-800'}`}>
       <img
         src={destination.image_url || destinationImageUrl(destination, 900, 600)}
         alt={destination.name}

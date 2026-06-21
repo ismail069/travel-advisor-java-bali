@@ -5,13 +5,13 @@ export default function Home({ t, language, destinations, setPage, onOpen, onTog
   const steps = [
     {
       title: t.stepOne,
-      image: 'https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=700&q=80',
+      image: 'https://image.pollinations.ai/prompt/realistic%20travel%20planning%20desk%20with%20Java%20Bali%20map%20smartphone%20and%20tropical%20landscape%20photos%20clear%20daylight%20wide%20angle%20no%20text?width=900&height=520&seed=301&model=flux&nologo=true',
       action: t.explore,
       page: 'destinations'
     },
     {
       title: t.stepTwo,
-      image: 'https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=700&q=80',
+      image: 'https://image.pollinations.ai/prompt/realistic%20travel%20wishlist%20saved%20places%20on%20phone%20Bali%20beach%20and%20Java%20temple%20clear%20daylight%20wide%20angle%20no%20text?width=900&height=520&seed=302&model=flux&nologo=true',
       action: t.saved,
       page: 'saved'
     },
@@ -41,12 +41,6 @@ export default function Home({ t, language, destinations, setPage, onOpen, onTog
           </div>
         </div>
       </section>
-      <section>
-        <h2 className="mb-4 text-2xl font-bold">{t.featured}</h2>
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {featured.map((destination) => <DestinationCard key={destination.id} destination={destination} language={language} t={t} onOpen={onOpen} onToggleSave={onToggleSave} />)}
-        </div>
-      </section>
       <section className="space-y-4">
         <div>
           <p className="text-sm font-bold uppercase tracking-wide text-primary">{t.howItWorks}</p>
@@ -59,8 +53,8 @@ export default function Home({ t, language, destinations, setPage, onOpen, onTog
               onClick={() => setPage(step.page)}
               className="group overflow-hidden rounded-lg bg-white text-left shadow-sm ring-1 ring-slate-200 transition hover:-translate-y-1 hover:shadow-xl dark:bg-slate-900 dark:ring-slate-800"
             >
-              <div className="relative h-36">
-                <img src={step.image} alt="" className="h-full w-full object-cover transition duration-500 group-hover:scale-105" />
+              <div className="relative h-36 overflow-hidden bg-slate-950">
+                <img src={step.image} alt="" className="absolute inset-0 h-full w-full object-cover transition duration-500 group-hover:scale-105" />
                 <div className="absolute inset-0 bg-gradient-to-t from-slate-950/75 to-transparent" />
                 <span className="absolute bottom-3 left-3 grid h-10 w-10 place-items-center rounded-full bg-primary text-lg font-black text-white">{index + 1}</span>
               </div>
@@ -72,6 +66,12 @@ export default function Home({ t, language, destinations, setPage, onOpen, onTog
               </div>
             </button>
           ))}
+        </div>
+      </section>
+      <section>
+        <h2 className="mb-4 text-2xl font-bold">{t.featured}</h2>
+        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          {featured.map((destination) => <DestinationCard key={destination.id} destination={destination} language={language} t={t} onOpen={onOpen} onToggleSave={onToggleSave} />)}
         </div>
       </section>
     </div>

@@ -3,7 +3,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { api } from '../services/api.js';
 import DestinationCard from './DestinationCard.jsx';
 
-export default function Chatbot({ language, t, traveler, destinations, onOpen, onToggleSave }) {
+export default function Chatbot({ language, t, traveler, destinations, recommendationIds, setRecommendationIds, onViewRecommendations, onOpen, onToggleSave }) {
   const chatKey = traveler?.id ? `chat_history_${traveler.id}` : null;
   const greeting = t.chatGreeting.replace('{name}', traveler?.name || 'Traveler');
   const [messages, setMessages] = useState(() => {
@@ -12,9 +12,12 @@ export default function Chatbot({ language, t, traveler, destinations, onOpen, o
   });
   const [input, setInput] = useState('');
   const [loading, setLoading] = useState(false);
-  const [recommendedIds, setRecommendedIds] = useState([]);
   const suggested = [t.prompt1, t.prompt2, t.prompt3];
-  const recommended = useMemo(() => destinations.filter((item) => recommendedIds.includes(item.id)), [destinations, recommendedIds]);
+  const recommended = useMemo(() => {
+    const byId = new Map(destinations.map((item) => [item.id, item]));
+    return recommendationIds.map((id) => byId.get(id)).filter(Boolean);
+  }, [destinations, recommendationIds]);
+  const visibleRecommended = recommended.slice(0, 3);
 
   useEffect(() => {
     if (chatKey) localStorage.setItem(chatKey, JSON.stringify(messages));
@@ -34,10 +37,10 @@ export default function Chatbot({ language, t, traveler, destinations, onOpen, o
     try {
       const data = await api.chat({ message, language, travelerName: traveler?.name, history });
       setMessages((items) => [...items, { role: 'assistant', content: data.reply, createdAt: new Date().toISOString() }]);
-      setRecommendedIds(data.recommendedDestinationIds || []);
+      setRecommendationIds(data.recommendedDestinationIds || []);
     } catch {
       setMessages((items) => [...items, { role: 'assistant', content: t.chatError, createdAt: new Date().toISOString() }]);
-      setRecommendedIds([]);
+      setRecommendationIds([]);
     } finally {
       setLoading(false);
     }
@@ -69,9 +72,22 @@ export default function Chatbot({ language, t, traveler, destinations, onOpen, o
         </form>
       </section>
       <aside>
-        <h2 className="mb-3 font-semibold">{t.recommended}</h2>
+        <h2 className="mb-1 font-semibold">{t.recommended}</h2>
+        {recommended.length > 0 && (
+          <p className="mb-3 text-sm text-slate-600 dark:text-slate-300">
+            {t.recommendedCount.replace('{count}', recommended.length)}
+          </p>
+        )}
         <div className="space-y-4">
-          {recommended.map((destination) => <DestinationCard key={destination.id} destination={destination} language={language} t={t} onOpen={onOpen} onToggleSave={onToggleSave} />)}
+          {visibleRecommended.map((destination) => <DestinationCard key={destination.id} destination={destination} language={language} t={t} onOpen={onOpen} onToggleSave={onToggleSave} />)}
+          {recommended.length > 3 && (
+            <button
+              onClick={() => onViewRecommendations(recommendationIds)}
+              className="w-full rounded-md bg-primary px-4 py-3 font-bold text-white transition hover:brightness-110"
+            >
+              {t.viewMoreRecommendations}
+            </button>
+          )}
           {!recommended.length && <p className="rounded-lg bg-white p-4 text-sm text-slate-500 dark:bg-slate-900">{t.emptyMessage}</p>}
         </div>
       </aside>

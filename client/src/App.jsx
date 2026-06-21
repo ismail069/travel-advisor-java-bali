@@ -23,6 +23,7 @@ export default function App() {
   const [savingActions, setSavingActions] = useState({});
   const [traveler, setTraveler] = useState(() => getTravelerFromCookies());
   const [showWelcome, setShowWelcome] = useState(() => !getTravelerFromCookies() && !sessionStorage.getItem('jb_welcome_dismissed'));
+  const [recommendationIds, setRecommendationIds] = useState([]);
   const [filters, setFilters] = useState({ search: '', island: '', category: '', sort: 'name_asc' });
   const t = translations[language];
 
@@ -112,6 +113,12 @@ export default function App() {
     setShowWelcome(false);
   }
 
+  function viewRecommendations(ids = recommendationIds) {
+    setRecommendationIds(ids);
+    setFilters({ search: '', island: '', category: '', sort: 'name_asc' });
+    setPage('destinations');
+  }
+
   const allKnownDestinations = useMemo(() => {
     const map = new Map([...destinations, ...saved].map((item) => [item.id, item]));
     return [...map.values()];
@@ -124,9 +131,9 @@ export default function App() {
         {loading && page === 'destinations' ? <LoadingSpinner label={t.loading} /> : (
           <>
             {page === 'home' && <Home t={t} language={language} destinations={allKnownDestinations} setPage={setPage} onOpen={setSelected} onToggleSave={toggleSave} />}
-            {page === 'destinations' && <Destinations t={t} language={language} destinations={destinations} categories={categories} filters={filters} setFilters={setFilters} onOpen={setSelected} onToggleSave={toggleSave} />}
+            {page === 'destinations' && <Destinations t={t} language={language} destinations={destinations} categories={categories} filters={filters} setFilters={setFilters} recommendationIds={recommendationIds} clearRecommendations={() => setRecommendationIds([])} onOpen={setSelected} onToggleSave={toggleSave} />}
             {page === 'saved' && <SavedPlaces t={t} language={language} saved={saved} onOpen={setSelected} onToggleSave={toggleSave} />}
-            {page === 'chat' && <Chat t={t} language={language} traveler={traveler} destinations={allKnownDestinations} onOpen={setSelected} onToggleSave={toggleSave} />}
+            {page === 'chat' && <Chat t={t} language={language} traveler={traveler} destinations={allKnownDestinations} recommendationIds={recommendationIds} setRecommendationIds={setRecommendationIds} onViewRecommendations={viewRecommendations} onOpen={setSelected} onToggleSave={toggleSave} />}
           </>
         )}
       </main>
