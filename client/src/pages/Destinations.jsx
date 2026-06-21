@@ -9,6 +9,11 @@ export default function Destinations({ t, language, destinations, categories, fi
     ? recommendationIds.map((id) => destinations.find((destination) => destination.id === id)).filter(Boolean)
     : destinations;
 
+  function updateFilters(nextFilters) {
+    if (showingRecommendations) clearRecommendations?.();
+    setFilters(nextFilters);
+  }
+
   return (
     <div className="space-y-5">
       <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
@@ -23,17 +28,17 @@ export default function Destinations({ t, language, destinations, categories, fi
         )}
       </div>
       <div className="grid gap-3 rounded-lg bg-white p-4 dark:bg-slate-900 md:grid-cols-4">
-        <input disabled={showingRecommendations} value={filters.search} onChange={(e) => setFilters({ ...filters, search: e.target.value })} placeholder={t.searchPlaceholder} className="rounded-md border border-slate-300 bg-white px-3 py-2 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-950 md:col-span-2" />
-        <select disabled={showingRecommendations} value={filters.island} onChange={(e) => setFilters({ ...filters, island: e.target.value })} className="rounded-md border border-slate-300 bg-white px-3 py-2 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-950">
+        <input value={filters.search} onChange={(e) => updateFilters({ ...filters, search: e.target.value })} placeholder={t.searchPlaceholder} className="rounded-md border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950 md:col-span-2" />
+        <select value={filters.island} onChange={(e) => updateFilters({ ...filters, island: e.target.value })} className="rounded-md border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950">
           <option value="">{t.all} {t.island}</option>
           <option value="Java">{t.java}</option>
           <option value="Bali">{t.bali}</option>
         </select>
-        <select disabled={showingRecommendations} value={filters.category} onChange={(e) => setFilters({ ...filters, category: e.target.value })} className="rounded-md border border-slate-300 bg-white px-3 py-2 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-950">
+        <select value={filters.category} onChange={(e) => updateFilters({ ...filters, category: e.target.value })} className="rounded-md border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950">
           <option value="">{t.all} {t.category}</option>
           {categories.map((category) => <option key={category.category_key} value={category.category_key}>{language === 'id' ? category.category_id : category.category_en}</option>)}
         </select>
-        <select disabled={showingRecommendations} value={filters.sort} onChange={(e) => setFilters({ ...filters, sort: e.target.value })} className="rounded-md border border-slate-300 bg-white px-3 py-2 disabled:opacity-50 dark:border-slate-700 dark:bg-slate-950 md:col-span-2">
+        <select value={filters.sort} onChange={(e) => updateFilters({ ...filters, sort: e.target.value })} className="rounded-md border border-slate-300 bg-white px-3 py-2 dark:border-slate-700 dark:bg-slate-950 md:col-span-2">
           <option value="name_asc">{t.nameAsc}</option>
           <option value="rating_desc">{t.ratingDesc}</option>
           <option value="review_count_desc">{t.reviewsDesc}</option>
