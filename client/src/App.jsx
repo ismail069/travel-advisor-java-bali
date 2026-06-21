@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import Header from './components/Header.jsx';
 import DestinationModal from './components/DestinationModal.jsx';
 import WelcomeTravelerModal from './components/WelcomeTravelerModal.jsx';
@@ -24,6 +24,7 @@ export default function App() {
   const [showWelcome, setShowWelcome] = useState(() => !getTravelerFromCookies() && !sessionStorage.getItem('jb_welcome_dismissed'));
   const [recommendationIds, setRecommendationIds] = useState([]);
   const [filters, setFilters] = useState({ search: '', island: '', category: '', sort: 'name_asc' });
+  const destinationRequestId = useRef(0);
   const t = translations[language];
 
   useEffect(() => {
@@ -36,21 +37,28 @@ export default function App() {
   }, [theme]);
 
   useEffect(() => {
-    loadDestinations();
+    const timeoutId = setTimeout(() => {
+      loadDestinations(filters);
+    }, 250);
+
+    return () => clearTimeout(timeoutId);
   }, [filters]);
 
   useEffect(() => {
     api.saved().then((data) => setSaved(data.destinations)).catch(() => setSaved([]));
   }, []);
 
-  async function loadDestinations() {
+  async function loadDestinations(nextFilters = filters) {
+    const requestId = destinationRequestId.current + 1;
+    destinationRequestId.current = requestId;
     setLoading(true);
     try {
-      const data = await api.destinations(filters);
+      const data = await api.destinations(nextFilters);
+      if (requestId !== destinationRequestId.current) return;
       setDestinations(data.destinations);
       setCategories(data.categories);
     } finally {
-      setLoading(false);
+      if (requestId === destinationRequestId.current) setLoading(false);
     }
   }
 
@@ -86,7 +94,7 @@ export default function App() {
       if (nextSaved) await api.save(destination.id);
       else await api.unsave(destination.id);
       await refreshSaved();
-      await loadDestinations();
+      await loadDestinations(filters);
       setSelected((current) => current?.id === destination.id ? { ...current, is_saved: nextSaved ? 1 : 0 } : current);
     } catch (error) {
       setSavedFlag(destination, !nextSaved);
