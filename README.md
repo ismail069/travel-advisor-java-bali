@@ -32,7 +32,7 @@ Copy `.env.example` to `.env` in the project root:
 
 ```bash
 GEMINI_API_KEY=your_gemini_api_key_here
-GEMINI_MODEL=gemini-2.5-flash-lite
+GEMINI_MODELS=gemini-2.5-flash,gemini-2.5-flash-lite,gemini-2.5-pro,gemini-3.1-flash-lite,gemini-3.5-flash
 SUPABASE_URL=https://your-project-ref.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key_here
 PORT=5000
@@ -52,7 +52,7 @@ If `GEMINI_API_KEY` is missing, TripAssistant AI returns a graceful fallback and
 SUPABASE_URL=https://your-project-ref.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 GEMINI_API_KEY=your-gemini-key
-GEMINI_MODEL=gemini-2.5-flash-lite
+GEMINI_MODELS=gemini-2.5-flash,gemini-2.5-flash-lite,gemini-2.5-pro,gemini-3.1-flash-lite,gemini-3.5-flash
 CLIENT_URL=https://client-travel-advisor-java-bali.vercel.app
 ```
 
@@ -155,7 +155,7 @@ Backend environment variables:
 SUPABASE_URL=your Supabase project URL
 SUPABASE_SERVICE_ROLE_KEY=your Supabase service role key
 GEMINI_API_KEY=your Gemini key
-GEMINI_MODEL=gemini-2.5-flash-lite
+GEMINI_MODELS=gemini-2.5-flash,gemini-2.5-flash-lite,gemini-2.5-pro,gemini-3.1-flash-lite,gemini-3.5-flash
 CLIENT_URL=https://client-travel-advisor-java-bali.vercel.app
 ```
 
@@ -163,5 +163,6 @@ CLIENT_URL=https://client-travel-advisor-java-bali.vercel.app
 
 - If the frontend cannot reach the API, check `CLIENT_URL`, backend port, and browser console errors.
 - If `/api/health` works but `/api/destinations` fails, check `SUPABASE_URL`, `SUPABASE_SERVICE_ROLE_KEY`, and whether `server/db/schema.sql` was run.
-- If the chatbot does not answer with Gemini, confirm `GEMINI_API_KEY` and `GEMINI_MODEL` in `.env`.
+- `GEMINI_MODELS` is a comma-separated fallback chain. The server tries each model from left to right and uses the local destination fallback only if every model fails.
+- If the chatbot does not answer with Gemini, confirm `GEMINI_API_KEY` and `GEMINI_MODELS` in `.env`.
 - To reset seed data, clear the Supabase tables and restart the backend.

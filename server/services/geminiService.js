@@ -8,6 +8,50 @@ const fallback = {
   en: 'Sorry, TripAssistant AI is not available right now. You can still explore local recommendations in the destination dashboard.'
 };
 
+const DEFAULT_GEMINI_MODELS = [
+  'gemini-2.5-flash',
+  'gemini-2.5-flash-lite',
+  'gemini-2.5-pro',
+  'gemini-3.1-flash-lite',
+  'gemini-3.5-flash'
+];
+
+export function getGeminiModels(env = process.env) {
+  const configuredModels = String(env.GEMINI_MODELS || '')
+    .split(',')
+    .map((model) => model.trim())
+    .filter(Boolean);
+  const models = configuredModels.length
+    ? configuredModels
+    : [env.GEMINI_MODEL, ...DEFAULT_GEMINI_MODELS].filter(Boolean);
+
+  return [...new Set(models)];
+}
+
+export async function generateWithModelFallback(genAI, prompt, models = getGeminiModels()) {
+  const failures = [];
+
+  for (const modelName of models) {
+    try {
+      const model = genAI.getGenerativeModel({ model: modelName, systemInstruction });
+      const result = await model.generateContent(prompt);
+      const text = result.response.text();
+      if (!text.trim()) throw new Error('Gemini returned an empty response.');
+      return { text, model: modelName };
+    } catch (error) {
+      failures.push({ model: modelName, message: error.message, status: error.status });
+      console.warn(`Gemini model ${modelName} failed; trying the next fallback.`, {
+        message: error.message,
+        status: error.status
+      });
+    }
+  }
+
+  const error = new Error(`All configured Gemini models failed: ${models.join(', ')}`);
+  error.failures = failures;
+  throw error;
+}
+
 function displayName(destination, language) {
   return language === 'id' && destination.name_id ? destination.name_id : destination.name;
 }
@@ -45,10 +89,6 @@ export async function askGemini({ message, language = 'id', travelerName = 'Trav
   }
 
   const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-  const model = genAI.getGenerativeModel({
-    model: process.env.GEMINI_MODEL || 'gemini-1.5-flash',
-    systemInstruction
-  });
 
   const contextText = context.map((d) => {
     const name = displayName(d, language);
@@ -76,8 +116,7 @@ Important rules:
 - Every destination you recommend in the visible reply must appear in DESTINATION_IDS.
 - Every ID in DESTINATION_IDS must be mentioned by exact name in the visible reply.`;
 
-  const result = await model.generateContent(prompt);
-  const text = result.response.text();
+  const { text } = await generateWithModelFallback(genAI, prompt);
   const reply = text.replace(/DESTINATION_IDS:\s*\[[^\]]*\]/i, '').trim();
   const idsMatch = text.match(/DESTINATION_IDS:\s*\[([^\]]*)\]/i);
   const parsedIds = idsMatch
