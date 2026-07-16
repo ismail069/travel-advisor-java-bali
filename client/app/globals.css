@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: light; }
+html { scroll-behavior: smooth; }
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; @apply bg-sand text-slate-950 antialiased; }
+a, button, input, textarea, select { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2; }
+.content-copy p { @apply leading-8 text-slate-700; }
+.content-copy h2 { @apply mt-10 text-2xl font-black tracking-tight text-slate-950; }

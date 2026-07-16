@@ -1,0 +1,4 @@
+import TripAssistant from '@/components/TripAssistant';
+import Breadcrumbs from '@/components/Breadcrumbs';
+export const metadata={title:'TripAssistant AI',description:'Asisten AI untuk membantu menyusun ide perjalanan Jawa dan Bali.',alternates:{canonical:'/trip-assistant'},robots:{index:false,follow:true}};
+export default function Page(){return <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6"><Breadcrumbs items={[{name:'Beranda',href:'/'},{name:'TripAssistant AI',href:'/trip-assistant'}]}/><header className="mb-8"><h1 className="text-4xl font-black tracking-tight sm:text-5xl">TripAssistant AI</h1><p className="mt-4 max-w-2xl text-lg leading-8 text-slate-600">Gunakan sebagai alat bantu ide. Selalu verifikasi harga, jadwal, cuaca, dan keselamatan melalui sumber resmi.</p></header><TripAssistant/><p className="mt-5 text-xs leading-5 text-slate-500">Jangan kirim data sensitif. Jawaban AI dapat mengandung kekeliruan dan bukan nasihat profesional.</p></div>}

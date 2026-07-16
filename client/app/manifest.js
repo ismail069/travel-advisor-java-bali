@@ -1,0 +1,1 @@
+export default function manifest(){return {name:'JawaBali Trip',short_name:'JawaBali Trip',description:'Panduan perjalanan Jawa dan Bali',start_url:'/',display:'standalone',background_color:'#f7f3ea',theme_color:'#a742f5',lang:'id'};}

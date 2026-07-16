@@ -1,0 +1,2 @@
+import Link from 'next/link';
+export default function NotFound(){return <div className="mx-auto max-w-2xl px-4 py-24 text-center"><p className="font-black text-primary">404</p><h1 className="mt-3 text-4xl font-black">Halaman tidak ditemukan</h1><p className="mt-4 text-slate-600">Alamat mungkin berubah atau halaman sudah tidak tersedia.</p><Link href="/" className="mt-8 inline-block rounded-xl bg-primary px-6 py-3 font-black text-white">Kembali ke beranda</Link></div>}

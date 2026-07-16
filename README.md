@@ -4,7 +4,7 @@ Mobile-first travel recommendation app for tourist destinations in Java and Bali
 
 ## Tech Stack
 
-- Frontend: React, Vite, Tailwind CSS, lucide-react
+- Frontend: Next.js App Router, React, Tailwind CSS, lucide-react
 - Backend: Node.js, Express.js, Supabase PostgreSQL
 - AI: Gemini API through the Express backend only
 - Storage: Supabase PostgreSQL
@@ -37,9 +37,10 @@ SUPABASE_URL=https://your-project-ref.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your_supabase_service_role_key_here
 PORT=5000
 CLIENT_URL=http://localhost:5173
+NEXT_PUBLIC_API_URL=http://localhost:5000/api
 ```
 
-If `GEMINI_API_KEY` is missing, TripAssistant AI returns a graceful fallback and destination suggestions. Keep `SUPABASE_SERVICE_ROLE_KEY` only on the backend project; never add it to the Vite frontend.
+If `GEMINI_API_KEY` is missing, TripAssistant AI returns a graceful fallback and destination suggestions. Keep `SUPABASE_SERVICE_ROLE_KEY` only on the backend project; never add it to the Next.js frontend.
 
 ## Supabase Setup
 
@@ -53,7 +54,7 @@ SUPABASE_URL=https://your-project-ref.supabase.co
 SUPABASE_SERVICE_ROLE_KEY=your-service-role-key
 GEMINI_API_KEY=your-gemini-key
 GEMINI_MODELS=gemini-2.5-flash,gemini-2.5-flash-lite,gemini-2.5-pro,gemini-3.1-flash-lite,gemini-3.5-flash
-CLIENT_URL=https://client-travel-advisor-java-bali.vercel.app
+CLIENT_URL=https://jawabalitrip.web.id
 ```
 
 When the backend starts and finds an empty `destinations` table, it seeds 20 famous Java and Bali destinations. The seed includes reputable source names and URLs such as UNESCO, Indonesia Travel, Jakarta Tourism, and UNESCO Global Geoparks.
@@ -135,10 +136,10 @@ Frontend project:
 
 ```bash
 Root Directory: client
-Framework Preset: Vite
+Framework Preset: Next.js
 Build Command: npm run build
-Output Directory: dist
-VITE_API_URL=https://travel-advisor-java-bali.vercel.app/api
+Output Directory: leave empty
+NEXT_PUBLIC_API_URL=https://travel-advisor-java-bali.vercel.app/api
 ```
 
 Backend project:
@@ -156,7 +157,7 @@ SUPABASE_URL=your Supabase project URL
 SUPABASE_SERVICE_ROLE_KEY=your Supabase service role key
 GEMINI_API_KEY=your Gemini key
 GEMINI_MODELS=gemini-2.5-flash,gemini-2.5-flash-lite,gemini-2.5-pro,gemini-3.1-flash-lite,gemini-3.5-flash
-CLIENT_URL=https://client-travel-advisor-java-bali.vercel.app
+CLIENT_URL=https://jawabalitrip.web.id
 ```
 
 ## Troubleshooting

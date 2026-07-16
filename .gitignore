@@ -6,4 +6,5 @@ node_modules
 *.sqlite
 server/data
 dist
+.next
 .DS_Store
