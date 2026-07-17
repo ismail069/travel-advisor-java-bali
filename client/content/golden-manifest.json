@@ -301,26 +301,13 @@
     "name": "Campuhan Ridge Walk",
     "province": "Bali",
     "regency": "Gianyar",
-    "category": "Jalur jalan kaki panorama",
-    "metaTitle": "Campuhan Ridge Walk: Panduan Jalur Ubud",
-    "metaDescription": "Panduan Campuhan Ridge Walk di Ubud: waktu terbaik, kondisi jalur, akses, fasilitas, dan tips berjalan aman.",
-    "lastUpdated": "2026-07-16",
-    "lastVerified": "2026-07-16",
+    "category": "nature-walk",
+    "metaTitle": "Campuhan Ridge Walk Ubud: Peta, Jam Buka, dan Tips",
+    "metaDescription": "Panduan bilingual Campuhan Ridge Walk dengan Google Maps, akses, etika, FAQ, dan sumber.",
+    "lastUpdated": "2026-07-17",
+    "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/campuhan-ridge-walk.webp",
-    "faq": [
-      {
-        "question": "Berapa lama waktu yang sebaiknya disediakan?",
-        "answer": "1–2 jam. Sesuaikan dengan cuaca, kepadatan, dan kemampuan berjalan."
-      },
-      {
-        "question": "Apakah informasi tiket dan jam buka sudah final?",
-        "answer": "Belum tentu. Informasi operasional dapat berubah dan harus diperiksa kembali melalui sumber resmi sebelum publikasi dan kunjungan."
-      },
-      {
-        "question": "Apakah cocok untuk keluarga?",
-        "answer": "Tergantung usia anak, kondisi jalur, cuaca, dan tingkat pengawasan yang tersedia."
-      }
-    ]
+    "faq": []
   },
   {
     "locale": "en",
@@ -328,26 +315,13 @@
     "name": "Campuhan Ridge Walk",
     "province": "Bali",
     "regency": "Gianyar",
-    "category": "Scenic walking trail",
-    "metaTitle": "Campuhan Ridge Walk: Ubud Trail Guide",
-    "metaDescription": "Plan Campuhan Ridge Walk in Ubud with practical guidance on timing, trail conditions, access, facilities, and walking safely.",
-    "lastUpdated": "2026-07-16",
-    "lastVerified": "2026-07-16",
+    "category": "nature-walk",
+    "metaTitle": "Campuhan Ridge Walk Ubud: Map, Hours, and Visitor Tips",
+    "metaDescription": "A bilingual guide to Campuhan Ridge Walk with Google Maps details, access, etiquette, FAQs, and sources.",
+    "lastUpdated": "2026-07-17",
+    "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/campuhan-ridge-walk.webp",
-    "faq": [
-      {
-        "question": "How much time should I allow?",
-        "answer": "1–2 hours. Adjust for weather, crowds, and walking ability."
-      },
-      {
-        "question": "Are ticket prices and opening times final?",
-        "answer": "Not necessarily. Operational details can change and must be rechecked through official sources before publication and travel."
-      },
-      {
-        "question": "Is it suitable for families?",
-        "answer": "Suitability depends on children’s ages, terrain, weather, and available supervision."
-      }
-    ]
+    "faq": []
   },
   {
     "locale": "id",

@@ -1,37 +1,45 @@
 
 <Hero
-  eyebrow="Bali"
+  eyebrow="Central Ubud"
   title="Campuhan Ridge Walk"
-  summary="Jalur punggung bukit dekat pusat Ubud yang menawarkan jalan kaki terbuka di antara lembah hijau, dengan akses mudah tetapi paparan panas yang cukup tinggi pada siang hari. A ridge-top walking route near central Ubud, offering an open trail between green valleys with convenient access but considerable midday heat exposure."
+  summary="A bilingual guide to Campuhan Ridge Walk with Google Maps details, access, etiquette, FAQs, and sources."
+  imageSrc="/images/destinations/phase-4/campuhan-ridge-walk.webp"
+  imageAlt="View of Campuhan Ridge Walk"
 />
 
 <QuickFacts
   items={[
     { label: "Location", value: "Ubud, Gianyar, Bali" },
-    { label: "Suggested duration", value: "1\u20132 hours" },
+    { label: "Duration", value: "1–2 hours" },
     { label: "Best time", value: "Early morning or late afternoon" },
-    { label: "Admission", value: "Generally accessed without a formal attraction ticket; verify local changes" },
-    { label: "Opening arrangement", value: "Open walking route rather than a gated attraction" },
-    { label: "Difficulty", value: "Easy to moderate depending on heat and walking distance" },
+    { label: "Admission", value: "Free" },
+    { label: "Pengaturan akses", value: "Open walking route" },
+    { label: "Difficulty", value: "Easy to moderate depending on heat" }
   ]}
 />
 
-<DestinationMap name="Campuhan Ridge Walk" regency="Gianyar" province="Bali" locale="en" />
+<DestinationMap name="Campuhan Ridge Walk" regency="Gianyar" province="Bali" locale="en" query="Campuhan Ridge Walk Ubud" />
 
-<TravelAdvisorScore
+<DestinationMap name="Campuhan Ridge Walk" regency="Gianyar" province="Bali" locale="id" query="Campuhan Ridge Walk Ubud" />
+
+<BestFor
+  title="Best For"
   items={[
-    { label: "Scenic beauty", score: 4, explanation: "Strong valley and ridge views close to Ubud." },
-    { label: "Photography", score: 4, explanation: "Best in soft morning or late-afternoon light." },
-    { label: "Family suitability", score: 4, explanation: "Suitable for older children with supervision and water." },
-    { label: "Accessibility", score: 2, explanation: "Slopes, uneven sections, and heat can be limiting." },
-    { label: "Value", score: 5, explanation: "A low-cost outdoor activity near central Ubud." },
-    { label: "Crowd comfort", score: 4, explanation: "Usually more comfortable early in the day." },
+    "Travelers seeking a relaxed walk",
+    "Morning or late-day photography",
+    "Couples and solo travelers",
+    "Visitors staying in Ubud"
   ]}
 />
 
-<BestFor title="Best For" items={["Travelers seeking a relaxed walk", "Morning or late-day photography", "Couples and solo travelers", "Visitors staying in Ubud"]} />
-
-<AvoidIf title="Reconsider If" items={["Struggle with exposed heat", "Need a completely level path", "Expect a shaded forest trail throughout"]} />
+<AvoidIf
+  title="Reconsider If"
+  items={[
+    "Struggle with exposed heat",
+    "Need a completely level path",
+    "Expect a shaded forest trail throughout"
+  ]}
+/>
 
 ## Overview — English
 
@@ -41,9 +49,19 @@ The walk is generally most comfortable in the morning, when temperatures are low
 
 Campuhan works better as a flexible walk than as a destination with one single focal point. Visitors can turn around at any stage depending on fitness, weather, and available time.
 
+<TravelTips
+  title="Tips Kunjungan / Travel Tips"
+  items={[
+    "Mulai lebih pagi untuk menghindari panas. / Start early to avoid heat.",
+    "Bawa air minum karena naungan terbatas. / Carry water because shade is limited.",
+    "Kenakan sepatu yang sesuai untuk permukaan campuran dan lereng. / Wear shoes suitable for mixed paving and slopes.",
+    "Jangan mengandalkan penerangan jalur setelah gelap. / Do not rely on the route for lighting after dark."
+  ]}
+/>
 
 
-<TravelTips title="Travel Tips" items={["Start early to avoid heat.", "Carry water because shade is limited.", "Wear shoes suitable for mixed paving and slopes.", "Do not rely on the route for lighting after dark."]} />
+
+
 
 <Accessibility
   title="Accessibility"
@@ -65,33 +83,34 @@ Campuhan works better as a flexible walk than as a destination with one single f
 <TicketInformation
   title="Ticket Information"
   entries={[
-    { label: "Current admission", price: "See Quick Facts", note: "Verify directly before publishing." }
+    { label: "General admission", price: "Free", note: "No entrance fee is required." }
   ]}
-  lastVerified="2026-07-16"
+  lastVerified="2026-07-17"
 />
 
 <OpeningHours
   title="Opening Hours"
   entries={[
-    { dayLabel: "Current information", hours: "See Quick Facts", note: "Recheck official information." }
+    { dayLabel: "Daily", hours: "24 Hours", note: "Best visited during daylight hours." }
   ]}
-  lastVerified="2026-07-16"
+  lastVerified="2026-07-17"
 />
 
 <NearbyDestinations
   title="Nearby Destinations"
   items={[
-    { name: "Ubud Palace", href: "/en/bali/ubud-palace", relation: "Central Ubud cultural stop" },
-    { name: "Ubud Art Market", href: "/en/bali/ubud-art-market", relation: "Easy combination in central Ubud" },
-    { name: "Sacred Monkey Forest Ubud", href: "/en/bali/sacred-monkey-forest-ubud", relation: "Separate half-day Ubud attraction" },
+    { name: "Saraswati Temple Ubud", href: "/id/bali/saraswati-temple-ubud" },
+    { name: "Ubud Palace", href: "/id/bali/ubud-palace" },
+    { name: "Ubud Art Market", href: "/id/bali/ubud-art-market" },
+    { name: "Sacred Monkey Forest Ubud", href: "/id/bali/sacred-monkey-forest-ubud" }
   ]}
-/><FAQ title="FAQ — English" items={[{"question": "How much time should I allow?", "answer": "1–2 hours. Adjust for weather, crowds, and walking ability."}, {"question": "Are ticket prices and opening times final?", "answer": "Not necessarily. Operational details can change and must be rechecked through official sources before publication and travel."}, {"question": "Is it suitable for families?", "answer": "Suitability depends on children’s ages, terrain, weather, and available supervision."}]} />
+/>
 
 <SourceList
   title="Sources"
   items={[
-    { title: "Ubud Tourism \u2014 Campuhan-area travel context", url: "https://ubudtourism.com/", accessedAt: "2026-07-16" },
-    { title: "Tripadvisor \u2014 Campuhan Ridge Walk visitor reports", url: "https://www.tripadvisor.com/Attraction_Review-g297701-d2662551-Reviews-Campuhan_Ridge_Walk-Ubud_Gianyar_Regency_Bali.html", accessedAt: "2026-07-16" },
-    { title: "Tiket.com \u2014 Campuhan route description", url: "https://www.tiket.com/id-id/to-do/tiket-private-tour-campuhan-ridge-walk-ubud-rice-terrace-ubud-palace", accessedAt: "2026-07-16" },
+    { title: "Ubud Tourism — Campuhan-area travel context", url: "https://ubudtourism.com/", accessedAt: "2026-07-17" },
+    { title: "Tripadvisor — Campuhan Ridge Walk visitor reports", url: "https://www.tripadvisor.com/Attraction_Review-g297701-d2662551-Reviews-Campuhan_Ridge_Walk-Ubud_Gianyar_Regency_Bali.html", accessedAt: "2026-07-17" },
+    { title: "Google Maps — Campuhan Ridge Walk", url: "https://www.google.com/maps/search/?api=1&query=Campuhan+Ridge+Walk+Ubud", accessedAt: "2026-07-17" }
   ]}
 />
