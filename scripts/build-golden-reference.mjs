@@ -44,6 +44,8 @@ const imageBySlug = {
   'water-blow-nusa-dua': '/images/destinations/phase-4/water-blow-nusa-dua.webp',
   'garuda-wisnu-kencana': '/images/destinations/phase-4/garuda-wisnu-kencana.webp',
   'jimbaran-beach': '/images/destinations/phase-4/jimbaran-beach.webp',
+  'tegenungan-waterfall': '/images/destinations/phase-4/tegenungan-waterfall.webp',
+  'bali-zoo': '/images/destinations/phase-4/bali-zoo.webp',
 };
 const phase4Metadata = {
   'campuhan-ridge-walk': { idTitle: 'Campuhan Ridge Walk: Panduan Jalur Ubud', enTitle: 'Campuhan Ridge Walk: Ubud Trail Guide', idDescription: 'Panduan Campuhan Ridge Walk di Ubud: waktu terbaik, kondisi jalur, akses, fasilitas, dan tips berjalan aman.', enDescription: 'Plan Campuhan Ridge Walk in Ubud with practical guidance on timing, trail conditions, access, facilities, and walking safely.' },
@@ -66,6 +68,8 @@ const phase4Metadata = {
   'blanco-renaissance-museum': { idTitle: 'Museum Blanco Ubud: Panduan Kunjungan', enTitle: 'Blanco Renaissance Museum: Visitor Guide', idDescription: 'Panduan Museum Blanco Ubud mencakup jam buka, tiket, koleksi Antonio Blanco, aturan fotografi, taman, dan kesesuaian keluarga.', enDescription: 'Visit the Blanco Renaissance Museum with guidance on hours, tickets, Antonio Blanco’s collection, photography, gardens, and families.' },
   'museum-puri-lukisan': { idTitle: 'Museum Puri Lukisan: Panduan Seni Bali Ubud', enTitle: 'Museum Puri Lukisan: Ubud Art Guide', idDescription: 'Panduan Museum Puri Lukisan mencakup jam resmi, tiket, koleksi seni Bali, pameran, workshop, fotografi, dan akses.', enDescription: 'Visit Museum Puri Lukisan with official hours, tickets, Balinese art collections, exhibitions, workshops, photography, and access.' },
   'arma-museum': { idTitle: 'ARMA Museum Ubud: Panduan Seni dan Budaya', enTitle: 'ARMA Museum Ubud: Art and Culture Guide', idDescription: 'Panduan ARMA Museum mencakup koleksi, taman, jam buka, tiket, pertunjukan, workshop, program budaya, dan aturan foto.', enDescription: 'Explore ARMA Museum’s collections, gardens, hours, tickets, performances, workshops, cultural programs, and photography rules.' },
+  'tegenungan-waterfall': { idTitle: 'Air Terjun Tegenungan: Panduan Bali Selatan', enTitle: 'Tegenungan Waterfall: South Bali Guide', idDescription: 'Panduan Air Terjun Tegenungan mencakup tiket, akses tangga, fasilitas, titik foto, dan lokasi dekat Ubud.', enDescription: 'Visit Tegenungan Waterfall with guidance on tickets, stair access, facilities, photo spots, and its location near Ubud.' },
+  'bali-zoo': { idTitle: 'Bali Zoo: Panduan Taman Satwa Gianyar', enTitle: 'Bali Zoo: Gianyar Wildlife Park Guide', idDescription: 'Panduan kunjungan ke Bali Zoo mencakup tiket, jam buka, aksesibilitas kursi roda, interaksi satwa, dan lokasi.', enDescription: 'Plan your Bali Zoo visit with guidance on tickets, hours, wheelchair accessibility, animal programs, and location.' },
 };
 
 function parseFrontmatter(raw) {

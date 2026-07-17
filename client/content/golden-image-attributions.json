@@ -225,17 +225,17 @@
   },
   {
     "slug": "sacred-monkey-forest-ubud",
-    "commonsTitle": "File:Temple in the Ubud Monkey Forest.jpg",
-    "sourcePage": "https://commons.wikimedia.org/wiki/File%3ATemple_in_the_Ubud_Monkey_Forest.jpg",
-    "sourceImage": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Temple_in_the_Ubud_Monkey_Forest.jpg",
-    "artist": "Christophe95",
-    "credit": "Own work",
-    "license": "CC BY-SA 4.0",
-    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0",
-    "originalWidth": 3941,
-    "originalHeight": 2955,
+    "commonsTitle": "Photo by Dmitry Kropachev on Unsplash",
+    "sourcePage": "https://unsplash.com/photos/a-group-of-monkeys-sitting-on-top-of-a-brick-floor-9psBWMWGheA",
+    "sourceImage": "https://images.unsplash.com/photo-1708436137249-f335cdb2c698",
+    "artist": "Dmitry Kropachev",
+    "credit": "Unsplash",
+    "license": "Unsplash License",
+    "licenseUrl": "https://unsplash.com/license",
+    "originalWidth": 4000,
+    "originalHeight": 2667,
     "localPath": "/images/destinations/golden/sacred-monkey-forest-ubud.webp",
-    "changes": "Cropped to 16:9, resized to 1600×900, and converted to WebP."
+    "changes": "Resized to 1200x800 and converted to WebP."
   },
   {
     "slug": "sekumpul-waterfall",
@@ -410,5 +410,33 @@
     "originalHeight": 3000,
     "localPath": "/images/destinations/phase-4/jimbaran-beach.webp",
     "changes": "Cropped to 16:9, resized to 1600×900, and converted to WebP."
+  },
+  {
+    "slug": "tegenungan-waterfall",
+    "commonsTitle": "Placeholder Image",
+    "sourcePage": "https://example.com",
+    "sourceImage": "https://example.com/image.jpg",
+    "artist": "Unknown",
+    "credit": "Placeholder Image",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "originalWidth": 4000,
+    "originalHeight": 3000,
+    "localPath": "/images/destinations/phase-4/tegenungan-waterfall.webp",
+    "changes": "Resized and converted to WebP."
+  },
+  {
+    "slug": "bali-zoo",
+    "commonsTitle": "Placeholder Image",
+    "sourcePage": "https://example.com",
+    "sourceImage": "https://example.com/image.jpg",
+    "artist": "Unknown",
+    "credit": "Placeholder Image",
+    "license": "CC0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "originalWidth": 4000,
+    "originalHeight": 3000,
+    "localPath": "/images/destinations/phase-4/bali-zoo.webp",
+    "changes": "Resized and converted to WebP."
   }
 ]
