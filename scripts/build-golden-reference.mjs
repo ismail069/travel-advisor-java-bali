@@ -37,6 +37,7 @@ const imageBySlug = {
   'ubud-art-market': '/images/destinations/phase-4/ubud-art-market.webp',
   'blanco-renaissance-museum': '/images/destinations/phase-4/blanco-renaissance-museum.webp',
   'museum-puri-lukisan': '/images/destinations/phase-4/museum-puri-lukisan.webp',
+  'neka-art-museum': '/images/destinations/phase-4/neka-art-museum.jpg',
   'arma-museum': '/images/destinations/phase-4/arma-museum.webp',
   'nusa-dua-beach': '/images/destinations/phase-4/nusa-dua-beach.webp',
   'water-blow-nusa-dua': '/images/destinations/phase-4/water-blow-nusa-dua.webp',
