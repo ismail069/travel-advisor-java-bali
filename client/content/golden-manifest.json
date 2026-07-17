@@ -271,6 +271,32 @@
   },
   {
     "locale": "id",
+    "slug": "saraswati-temple-ubud",
+    "name": "Pura Taman Saraswati",
+    "province": "Bali",
+    "regency": "Gianyar",
+    "category": "hindu-temple",
+    "metaTitle": "Pura Taman Saraswati Ubud: Tiket, Jam Buka, Peta, dan Tips",
+    "metaDescription": "Panduan bilingual Pura Taman Saraswati Ubud dengan Google Maps, jam buka, tiket, kolam teratai, etika berkunjung, pertunjukan, FAQ, dan sumber.",
+    "lastUpdated": "2026-07-17",
+    "lastVerified": "2026-07-17",
+    "faq": []
+  },
+  {
+    "locale": "en",
+    "slug": "saraswati-temple-ubud",
+    "name": "Saraswati Temple Ubud",
+    "province": "Bali",
+    "regency": "Gianyar",
+    "category": "hindu-temple",
+    "metaTitle": "Saraswati Temple Ubud: Tickets, Hours, Map, and Visitor Tips",
+    "metaDescription": "A bilingual guide to Saraswati Temple Ubud with Google Maps details, opening hours, admission, lotus ponds, etiquette, performances, FAQs, and sources.",
+    "lastUpdated": "2026-07-17",
+    "lastVerified": "2026-07-17",
+    "faq": []
+  },
+  {
+    "locale": "id",
     "slug": "campuhan-ridge-walk",
     "name": "Campuhan Ridge Walk",
     "province": "Bali",
