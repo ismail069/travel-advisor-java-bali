@@ -1,3 +1,4 @@
+import Script from 'next/script';
 import './globals.css';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
@@ -22,5 +23,24 @@ export const metadata = {
 export default function RootLayout({ children }) {
   const organization = { '@context': 'https://schema.org', '@type': 'Organization', name: SITE_NAME, url: SITE_URL, email: CONTACT_EMAIL, founder: { '@type': 'Person', name: OWNER_NAME } };
   const themeScript = `(function(){try{var saved=localStorage.getItem('jawabali-theme');var dark=saved==='dark'||(!saved&&window.matchMedia('(prefers-color-scheme: dark)').matches);document.documentElement.classList.toggle('dark',dark);document.documentElement.style.colorScheme=dark?'dark':'light'}catch(e){}})()`;
-  return <html lang="id" suppressHydrationWarning><head><script dangerouslySetInnerHTML={{ __html: themeScript }} /></head><body><JsonLd data={organization} /><a href="#konten" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:p-3">Lewati ke konten</a><Header /><main id="konten">{children}</main><Footer /></body></html>;
+  return (
+    <html lang="id" suppressHydrationWarning>
+      <head>
+        <script dangerouslySetInnerHTML={{ __html: themeScript }} />
+        <Script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9110636569427281"
+          crossOrigin="anonymous"
+          strategy="afterInteractive"
+        />
+      </head>
+      <body>
+        <JsonLd data={organization} />
+        <a href="#konten" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:p-3">Lewati ke konten</a>
+        <Header />
+        <main id="konten">{children}</main>
+        <Footer />
+      </body>
+    </html>
+  );
 }
