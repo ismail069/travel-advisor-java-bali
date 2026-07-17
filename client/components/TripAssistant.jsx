@@ -69,10 +69,16 @@ export default function TripAssistant() {
     }
   }
 
+  function handleInputKeyDown(event) {
+    if (event.key !== 'Enter' || event.shiftKey || event.nativeEvent.isComposing) return;
+    event.preventDefault();
+    event.currentTarget.form?.requestSubmit();
+  }
+
   return <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
     <div className="border-b border-violet-100 bg-violet-50 px-5 py-3 text-sm text-slate-700 sm:px-7"><strong>Jawaban berbasis database.</strong> TripAssistant hanya membahas perjalanan Jawa dan Bali dari data JawaBali Trip.</div>
     <div className="flex flex-wrap gap-2 px-5 pt-5 sm:px-7">{suggestions.map((suggestion) => <button key={suggestion} type="button" onClick={() => setInput(suggestion)} className="rounded-full border border-violet-200 bg-white px-3 py-2 text-xs font-bold text-primary hover:bg-violet-50">{suggestion}</button>)}</div>
     <div className="max-h-[620px] min-h-[360px] space-y-4 overflow-y-auto p-5 sm:p-7" aria-live="polite">{messages.map((item, index) => <div key={index} className={`flex ${item.role === 'user' ? 'justify-end' : 'justify-start'}`}><div className={`max-w-[92%] rounded-2xl px-4 py-3 text-sm leading-6 ${item.role === 'user' ? 'bg-primary text-white' : 'bg-slate-100 text-slate-800 sm:max-w-[88%]'}`}><RichMessage content={item.content} /><RelatedDestinations items={item.recommendations} /></div></div>)}{loading && <p className="text-sm text-slate-500">TripAssistant sedang menyusun jawaban…</p>}</div>
-    <form onSubmit={submit} className="border-t border-slate-200 p-4"><label htmlFor="chat-message" className="sr-only">Pesan untuk TripAssistant</label><div className="flex flex-col gap-3 sm:flex-row"><textarea id="chat-message" value={input} onChange={(event) => setInput(event.target.value)} maxLength={1000} rows="2" placeholder="Contoh: Liburan keluarga 3 hari di Bali, budget 5 juta…" className="min-h-14 flex-1 resize-none rounded-xl border border-slate-300 px-4 py-3" /><button disabled={loading} className="rounded-xl bg-primary px-6 py-3 font-black text-white disabled:opacity-60">Kirim</button></div></form>
+    <form onSubmit={submit} className="border-t border-slate-200 p-4"><label htmlFor="chat-message" className="sr-only">Pesan untuk TripAssistant</label><div className="flex flex-col gap-3 sm:flex-row"><div className="flex-1"><textarea id="chat-message" value={input} onChange={(event) => setInput(event.target.value)} onKeyDown={handleInputKeyDown} maxLength={1000} rows="2" placeholder="Contoh: Liburan keluarga 3 hari di Bali, budget 5 juta…" aria-describedby="chat-keyboard-hint" className="min-h-14 w-full resize-none rounded-xl border border-slate-300 px-4 py-3" /><p id="chat-keyboard-hint" className="mt-1.5 px-1 text-xs text-slate-500">Enter untuk mengirim · Shift+Enter untuk baris baru</p></div><button disabled={loading} className="h-fit rounded-xl bg-primary px-6 py-3 font-black text-white disabled:opacity-60">Kirim</button></div></form>
   </div>;
 }
