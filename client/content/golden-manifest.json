@@ -297,6 +297,32 @@
   },
   {
     "locale": "id",
+    "slug": "neka-art-museum",
+    "name": "Neka Art Museum",
+    "province": "Bali",
+    "regency": "Gianyar",
+    "category": "art-museum",
+    "metaTitle": "Neka Art Museum Ubud: Tiket, Jam Buka, Peta, dan Koleksi",
+    "metaDescription": "Panduan bilingual Neka Art Museum Ubud dengan Google Maps, jam buka, tiket, koleksi seni Bali, fasilitas, aksesibilitas, FAQ, sumber, dan rencana foto legal.",
+    "lastUpdated": "2026-07-17",
+    "lastVerified": "2026-07-17",
+    "faq": []
+  },
+  {
+    "locale": "en",
+    "slug": "neka-art-museum",
+    "name": "Neka Art Museum",
+    "province": "Bali",
+    "regency": "Gianyar",
+    "category": "art-museum",
+    "metaTitle": "Neka Art Museum Ubud: Tickets, Hours, Map, and Collections",
+    "metaDescription": "A bilingual guide to Neka Art Museum Ubud with Google Maps details, opening hours, admission, Balinese art collections, facilities, accessibility, FAQs, sources, and a legal photo plan.",
+    "lastUpdated": "2026-07-17",
+    "lastVerified": "2026-07-17",
+    "faq": []
+  },
+  {
+    "locale": "id",
     "slug": "campuhan-ridge-walk",
     "name": "Campuhan Ridge Walk",
     "province": "Bali",
