@@ -35,6 +35,7 @@ const imageBySlug = {
   'brahmavihara-arama': '/images/destinations/phase-4/brahmavihara-arama.webp',
   'ubud-palace': '/images/destinations/phase-4/ubud-palace.webp',
   'ubud-art-market': '/images/destinations/phase-4/ubud-art-market.webp',
+  'saraswati-temple-ubud': '/images/destinations/phase-4/saraswati-temple-ubud.jpg',
   'blanco-renaissance-museum': '/images/destinations/phase-4/blanco-renaissance-museum.webp',
   'museum-puri-lukisan': '/images/destinations/phase-4/museum-puri-lukisan.webp',
   'neka-art-museum': '/images/destinations/phase-4/neka-art-museum.jpg',
