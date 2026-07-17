@@ -323,6 +323,68 @@
   },
   {
     "locale": "id",
+    "slug": "blanco-renaissance-museum",
+    "name": "The Blanco Renaissance Museum",
+    "province": "Bali",
+    "regency": "Gianyar",
+    "category": "Artist house museum",
+    "metaTitle": "Museum Blanco Ubud: Panduan Kunjungan",
+    "metaDescription": "Panduan Museum Blanco Ubud mencakup jam buka, tiket, koleksi Antonio Blanco, aturan fotografi, taman, dan kesesuaian keluarga.",
+    "lastUpdated": "2026-07-17",
+    "lastVerified": "2026-07-17",
+    "image": "/images/destinations/phase-4/blanco-renaissance-museum.webp",
+    "faq": [
+      {
+        "question": "Berapa lama waktu yang sebaiknya disediakan?",
+        "answer": "1–2 jam. Tambahkan waktu untuk antrean, pertunjukan, atau membaca koleksi."
+      },
+      {
+        "question": "Apakah jam buka dan tiket sudah pasti?",
+        "answer": "Belum tentu. Informasi operasional harus diperiksa kembali melalui pengelola atau sumber resmi sebelum publikasi dan kunjungan."
+      },
+      {
+        "question": "Apakah cocok untuk keluarga?",
+        "answer": "Secara umum dapat dikunjungi keluarga, tetapi kesesuaian tergantung usia anak, tema koleksi, kepadatan, dan program yang sedang berlangsung."
+      },
+      {
+        "question": "Bisakah digabungkan dengan atraksi lain?",
+        "answer": "Ya. Semua destinasi batch ini berada di atau dekat pusat Ubud dan mudah dimasukkan ke rute setengah hari atau sehari."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "blanco-renaissance-museum",
+    "name": "The Blanco Renaissance Museum",
+    "province": "Bali",
+    "regency": "Gianyar",
+    "category": "Artist house museum",
+    "metaTitle": "Blanco Renaissance Museum: Visitor Guide",
+    "metaDescription": "Visit the Blanco Renaissance Museum with guidance on hours, tickets, Antonio Blanco’s collection, photography, gardens, and families.",
+    "lastUpdated": "2026-07-17",
+    "lastVerified": "2026-07-17",
+    "image": "/images/destinations/phase-4/blanco-renaissance-museum.webp",
+    "faq": [
+      {
+        "question": "How much time should I allow?",
+        "answer": "1–2 hours. Add time for queues, performances, or reading collection information."
+      },
+      {
+        "question": "Are opening hours and admission guaranteed?",
+        "answer": "No. Operational information must be rechecked through the operator or official sources before publication and travel."
+      },
+      {
+        "question": "Is it suitable for families?",
+        "answer": "Generally yes, but suitability depends on children’s ages, collection themes, crowd levels, and current programs."
+      },
+      {
+        "question": "Can it be combined with other attractions?",
+        "answer": "Yes. All destinations in this batch are in or near central Ubud and fit naturally into a half-day or full-day route."
+      }
+    ]
+  },
+  {
+    "locale": "id",
     "slug": "campuhan-ridge-walk",
     "name": "Campuhan Ridge Walk",
     "province": "Bali",
@@ -1254,68 +1316,6 @@
       {
         "question": "How much time should I allow?",
         "answer": "45–90 minutes. Add time for queues, performances, or reading collection information."
-      },
-      {
-        "question": "Are opening hours and admission guaranteed?",
-        "answer": "No. Operational information must be rechecked through the operator or official sources before publication and travel."
-      },
-      {
-        "question": "Is it suitable for families?",
-        "answer": "Generally yes, but suitability depends on children’s ages, collection themes, crowd levels, and current programs."
-      },
-      {
-        "question": "Can it be combined with other attractions?",
-        "answer": "Yes. All destinations in this batch are in or near central Ubud and fit naturally into a half-day or full-day route."
-      }
-    ]
-  },
-  {
-    "locale": "id",
-    "slug": "blanco-renaissance-museum",
-    "name": "The Blanco Renaissance Museum",
-    "province": "Bali",
-    "regency": "Gianyar",
-    "category": "Artist house museum",
-    "metaTitle": "Museum Blanco Ubud: Panduan Kunjungan",
-    "metaDescription": "Panduan Museum Blanco Ubud mencakup jam buka, tiket, koleksi Antonio Blanco, aturan fotografi, taman, dan kesesuaian keluarga.",
-    "lastUpdated": "2026-07-17",
-    "lastVerified": "2026-07-17",
-    "image": "/images/destinations/phase-4/blanco-renaissance-museum.webp",
-    "faq": [
-      {
-        "question": "Berapa lama waktu yang sebaiknya disediakan?",
-        "answer": "1–2 jam. Tambahkan waktu untuk antrean, pertunjukan, atau membaca koleksi."
-      },
-      {
-        "question": "Apakah jam buka dan tiket sudah pasti?",
-        "answer": "Belum tentu. Informasi operasional harus diperiksa kembali melalui pengelola atau sumber resmi sebelum publikasi dan kunjungan."
-      },
-      {
-        "question": "Apakah cocok untuk keluarga?",
-        "answer": "Secara umum dapat dikunjungi keluarga, tetapi kesesuaian tergantung usia anak, tema koleksi, kepadatan, dan program yang sedang berlangsung."
-      },
-      {
-        "question": "Bisakah digabungkan dengan atraksi lain?",
-        "answer": "Ya. Semua destinasi batch ini berada di atau dekat pusat Ubud dan mudah dimasukkan ke rute setengah hari atau sehari."
-      }
-    ]
-  },
-  {
-    "locale": "en",
-    "slug": "blanco-renaissance-museum",
-    "name": "The Blanco Renaissance Museum",
-    "province": "Bali",
-    "regency": "Gianyar",
-    "category": "Artist house museum",
-    "metaTitle": "Blanco Renaissance Museum: Visitor Guide",
-    "metaDescription": "Visit the Blanco Renaissance Museum with guidance on hours, tickets, Antonio Blanco’s collection, photography, gardens, and families.",
-    "lastUpdated": "2026-07-17",
-    "lastVerified": "2026-07-17",
-    "image": "/images/destinations/phase-4/blanco-renaissance-museum.webp",
-    "faq": [
-      {
-        "question": "How much time should I allow?",
-        "answer": "1–2 hours. Add time for queues, performances, or reading collection information."
       },
       {
         "question": "Are opening hours and admission guaranteed?",

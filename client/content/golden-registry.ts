@@ -12,42 +12,42 @@ import Page10 from './destinations/id/bali/saraswati-temple-ubud.mdx';
 import Page11 from './destinations/en/bali/saraswati-temple-ubud.mdx';
 import Page12 from './destinations/id/bali/neka-art-museum.mdx';
 import Page13 from './destinations/en/bali/neka-art-museum.mdx';
-import Page14 from './destinations/id/bali/campuhan-ridge-walk.mdx';
-import Page15 from './destinations/en/bali/campuhan-ridge-walk.mdx';
-import Page16 from './destinations/id/bali/goa-gajah.mdx';
-import Page17 from './destinations/en/bali/goa-gajah.mdx';
-import Page18 from './destinations/id/bali/jatiluwih-rice-terraces.mdx';
-import Page19 from './destinations/en/bali/jatiluwih-rice-terraces.mdx';
-import Page20 from './destinations/id/bali/ulun-danu-beratan-temple.mdx';
-import Page21 from './destinations/en/bali/ulun-danu-beratan-temple.mdx';
-import Page22 from './destinations/id/bali/sekumpul-waterfall.mdx';
-import Page23 from './destinations/en/bali/sekumpul-waterfall.mdx';
-import Page24 from './destinations/id/bali/lovina-beach.mdx';
-import Page25 from './destinations/en/bali/lovina-beach.mdx';
-import Page26 from './destinations/id/bali/munduk.mdx';
-import Page27 from './destinations/en/bali/munduk.mdx';
-import Page28 from './destinations/id/bali/kelingking-beach.mdx';
-import Page29 from './destinations/en/bali/kelingking-beach.mdx';
-import Page30 from './destinations/id/bali/broken-beach.mdx';
-import Page31 from './destinations/en/bali/broken-beach.mdx';
-import Page32 from './destinations/id/bali/angels-billabong.mdx';
-import Page33 from './destinations/en/bali/angels-billabong.mdx';
-import Page34 from './destinations/id/bali/bali-botanic-garden.mdx';
-import Page35 from './destinations/en/bali/bali-botanic-garden.mdx';
-import Page36 from './destinations/id/bali/handara-gate.mdx';
-import Page37 from './destinations/en/bali/handara-gate.mdx';
-import Page38 from './destinations/id/bali/banyumala-twin-waterfalls.mdx';
-import Page39 from './destinations/en/bali/banyumala-twin-waterfalls.mdx';
-import Page40 from './destinations/id/bali/banjar-hot-springs.mdx';
-import Page41 from './destinations/en/bali/banjar-hot-springs.mdx';
-import Page42 from './destinations/id/bali/brahmavihara-arama.mdx';
-import Page43 from './destinations/en/bali/brahmavihara-arama.mdx';
-import Page44 from './destinations/id/bali/ubud-palace.mdx';
-import Page45 from './destinations/en/bali/ubud-palace.mdx';
-import Page46 from './destinations/id/bali/ubud-art-market.mdx';
-import Page47 from './destinations/en/bali/ubud-art-market.mdx';
-import Page48 from './destinations/id/bali/blanco-renaissance-museum.mdx';
-import Page49 from './destinations/en/bali/blanco-renaissance-museum.mdx';
+import Page14 from './destinations/id/bali/blanco-renaissance-museum.mdx';
+import Page15 from './destinations/en/bali/blanco-renaissance-museum.mdx';
+import Page16 from './destinations/id/bali/campuhan-ridge-walk.mdx';
+import Page17 from './destinations/en/bali/campuhan-ridge-walk.mdx';
+import Page18 from './destinations/id/bali/goa-gajah.mdx';
+import Page19 from './destinations/en/bali/goa-gajah.mdx';
+import Page20 from './destinations/id/bali/jatiluwih-rice-terraces.mdx';
+import Page21 from './destinations/en/bali/jatiluwih-rice-terraces.mdx';
+import Page22 from './destinations/id/bali/ulun-danu-beratan-temple.mdx';
+import Page23 from './destinations/en/bali/ulun-danu-beratan-temple.mdx';
+import Page24 from './destinations/id/bali/sekumpul-waterfall.mdx';
+import Page25 from './destinations/en/bali/sekumpul-waterfall.mdx';
+import Page26 from './destinations/id/bali/lovina-beach.mdx';
+import Page27 from './destinations/en/bali/lovina-beach.mdx';
+import Page28 from './destinations/id/bali/munduk.mdx';
+import Page29 from './destinations/en/bali/munduk.mdx';
+import Page30 from './destinations/id/bali/kelingking-beach.mdx';
+import Page31 from './destinations/en/bali/kelingking-beach.mdx';
+import Page32 from './destinations/id/bali/broken-beach.mdx';
+import Page33 from './destinations/en/bali/broken-beach.mdx';
+import Page34 from './destinations/id/bali/angels-billabong.mdx';
+import Page35 from './destinations/en/bali/angels-billabong.mdx';
+import Page36 from './destinations/id/bali/bali-botanic-garden.mdx';
+import Page37 from './destinations/en/bali/bali-botanic-garden.mdx';
+import Page38 from './destinations/id/bali/handara-gate.mdx';
+import Page39 from './destinations/en/bali/handara-gate.mdx';
+import Page40 from './destinations/id/bali/banyumala-twin-waterfalls.mdx';
+import Page41 from './destinations/en/bali/banyumala-twin-waterfalls.mdx';
+import Page42 from './destinations/id/bali/banjar-hot-springs.mdx';
+import Page43 from './destinations/en/bali/banjar-hot-springs.mdx';
+import Page44 from './destinations/id/bali/brahmavihara-arama.mdx';
+import Page45 from './destinations/en/bali/brahmavihara-arama.mdx';
+import Page46 from './destinations/id/bali/ubud-palace.mdx';
+import Page47 from './destinations/en/bali/ubud-palace.mdx';
+import Page48 from './destinations/id/bali/ubud-art-market.mdx';
+import Page49 from './destinations/en/bali/ubud-art-market.mdx';
 import Page50 from './destinations/id/bali/museum-puri-lukisan.mdx';
 import Page51 from './destinations/en/bali/museum-puri-lukisan.mdx';
 import Page52 from './destinations/id/bali/arma-museum.mdx';
@@ -79,42 +79,42 @@ export const goldenRegistry: Record<string, ComponentType> = {
   'en/saraswati-temple-ubud': Page11,
   'id/neka-art-museum': Page12,
   'en/neka-art-museum': Page13,
-  'id/campuhan-ridge-walk': Page14,
-  'en/campuhan-ridge-walk': Page15,
-  'id/goa-gajah': Page16,
-  'en/goa-gajah': Page17,
-  'id/jatiluwih-rice-terraces': Page18,
-  'en/jatiluwih-rice-terraces': Page19,
-  'id/ulun-danu-beratan-temple': Page20,
-  'en/ulun-danu-beratan-temple': Page21,
-  'id/sekumpul-waterfall': Page22,
-  'en/sekumpul-waterfall': Page23,
-  'id/lovina-beach': Page24,
-  'en/lovina-beach': Page25,
-  'id/munduk': Page26,
-  'en/munduk': Page27,
-  'id/kelingking-beach': Page28,
-  'en/kelingking-beach': Page29,
-  'id/broken-beach': Page30,
-  'en/broken-beach': Page31,
-  'id/angels-billabong': Page32,
-  'en/angels-billabong': Page33,
-  'id/bali-botanic-garden': Page34,
-  'en/bali-botanic-garden': Page35,
-  'id/handara-gate': Page36,
-  'en/handara-gate': Page37,
-  'id/banyumala-twin-waterfalls': Page38,
-  'en/banyumala-twin-waterfalls': Page39,
-  'id/banjar-hot-springs': Page40,
-  'en/banjar-hot-springs': Page41,
-  'id/brahmavihara-arama': Page42,
-  'en/brahmavihara-arama': Page43,
-  'id/ubud-palace': Page44,
-  'en/ubud-palace': Page45,
-  'id/ubud-art-market': Page46,
-  'en/ubud-art-market': Page47,
-  'id/blanco-renaissance-museum': Page48,
-  'en/blanco-renaissance-museum': Page49,
+  'id/blanco-renaissance-museum': Page14,
+  'en/blanco-renaissance-museum': Page15,
+  'id/campuhan-ridge-walk': Page16,
+  'en/campuhan-ridge-walk': Page17,
+  'id/goa-gajah': Page18,
+  'en/goa-gajah': Page19,
+  'id/jatiluwih-rice-terraces': Page20,
+  'en/jatiluwih-rice-terraces': Page21,
+  'id/ulun-danu-beratan-temple': Page22,
+  'en/ulun-danu-beratan-temple': Page23,
+  'id/sekumpul-waterfall': Page24,
+  'en/sekumpul-waterfall': Page25,
+  'id/lovina-beach': Page26,
+  'en/lovina-beach': Page27,
+  'id/munduk': Page28,
+  'en/munduk': Page29,
+  'id/kelingking-beach': Page30,
+  'en/kelingking-beach': Page31,
+  'id/broken-beach': Page32,
+  'en/broken-beach': Page33,
+  'id/angels-billabong': Page34,
+  'en/angels-billabong': Page35,
+  'id/bali-botanic-garden': Page36,
+  'en/bali-botanic-garden': Page37,
+  'id/handara-gate': Page38,
+  'en/handara-gate': Page39,
+  'id/banyumala-twin-waterfalls': Page40,
+  'en/banyumala-twin-waterfalls': Page41,
+  'id/banjar-hot-springs': Page42,
+  'en/banjar-hot-springs': Page43,
+  'id/brahmavihara-arama': Page44,
+  'en/brahmavihara-arama': Page45,
+  'id/ubud-palace': Page46,
+  'en/ubud-palace': Page47,
+  'id/ubud-art-market': Page48,
+  'en/ubud-art-market': Page49,
   'id/museum-puri-lukisan': Page50,
   'en/museum-puri-lukisan': Page51,
   'id/arma-museum': Page52,
