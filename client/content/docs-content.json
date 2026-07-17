@@ -1,0 +1,273 @@
+{
+  "/docs/ai/prompt-library": {
+    "content": "\n# AI Prompt Library\n\n## Drafting Prompt\n\n```text\nYou are a senior bilingual travel editor.\n\nUse only the supplied research brief and approved source notes.\n\nDo not invent ticket prices, opening hours, transport schedules, accessibility claims, historical facts, or personal experience.\n\nWrite practical destination content that helps travelers decide whether to visit, how to plan, what limitations to expect, and what nearby destinations combine well.\n\nWrite Indonesian and English naturally and independently while preserving the same facts.\n\nMark missing facts with [VERIFY].\n```\n\n## Review Prompt\n\n```text\nReview this destination page for:\n- Unsupported claims\n- Missing verification dates\n- Bilingual inconsistencies\n- Unnatural translation\n- Weak practical advice\n- Missing internal links\n- Missing source support\n```\n",
+    "meta": {
+      "title": "AI Prompt Library",
+      "description": "Controlled prompts for research and drafting."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Drafting Prompt",
+        "id": "drafting-prompt"
+      },
+      {
+        "level": 2,
+        "title": "Review Prompt",
+        "id": "review-prompt"
+      }
+    ]
+  },
+  "/docs/components/destination-library": {
+    "content": "\n<EditorialNotice>\nThis is sample content for Phase 2 component integration only.\n</EditorialNotice>\n\n<Hero\n  eyebrow=\"Bali\"\n  title=\"Example Destination\"\n  summary=\"A short example showing how destination MDX components are composed.\"\n/>\n\n<QuickFacts\n  items={[\n    { label: \"Location\", value: \"Bali\" },\n    { label: \"Duration\", value: \"2 hours\" },\n    { label: \"Best time\", value: \"Morning\" }\n  ]}\n/>\n\n<TravelAdvisorScore\n  items={[\n    { label: \"Scenic beauty\", score: 5, explanation: \"Strong landscape value.\" },\n    { label: \"Accessibility\", score: 3, explanation: \"Some uneven paths.\" }\n  ]}\n/>\n\n<BestFor items={[\"First-time visitors\", \"Photographers\"]} />\n\n<AvoidIf items={[\"You require step-free access throughout\"]} />\n\n<TicketInformation\n  entries={[\n    { label: \"Adult\", price: \"Needs verification\" }\n  ]}\n  lastVerified=\"2026-07-16\"\n/>\n\n<OpeningHours\n  entries={[\n    { dayLabel: \"Daily\", hours: \"Needs verification\" }\n  ]}\n  lastVerified=\"2026-07-16\"\n/>\n\n<Facilities\n  items={[\n    { label: \"Parking\", available: true },\n    { label: \"Accessible toilet\", available: false, note: \"Verify on site.\" }\n  ]}\n/>\n\n<Accessibility\n  items={[\n    { label: \"Step-free entrance\", status: \"partial\" },\n    { label: \"Uneven ground\", status: \"available\", note: \"Expect mixed surfaces.\" }\n  ]}\n/>\n\n<TravelTips\n  items={[\n    \"Arrive early.\",\n    \"Bring water.\",\n    \"Verify operational information before departure.\"\n  ]}\n/>\n\n<NearbyDestinations\n  items={[\n    {\n      name: \"Related Destination\",\n      href: \"/destinasi\",\n      distance: \"10 km\"\n    }\n  ]}\n/>\n\n<FAQ\n  items={[\n    {\n      question: \"How long should I stay?\",\n      answer: \"Allow around two hours.\"\n    }\n  ]}\n/>\n\n<SourceList\n  items={[\n    {\n      title: \"Official Source\",\n      url: \"https://example.com\",\n      accessedAt: \"2026-07-16\"\n    }\n  ]}\n/>\n\n<LastVerified\n  date=\"2026-07-16\"\n  note=\"Recheck ticket prices and opening hours before publishing.\"\n/>\n",
+    "meta": {
+      "title": "Destination Component Example",
+      "description": "Interactive Phase 2 reference showing every reusable destination MDX component."
+    },
+    "toc": []
+  },
+  "/docs/destination/frontmatter": {
+    "content": "\n# Frontmatter Reference\n\n```yaml\n---\nid: tanah-lot\nslug: tanah-lot\nlocale: id\nname: Pura Tanah Lot\nprovince: Bali\nregency: Tabanan\ncategory: temple\nlatitude: -8.6212\nlongitude: 115.0868\nmetaTitle: \"\"\nmetaDescription: \"\"\ncanonical: \"\"\nlastUpdated: \"\"\nlastVerified: \"\"\nstatus: draft\n---\n```\n\nDo not add new frontmatter fields without updating this reference first.\n",
+    "meta": {
+      "title": "Frontmatter Reference",
+      "description": "Canonical frontmatter fields for destination MDX."
+    },
+    "toc": []
+  },
+  "/docs/destination/template": {
+    "content": "\n# Canonical Destination Template\n\n1. Frontmatter\n2. Hero summary\n3. Quick facts\n4. Travel Advisor score\n5. Best for\n6. Avoid if\n7. Overview — Indonesian\n8. Overview — English\n9. Highlights\n10. Best time\n11. Ticket information\n12. Opening hours\n13. How to get there\n14. Suggested duration\n15. Facilities\n16. Accessibility\n17. Travel tips\n18. Nearby attractions\n19. FAQ — Indonesian\n20. FAQ — English\n21. Sources\n22. Legal photo references\n23. Last verified\n24. Editorial checklist\n\nThe template must remain consistent across all production batches.\n",
+    "meta": {
+      "title": "Canonical Destination Template",
+      "description": "Required section order for every destination."
+    },
+    "toc": []
+  },
+  "/docs/developer/folder-structure": {
+    "content": "\n# Folder Structure\n\n```text\ncontent/\n  docs/\n  destinations/\n    id/\n    en/\n\ncomponents/\n  mdx/\n  destination/\n\nlib/\n  content/\n  seo/\n  schema/\n```\n\nDocumentation and destination content must remain separate.\n",
+    "meta": {
+      "title": "Folder Structure",
+      "description": "Suggested project organization."
+    },
+    "toc": []
+  },
+  "/docs/developer/mdx-integration": {
+    "content": "\n# MDX Integration\n\nRequirements:\n\n- Type-safe frontmatter\n- Central component mapping\n- Consistent heading anchors\n- Table-of-contents generation\n- Search indexing\n- Safe code rendering\n- No raw unsanitized HTML from content\n\nDestination MDX components are implemented in Phase 2.\n",
+    "meta": {
+      "title": "MDX Integration",
+      "description": "Requirements for rendering documentation and destination content."
+    },
+    "toc": []
+  },
+  "/docs/editorial/bilingual-guide": {
+    "content": "\n# Bilingual Guide\n\nIndonesian and English content must preserve the same facts while sounding natural in each language.\n\n## Bahasa Indonesia\n\n- Clear and practical\n- Suitable for domestic travelers\n- Explain unfamiliar terms\n- Avoid stiff translation language\n\n## English\n\n- Natural international travel style\n- Explain local cultural terms\n- Do not mirror Indonesian sentence structure\n- Keep facts and recommendations consistent\n\nDo not translate line by line.\n",
+    "meta": {
+      "title": "Bilingual Guide",
+      "description": "Standards for Bahasa Indonesia and English content."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Bahasa Indonesia",
+        "id": "bahasa-indonesia"
+      },
+      {
+        "level": 2,
+        "title": "English",
+        "id": "english"
+      }
+    ]
+  },
+  "/docs/editorial/fact-check": {
+    "content": "\n# Fact-check Guide\n\n## Minimum Sources\n\n1. Official operator or attraction\n2. Government or official tourism authority\n3. Independent operational source\n\n## Must Be Rechecked Before Publication\n\n- Ticket price\n- Opening hours\n- Access rules\n- Temporary closures\n- Transport schedule\n- Parking\n- Accessibility\n- Facilities\n- Performance schedule\n\nEvery changing value requires a `lastVerified` date.\n",
+    "meta": {
+      "title": "Fact-check Guide",
+      "description": "Verification requirements for destination information."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Minimum Sources",
+        "id": "minimum-sources"
+      },
+      {
+        "level": 2,
+        "title": "Must Be Rechecked Before Publication",
+        "id": "must-be-rechecked-before-publication"
+      }
+    ]
+  },
+  "/docs/editorial/writing-standard": {
+    "content": "\n# Writing Standard\n\nEvery page must help a traveler answer:\n\n- Is this destination worth visiting?\n- Who is it suitable for?\n- How much time is needed?\n- What practical limitations should be expected?\n- What should be combined with it?\n\n## Rules\n\n- Use original wording.\n- Avoid unsupported superlatives.\n- Explain trade-offs.\n- Do not fabricate first-hand experience.\n- Separate stable facts from changing information.\n- Avoid padding content only to increase word count.\n",
+    "meta": {
+      "title": "Writing Standard",
+      "description": "Canonical editorial requirements for destination content."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Rules",
+        "id": "rules"
+      }
+    ]
+  },
+  "/docs/getting-started/introduction": {
+    "content": "\n# Introduction\n\nTravel Advisor Java & Bali is a bilingual destination-content website focused on practical, trustworthy, and maintainable travel guides.\n\nThe project prioritizes content quality over platform complexity.\n\n## Core Principles\n\n- Write for travelers, not for keyword density.\n- Never copy another publication.\n- Never invent operational facts.\n- Use at least three reliable sources.\n- Mark changing information with a verification date.\n- Write Indonesian and English naturally.\n",
+    "meta": {
+      "title": "Introduction",
+      "description": "Purpose and operating principles of the project."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Core Principles",
+        "id": "core-principles"
+      }
+    ]
+  },
+  "/docs/getting-started/roadmap": {
+    "content": "\n# Final Roadmap\n\n## Phase 1 — Documentation Portal\n\nCreate the MDX documentation portal.\n\n## Phase 2 — Component Library\n\nCreate reusable components for destination pages.\n\n## Phase 3 — Golden Reference Batch\n\nCreate five benchmark Bali destinations.\n\n## Phase 4 — Scalable Production\n\nProduce all 161 destinations in consistent batches.\n\n> This roadmap is locked. New phases must not be added without explicit project-owner approval.\n",
+    "meta": {
+      "title": "Final Roadmap",
+      "description": "Locked four-phase project roadmap."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Phase 1 — Documentation Portal",
+        "id": "phase-1-documentation-portal"
+      },
+      {
+        "level": 2,
+        "title": "Phase 2 — Component Library",
+        "id": "phase-2-component-library"
+      },
+      {
+        "level": 2,
+        "title": "Phase 3 — Golden Reference Batch",
+        "id": "phase-3-golden-reference-batch"
+      },
+      {
+        "level": 2,
+        "title": "Phase 4 — Scalable Production",
+        "id": "phase-4-scalable-production"
+      }
+    ]
+  },
+  "/docs/glossary": {
+    "content": "\n# Glossary\n\n## Canonical Destination Template\n\nThe required section order used by every destination page.\n\n## Dynamic Information\n\nInformation likely to change, including tickets, hours, access rules, and facilities.\n\n## Golden Reference Batch\n\nThe five Bali destination pages used as the final quality benchmark.\n\n## Last Verified\n\nThe date on which a changing fact was checked against a reliable source.\n\n## MDX\n\nMarkdown extended with reusable UI components.\n\n## Source of Truth\n\nThe canonical documentation that controls all production decisions.\n",
+    "meta": {
+      "title": "Glossary",
+      "description": "Canonical terms used across the project."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Canonical Destination Template",
+        "id": "canonical-destination-template"
+      },
+      {
+        "level": 2,
+        "title": "Dynamic Information",
+        "id": "dynamic-information"
+      },
+      {
+        "level": 2,
+        "title": "Golden Reference Batch",
+        "id": "golden-reference-batch"
+      },
+      {
+        "level": 2,
+        "title": "Last Verified",
+        "id": "last-verified"
+      },
+      {
+        "level": 2,
+        "title": "MDX",
+        "id": "mdx"
+      },
+      {
+        "level": 2,
+        "title": "Source of Truth",
+        "id": "source-of-truth"
+      }
+    ]
+  },
+  "/docs": {
+    "content": "\n# Travel Advisor Java & Bali Documentation\n\nThis portal defines how destination content is researched, written, reviewed, structured, and published.\n\n## Project Focus\n\n- Bilingual destination content\n- Bali first, Java second\n- Five destinations per production batch\n- One consistent MDX structure\n- Original writing\n- Fact-checked dynamic information\n- SEO-ready publication\n\n## Final Roadmap\n\n1. Documentation Portal\n2. Component Library\n3. Golden Reference Batch\n4. Scalable Production\n\nThe project scope is locked to these four phases.\n",
+    "meta": {
+      "title": "Travel Advisor Documentation",
+      "description": "Single source of truth for the Java & Bali destination content project."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Project Focus",
+        "id": "project-focus"
+      },
+      {
+        "level": 2,
+        "title": "Final Roadmap",
+        "id": "final-roadmap"
+      }
+    ]
+  },
+  "/docs/publishing/checklist": {
+    "content": "\n# Publishing Checklist\n\n## Editorial\n\n- [ ] Original writing\n- [ ] Indonesian reviewed\n- [ ] English reviewed\n- [ ] No unsupported superlatives\n- [ ] No fabricated experience\n\n## Fact-check\n\n- [ ] Minimum three sources\n- [ ] Ticket verified\n- [ ] Opening hours verified\n- [ ] Access rules verified\n- [ ] Facilities reviewed\n- [ ] Accessibility claims reviewed\n- [ ] Last verified added\n\n## SEO\n\n- [ ] Unique title\n- [ ] Unique meta description\n- [ ] Canonical URL\n- [ ] Alternate-language URL\n- [ ] Internal links\n- [ ] Schema validated\n\n## Images\n\n- [ ] Legal source\n- [ ] License recorded\n- [ ] Attribution added if required\n- [ ] Alt text written\n",
+    "meta": {
+      "title": "Publishing Checklist",
+      "description": "Final quality gate before publishing a destination."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Editorial",
+        "id": "editorial"
+      },
+      {
+        "level": 2,
+        "title": "Fact-check",
+        "id": "fact-check"
+      },
+      {
+        "level": 2,
+        "title": "SEO",
+        "id": "seo"
+      },
+      {
+        "level": 2,
+        "title": "Images",
+        "id": "images"
+      }
+    ]
+  },
+  "/docs/seo/internal-linking": {
+    "content": "\n# Internal Linking\n\nEvery destination should include useful links to:\n\n- Nearby destinations\n- Same-area destinations\n- Same-category destinations\n- Suggested next destination\n- Relevant itinerary page when available\n\nLinks must support trip planning, not exist only for SEO.\n",
+    "meta": {
+      "title": "Internal Linking",
+      "description": "Rules for useful destination-to-destination linking."
+    },
+    "toc": []
+  },
+  "/docs/seo/metadata": {
+    "content": "\n# Metadata Standard\n\nEvery destination page requires:\n\n- Unique title\n- Unique meta description\n- Canonical URL\n- Locale\n- Alternate-language URL\n- Open Graph title\n- Open Graph description\n- Open Graph image\n- Last updated\n- Last verified\n\n## Suggested URL Pattern\n\n```text\n/id/bali/tanah-lot\n/en/bali/tanah-lot\n```\n",
+    "meta": {
+      "title": "Metadata Standard",
+      "description": "SEO metadata requirements for every destination page."
+    },
+    "toc": [
+      {
+        "level": 2,
+        "title": "Suggested URL Pattern",
+        "id": "suggested-url-pattern"
+      }
+    ]
+  },
+  "/docs/seo/schema": {
+    "content": "\n# Schema Reference\n\nUse structured data only when it matches visible page content.\n\nRecommended types:\n\n- `TouristAttraction`\n- `Place`\n- `GeoCoordinates`\n- `BreadcrumbList`\n- `FAQPage`\n- `ImageObject`\n\nDo not include hidden FAQ content in `FAQPage`.\n",
+    "meta": {
+      "title": "Schema Reference",
+      "description": "Structured-data requirements for destination pages."
+    },
+    "toc": []
+  }
+}

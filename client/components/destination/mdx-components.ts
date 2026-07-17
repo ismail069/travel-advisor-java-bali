@@ -1,0 +1,38 @@
+import type { MDXComponents } from 'mdx/types';
+import {
+  Accessibility,
+  AvoidIf,
+  BestFor,
+  EditorialNotice,
+  DestinationMap,
+  FAQ,
+  Facilities,
+  Hero,
+  LastVerified,
+  NearbyDestinations,
+  OpeningHours,
+  QuickFacts,
+  SourceList,
+  TicketInformation,
+  TravelAdvisorScore,
+  TravelTips,
+} from '@/components/destination';
+
+export const destinationMdxComponents: MDXComponents = {
+  Hero,
+  QuickFacts,
+  TravelAdvisorScore,
+  BestFor,
+  AvoidIf,
+  TicketInformation,
+  OpeningHours,
+  Facilities,
+  Accessibility,
+  TravelTips,
+  NearbyDestinations,
+  FAQ,
+  SourceList,
+  LastVerified,
+  EditorialNotice,
+  DestinationMap,
+};

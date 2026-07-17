@@ -1,0 +1,103 @@
+---
+title: Destination Component Example
+description: Interactive Phase 2 reference showing every reusable destination MDX component.
+---
+
+<EditorialNotice>
+This is sample content for Phase 2 component integration only.
+</EditorialNotice>
+
+<Hero
+  eyebrow="Bali"
+  title="Example Destination"
+  summary="A short example showing how destination MDX components are composed."
+/>
+
+<QuickFacts
+  items={[
+    { label: "Location", value: "Bali" },
+    { label: "Duration", value: "2 hours" },
+    { label: "Best time", value: "Morning" }
+  ]}
+/>
+
+<TravelAdvisorScore
+  items={[
+    { label: "Scenic beauty", score: 5, explanation: "Strong landscape value." },
+    { label: "Accessibility", score: 3, explanation: "Some uneven paths." }
+  ]}
+/>
+
+<BestFor items={["First-time visitors", "Photographers"]} />
+
+<AvoidIf items={["You require step-free access throughout"]} />
+
+<TicketInformation
+  entries={[
+    { label: "Adult", price: "Needs verification" }
+  ]}
+  lastVerified="2026-07-16"
+/>
+
+<OpeningHours
+  entries={[
+    { dayLabel: "Daily", hours: "Needs verification" }
+  ]}
+  lastVerified="2026-07-16"
+/>
+
+<Facilities
+  items={[
+    { label: "Parking", available: true },
+    { label: "Accessible toilet", available: false, note: "Verify on site." }
+  ]}
+/>
+
+<Accessibility
+  items={[
+    { label: "Step-free entrance", status: "partial" },
+    { label: "Uneven ground", status: "available", note: "Expect mixed surfaces." }
+  ]}
+/>
+
+<TravelTips
+  items={[
+    "Arrive early.",
+    "Bring water.",
+    "Verify operational information before departure."
+  ]}
+/>
+
+<NearbyDestinations
+  items={[
+    {
+      name: "Related Destination",
+      href: "/destinasi",
+      distance: "10 km"
+    }
+  ]}
+/>
+
+<FAQ
+  items={[
+    {
+      question: "How long should I stay?",
+      answer: "Allow around two hours."
+    }
+  ]}
+/>
+
+<SourceList
+  items={[
+    {
+      title: "Official Source",
+      url: "https://example.com",
+      accessedAt: "2026-07-16"
+    }
+  ]}
+/>
+
+<LastVerified
+  date="2026-07-16"
+  note="Recheck ticket prices and opening hours before publishing."
+/>

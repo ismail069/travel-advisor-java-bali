@@ -1,6 +1,19 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { generateWithModelFallback, getGeminiModels } from './geminiService.js';
+import { classifyChatScope, generateWithModelFallback, getGeminiModels } from './geminiService.js';
+
+test('limits chat scope to Java and Bali travel', () => {
+  assert.equal(classifyChatScope('Rekomendasi pantai keluarga di Bali'), 'travel');
+  assert.equal(classifyChatScope('Buat itinerary 3 hari di Yogyakarta'), 'travel');
+  assert.equal(classifyChatScope('Hotel dan restoran di sekitar Tanah Lot'), 'travel');
+  assert.equal(classifyChatScope('Transportasi menuju Ubud dari Denpasar'), 'travel');
+  assert.equal(classifyChatScope('Rumah sakit terdekat dari Tanah Lot'), 'travel');
+  assert.equal(classifyChatScope('Kantor polisi sekitar Ubud'), 'travel');
+  assert.equal(classifyChatScope('Halo'), 'greeting');
+  assert.equal(classifyChatScope('Buatkan kode JavaScript'), 'outside');
+  assert.equal(classifyChatScope('Apa tempat wisata terbaik di Lombok?'), 'outside');
+  assert.equal(classifyChatScope('Siapa presiden Indonesia?'), 'outside');
+});
 
 test('uses configured models in order and removes duplicates', () => {
   assert.deepEqual(

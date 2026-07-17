@@ -7,4 +7,7 @@ node_modules
 server/data
 dist
 .next
+exports/
+*.tsbuildinfo
+.client-dev.*.log
 .DS_Store

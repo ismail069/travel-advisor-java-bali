@@ -127,5 +127,8 @@ export async function getDestinationContext(message) {
     .filter((item) => item.score > 0)
     .sort((a, b) => b.score - a.score || b.destination.rating - a.destination.rating || a.destination.id - b.destination.id);
 
-  return (scoredRows.length ? scoredRows.map((item) => item.destination) : rows).slice(0, 15);
+  // Never supply unrelated rows as AI context. An empty result is meaningful:
+  // the assistant must ask for a Java/Bali destination or preference instead
+  // of grounding an answer on arbitrary database records.
+  return scoredRows.map((item) => item.destination).slice(0, 15);
 }

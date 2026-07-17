@@ -1,0 +1,113 @@
+{
+  "title": "Travel Advisor Documentation",
+  "items": [
+    {
+      "title": "Home",
+      "href": "/docs"
+    },
+    {
+      "title": "Getting Started",
+      "children": [
+        {
+          "title": "Introduction",
+          "href": "/docs/getting-started/introduction"
+        },
+        {
+          "title": "Final Roadmap",
+          "href": "/docs/getting-started/roadmap"
+        }
+      ]
+    },
+    {
+      "title": "Editorial",
+      "children": [
+        {
+          "title": "Writing Standard",
+          "href": "/docs/editorial/writing-standard"
+        },
+        {
+          "title": "Bilingual Guide",
+          "href": "/docs/editorial/bilingual-guide"
+        },
+        {
+          "title": "Fact-check Guide",
+          "href": "/docs/editorial/fact-check"
+        }
+      ]
+    },
+    {
+      "title": "SEO",
+      "children": [
+        {
+          "title": "Metadata",
+          "href": "/docs/seo/metadata"
+        },
+        {
+          "title": "Internal Linking",
+          "href": "/docs/seo/internal-linking"
+        },
+        {
+          "title": "Schema",
+          "href": "/docs/seo/schema"
+        }
+      ]
+    },
+    {
+      "title": "Destination",
+      "children": [
+        {
+          "title": "Canonical Template",
+          "href": "/docs/destination/template"
+        },
+        {
+          "title": "Frontmatter Reference",
+          "href": "/docs/destination/frontmatter"
+        }
+      ]
+    },
+    {
+      "title": "Component Library",
+      "children": [
+        {
+          "title": "Destination Components",
+          "href": "/docs/components/destination-library"
+        }
+      ]
+    },
+    {
+      "title": "AI",
+      "children": [
+        {
+          "title": "Prompt Library",
+          "href": "/docs/ai/prompt-library"
+        }
+      ]
+    },
+    {
+      "title": "Developer",
+      "children": [
+        {
+          "title": "Folder Structure",
+          "href": "/docs/developer/folder-structure"
+        },
+        {
+          "title": "MDX Integration",
+          "href": "/docs/developer/mdx-integration"
+        }
+      ]
+    },
+    {
+      "title": "Publishing",
+      "children": [
+        {
+          "title": "Checklist",
+          "href": "/docs/publishing/checklist"
+        }
+      ]
+    },
+    {
+      "title": "Glossary",
+      "href": "/docs/glossary"
+    }
+  ]
+}

@@ -29,7 +29,17 @@ export async function create(req, res) {
     const destinations = await getDestinationContext(req.body.message).catch(() => []);
     res.status(200).json({
       reply: buildFallbackReply(req.body.language, destinations.slice(0, 3)),
-      recommendedDestinationIds: destinations.slice(0, 3).map((item) => item.id)
+      recommendedDestinationIds: destinations.slice(0, 3).map((item) => item.id),
+      recommendedDestinations: destinations.slice(0, 3).map((item) => ({
+        id: item.id,
+        name: req.body.language === 'en' ? item.name : (item.name_id || item.name),
+        city: item.city,
+        province: item.province,
+        island: item.island,
+        category: req.body.language === 'en' ? item.category_en : item.category_id,
+        description: req.body.language === 'en' ? item.short_description_en : item.short_description_id,
+        imageUrl: item.image_url || null
+      }))
     });
   }
 }

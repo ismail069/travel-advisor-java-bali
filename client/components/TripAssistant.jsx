@@ -1,10 +1,78 @@
 'use client';
 
+import Link from 'next/link';
+import { MapPin } from 'lucide-react';
 import { useState } from 'react';
-const API_URL=(process.env.NEXT_PUBLIC_API_URL||'http://localhost:5000/api').replace(/\/+$/,'');
+import { destinationSlug } from '@/lib/site';
 
-export default function TripAssistant(){
- const [messages,setMessages]=useState([{role:'assistant',content:'Halo! Ceritakan durasi, titik berangkat, budget, jumlah traveler, dan minat perjalananmu di Jawa atau Bali.'}]); const [input,setInput]=useState(''); const [loading,setLoading]=useState(false);
- async function submit(event){event.preventDefault();const message=input.trim();if(!message||loading)return;const next=[...messages,{role:'user',content:message}];setMessages(next);setInput('');setLoading(true);try{const response=await fetch(`${API_URL}/chat`,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message,language:'id',history:next.slice(-8)})});const data=await response.json();if(!response.ok)throw new Error(data.message);setMessages([...next,{role:'assistant',content:data.reply}]);}catch{setMessages([...next,{role:'assistant',content:'Maaf, asisten sedang tidak dapat dihubungi. Coba lagi beberapa saat atau jelajahi halaman destinasi.'}]);}finally{setLoading(false)}}
- return <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl"><div className="max-h-[520px] min-h-[360px] space-y-4 overflow-y-auto p-5 sm:p-7" aria-live="polite">{messages.map((item,index)=><div key={index} className={`flex ${item.role==='user'?'justify-end':'justify-start'}`}><div className={`max-w-[88%] whitespace-pre-wrap rounded-2xl px-4 py-3 text-sm leading-6 ${item.role==='user'?'bg-primary text-white':'bg-slate-100 text-slate-800'}`}>{item.content}</div></div>)}{loading&&<p className="text-sm text-slate-500">TripAssistant sedang menyusun jawaban…</p>}</div><form onSubmit={submit} className="border-t border-slate-200 p-4"><label htmlFor="chat-message" className="sr-only">Pesan untuk TripAssistant</label><div className="flex flex-col gap-3 sm:flex-row"><textarea id="chat-message" value={input} onChange={(e)=>setInput(e.target.value)} maxLength={1000} rows="2" placeholder="Contoh: Liburan keluarga 3 hari di Bali, budget 5 juta…" className="min-h-14 flex-1 resize-none rounded-xl border border-slate-300 px-4 py-3"/><button disabled={loading} className="rounded-xl bg-primary px-6 py-3 font-black text-white disabled:opacity-60">Kirim</button></div></form></div>
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'http://localhost:5000/api').replace(/\/+$/, '');
+const suggestions = ['Hotel dekat Tanah Lot', 'Restoran sekitar Ubud', 'Transportasi ke Borobudur', 'Fasilitas kesehatan dekat destinasi'];
+
+function richLine(text, lineIndex) {
+  const clean = text.replace(/^\s*[-*]\s+/, '');
+  const pattern = /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)|(https?:\/\/[^\s]+)|\*\*([^*]+)\*\*/g;
+  const nodes = [];
+  let cursor = 0;
+  let match;
+  while ((match = pattern.exec(clean))) {
+    if (match.index > cursor) nodes.push(clean.slice(cursor, match.index));
+    if (match[1]) nodes.push(<a key={`${lineIndex}-${match.index}`} href={match[2]} target="_blank" rel="noopener noreferrer" className="font-bold text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">{match[1]}</a>);
+    else if (match[3]) nodes.push(<a key={`${lineIndex}-${match.index}`} href={match[3]} target="_blank" rel="noopener noreferrer" className="font-bold text-primary underline decoration-primary/30 underline-offset-2 hover:decoration-primary">Buka tautan</a>);
+    else nodes.push(<strong key={`${lineIndex}-${match.index}`}>{match[4]}</strong>);
+    cursor = pattern.lastIndex;
+  }
+  if (cursor < clean.length) nodes.push(clean.slice(cursor));
+  return nodes;
+}
+
+function RichMessage({ content }) {
+  return <div className="space-y-2">{content.split('\n').map((line, index) => {
+    if (!line.trim()) return <div key={index} className="h-1" />;
+    const bullet = /^\s*[-*]\s+/.test(line);
+    return <div key={index} className={bullet ? 'flex gap-2' : ''}>{bullet && <span aria-hidden="true">•</span>}<span>{richLine(line, index)}</span></div>;
+  })}</div>;
+}
+
+function RelatedDestinations({ items }) {
+  if (!items?.length) return null;
+  return <section className="mt-4 border-t border-slate-200 pt-4" aria-label="Destinasi terkait">
+    <h3 className="mb-3 text-sm font-black text-slate-950">Destinasi terkait</h3>
+    <div className="grid gap-3 sm:grid-cols-2">{items.map((item) => <Link key={item.id} href={`/destinasi/${destinationSlug({ id: item.id, name: item.name })}`} className="group overflow-hidden rounded-xl border border-slate-200 bg-white transition hover:border-primary hover:shadow-md">
+      {item.imageUrl ? <img src={item.imageUrl} alt={item.name} width="480" height="270" className="aspect-video w-full object-cover" /> : null}
+      <div className="p-3"><p className="font-black text-slate-950 group-hover:text-primary">{item.name}</p><p className="mt-1 flex items-center gap-1 text-xs text-slate-500"><MapPin className="h-3.5 w-3.5" aria-hidden="true" />{item.city}, {item.province}</p><p className="mt-2 line-clamp-2 text-xs leading-5 text-slate-600">{item.description}</p></div>
+    </Link>)}</div>
+  </section>;
+}
+
+export default function TripAssistant() {
+  const [messages, setMessages] = useState([{ role: 'assistant', content: 'Halo! Ceritakan durasi, titik berangkat, budget, jumlah traveler, dan minat perjalananmu di Jawa atau Bali.', recommendations: [] }]);
+  const [input, setInput] = useState('');
+  const [loading, setLoading] = useState(false);
+
+  async function submit(event) {
+    event.preventDefault();
+    const message = input.trim();
+    if (!message || loading) return;
+    const next = [...messages, { role: 'user', content: message, recommendations: [] }];
+    setMessages(next);
+    setInput('');
+    setLoading(true);
+    try {
+      const response = await fetch(`${API_URL}/chat`, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ message, language: 'id', history: next.slice(-8).map(({ role, content }) => ({ role, content })) }) });
+      const data = await response.json();
+      if (!response.ok) throw new Error(data.message);
+      setMessages([...next, { role: 'assistant', content: data.reply, recommendations: data.recommendedDestinations || [] }]);
+    } catch {
+      setMessages([...next, { role: 'assistant', content: 'Maaf, asisten sedang tidak dapat dihubungi. Coba lagi beberapa saat atau jelajahi halaman destinasi.', recommendations: [] }]);
+    } finally {
+      setLoading(false);
+    }
+  }
+
+  return <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl">
+    <div className="border-b border-violet-100 bg-violet-50 px-5 py-3 text-sm text-slate-700 sm:px-7"><strong>Jawaban berbasis database.</strong> TripAssistant hanya membahas perjalanan Jawa dan Bali dari data JawaBali Trip.</div>
+    <div className="flex flex-wrap gap-2 px-5 pt-5 sm:px-7">{suggestions.map((suggestion) => <button key={suggestion} type="button" onClick={() => setInput(suggestion)} className="rounded-full border border-violet-200 bg-white px-3 py-2 text-xs font-bold text-primary hover:bg-violet-50">{suggestion}</button>)}</div>
+    <div className="max-h-[620px] min-h-[360px] space-y-4 overflow-y-auto p-5 sm:p-7" aria-live="polite">{messages.map((item, index) => <div key={index} className={`flex ${item.role === 'user' ? 'justify-end' : 'justify-start'}`}><div className={`max-w-[92%] rounded-2xl px-4 py-3 text-sm leading-6 ${item.role === 'user' ? 'bg-primary text-white' : 'bg-slate-100 text-slate-800 sm:max-w-[88%]'}`}><RichMessage content={item.content} /><RelatedDestinations items={item.recommendations} /></div></div>)}{loading && <p className="text-sm text-slate-500">TripAssistant sedang menyusun jawaban…</p>}</div>
+    <form onSubmit={submit} className="border-t border-slate-200 p-4"><label htmlFor="chat-message" className="sr-only">Pesan untuk TripAssistant</label><div className="flex flex-col gap-3 sm:flex-row"><textarea id="chat-message" value={input} onChange={(event) => setInput(event.target.value)} maxLength={1000} rows="2" placeholder="Contoh: Liburan keluarga 3 hari di Bali, budget 5 juta…" className="min-h-14 flex-1 resize-none rounded-xl border border-slate-300 px-4 py-3" /><button disabled={loading} className="rounded-xl bg-primary px-6 py-3 font-black text-white disabled:opacity-60">Kirim</button></div></form>
+  </div>;
 }

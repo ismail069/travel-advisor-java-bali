@@ -5,17 +5,29 @@
   "type": "module",
   "scripts": {
     "dev": "next dev -H 0.0.0.0 -p 5173",
+    "docs:index": "node ../scripts/build-docs-index.mjs",
+    "golden:index": "node ../scripts/build-golden-reference.mjs",
+    "prebuild": "npm run docs:index && npm run golden:index",
     "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "lint": "eslint . --max-warnings=0",
+    "test": "node --test --experimental-strip-types lib/*.test.ts",
     "start": "next start -p 5173"
   },
   "dependencies": {
+    "@mdx-js/loader": "^3.1.1",
+    "@mdx-js/react": "^3.1.1",
+    "@next/mdx": "^16.2.10",
+    "lucide-react": "^0.468.0",
     "next": "^16.2.10",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
-    "lucide-react": "^0.468.0"
+    "remark-gfm": "^4.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
+    "eslint": "^9.39.5",
+    "eslint-config-next": "^16.2.10",
     "postcss": "^8.5.19",
     "tailwindcss": "^3.4.17"
   },

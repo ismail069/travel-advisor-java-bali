@@ -1,0 +1,42 @@
+[
+  {
+    "slug": "tanah-lot",
+    "checkedAt": "2026-07-16",
+    "status": "partially_verified",
+    "verifiedFacts": ["Domestic adult ticket: IDR 30,000", "Foreign adult ticket: IDR 75,000"],
+    "pendingFacts": ["Opening hours", "Temporary access restrictions"],
+    "source": "https://www.tanahlot.id/page/harga-tiket"
+  },
+  {
+    "slug": "sacred-monkey-forest-ubud",
+    "checkedAt": "2026-07-16",
+    "status": "verified_recheck_before_publish",
+    "verifiedFacts": ["Opening hours: 09:00–18:00", "Adult ticket: IDR 130,000", "Child ticket: IDR 100,000"],
+    "pendingFacts": ["Temporary weather restrictions"],
+    "source": "https://monkeyforestubud.com/visit/"
+  },
+  {
+    "slug": "tirta-empul-temple",
+    "checkedAt": "2026-07-16",
+    "status": "partially_verified",
+    "verifiedFacts": ["Foreign adult ticket: IDR 75,000", "Foreign child ticket: IDR 50,000"],
+    "pendingFacts": ["Opening hours", "Domestic ticket categories", "Pool access rules"],
+    "source": "https://gianyartourismticket.com/en/detail/titra-empul"
+  },
+  {
+    "slug": "uluwatu-temple",
+    "checkedAt": "2026-07-16",
+    "status": "needs_live_verification",
+    "verifiedFacts": [],
+    "pendingFacts": ["Opening hours", "Temple admission", "Kecak schedule and ticket"],
+    "source": null
+  },
+  {
+    "slug": "tegallalang-rice-terrace",
+    "checkedAt": "2026-07-16",
+    "status": "needs_live_verification",
+    "verifiedFacts": [],
+    "pendingFacts": ["Entry arrangements by access point", "Fees or donations", "Operating access"],
+    "source": null
+  }
+]

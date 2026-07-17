@@ -1,4 +1,11 @@
+import enhancements from '@/content/destination-enhancements.json';
+
 const API_URL = (process.env.NEXT_PUBLIC_API_URL || process.env.API_URL || 'http://localhost:5000/api').replace(/\/+$/, '');
+const enhancementMap = new Map(enhancements.map((item) => [item.id, item]));
+
+function applyEnhancement(destination) {
+  return destination ? { ...destination, ...enhancementMap.get(destination.id) } : destination;
+}
 
 async function apiFetch(path, options = {}) {
   const response = await fetch(`${API_URL}${path}`, {
@@ -13,7 +20,7 @@ async function apiFetch(path, options = {}) {
 export async function getDestinations() {
   try {
     const data = await apiFetch('/destinations');
-    return data.destinations || [];
+    return (data.destinations || []).map(applyEnhancement);
   } catch {
     return [];
   }
@@ -22,7 +29,7 @@ export async function getDestinations() {
 export async function getDestination(id) {
   try {
     const data = await apiFetch(`/destinations/${id}`);
-    return data.destination || null;
+    return applyEnhancement(data.destination || null);
   } catch {
     return null;
   }
