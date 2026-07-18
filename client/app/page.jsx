@@ -15,14 +15,14 @@ export default function HomePage() {
   return <><JsonLd data={website} />
     <section className="mx-auto max-w-6xl px-4 pt-8 sm:px-6 sm:pt-12">
       <div className="overflow-hidden rounded-3xl border border-slate-200 bg-white p-6 shadow-sm sm:p-10">
-        <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr] lg:items-center">
-          <div>
+        <div className="grid gap-8 lg:grid-cols-[.9fr_1.1fr]">
+          <div className="flex flex-col justify-center">
             <p className="text-xs font-black uppercase tracking-[.18em] text-primary">Panduan independen Jawa & Bali</p>
             <h1 className="mt-4 text-4xl font-black leading-tight tracking-tight sm:text-6xl">Jelajahi Bali dengan informasi yang lebih jelas.</h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">Panduan destinasi bilingual dengan sumber, tanggal verifikasi, tips akses, keselamatan, dan rencana kunjungan yang transparan.</p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row"><Link href="/id/bali" className="inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-4 font-black text-white">Jelajahi {destinations.length} destinasi <ArrowRight size={18}/></Link><Link href="/en/bali" className="inline-flex items-center justify-center gap-2 rounded-xl border border-slate-300 px-6 py-4 font-black hover:border-primary hover:text-primary"><Languages size={18}/> English guides</Link></div>
           </div>
-          <img src="/images/destinations/phase-4/broken-beach.webp" alt="Broken Beach atau Pasih Uug di Nusa Penida, Bali" width="1200" height="675" className="aspect-video w-full rounded-2xl object-cover" fetchPriority="high"/>
+          <img src="/images/destinations/phase-4/broken-beach.webp" alt="Broken Beach atau Pasih Uug di Nusa Penida, Bali" width="1200" height="675" className="aspect-video lg:aspect-auto h-full w-full rounded-2xl object-cover" fetchPriority="high"/>
         </div>
         <HomeDestinationSearch items={destinations} />
       </div>

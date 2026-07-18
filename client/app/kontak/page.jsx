@@ -1,4 +1,0 @@
-import LegalPage from '@/components/LegalPage';
-import { CONTACT_EMAIL } from '@/lib/site';
-export const metadata={title:'Kontak',description:'Hubungi pengelola JawaBali Trip.',alternates:{canonical:'/kontak'}};
-export default function Page(){return <LegalPage title="Kontak" description="Hubungi kami untuk koreksi informasi, pertanyaan editorial, atau kerja sama."><h2>Email</h2><p><a className="font-bold text-primary" href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a></p><h2>Koreksi informasi</h2><p>Sertakan URL halaman, bagian yang perlu diperbaiki, penjelasan singkat, dan sumber pendukung. Kami akan meninjau masukan sebelum melakukan perubahan.</p><h2>Waktu tanggapan</h2><p>Situs ini dikelola secara personal. Kami berusaha menanggapi pesan yang relevan dalam waktu yang wajar, tetapi tidak menjamin respons langsung.</p></LegalPage>}

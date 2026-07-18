@@ -46,6 +46,15 @@ const imageBySlug = {
   'jimbaran-beach': '/images/destinations/phase-4/jimbaran-beach.webp',
   'tegenungan-waterfall': '/images/destinations/phase-4/tegenungan-waterfall.webp',
   'bali-zoo': '/images/destinations/phase-4/bali-zoo.webp',
+  'sukawati-art-market': '/images/destinations/phase-4/sukawati-art-market.webp',
+  'celuk-village': '/images/destinations/phase-4/celuk-village.webp',
+  'mas-village': '/images/destinations/phase-4/mas-village.webp',
+  'batuan-village': '/images/destinations/phase-4/batuan-village.webp',
+  'batuan-temple': '/images/destinations/phase-4/batuan-temple.webp',
+  'bali-bird-park': '/images/destinations/phase-4/bali-bird-park.webp',
+  'bali-reptile-park': '/images/destinations/phase-4/bali-reptile-park.webp',
+  'kanto-lampo-waterfall': '/images/destinations/phase-4/kanto-lampo-waterfall.webp',
+  'kemenuh-butterfly-park': '/images/destinations/phase-4/kemenuh-butterfly-park.webp',
 };
 const phase4Metadata = {
   'campuhan-ridge-walk': { idTitle: 'Campuhan Ridge Walk: Panduan Jalur Ubud', enTitle: 'Campuhan Ridge Walk: Ubud Trail Guide', idDescription: 'Panduan Campuhan Ridge Walk di Ubud: waktu terbaik, kondisi jalur, akses, fasilitas, dan tips berjalan aman.', enDescription: 'Plan Campuhan Ridge Walk in Ubud with practical guidance on timing, trail conditions, access, facilities, and walking safely.' },
@@ -70,6 +79,15 @@ const phase4Metadata = {
   'arma-museum': { idTitle: 'ARMA Museum Ubud: Panduan Seni dan Budaya', enTitle: 'ARMA Museum Ubud: Art and Culture Guide', idDescription: 'Panduan ARMA Museum mencakup koleksi, taman, jam buka, tiket, pertunjukan, workshop, program budaya, dan aturan foto.', enDescription: 'Explore ARMA Museum’s collections, gardens, hours, tickets, performances, workshops, cultural programs, and photography rules.' },
   'tegenungan-waterfall': { idTitle: 'Air Terjun Tegenungan: Panduan Bali Selatan', enTitle: 'Tegenungan Waterfall: South Bali Guide', idDescription: 'Panduan Air Terjun Tegenungan mencakup tiket, akses tangga, fasilitas, titik foto, dan lokasi dekat Ubud.', enDescription: 'Visit Tegenungan Waterfall with guidance on tickets, stair access, facilities, photo spots, and its location near Ubud.' },
   'bali-zoo': { idTitle: 'Bali Zoo: Panduan Taman Satwa Gianyar', enTitle: 'Bali Zoo: Gianyar Wildlife Park Guide', idDescription: 'Panduan kunjungan ke Bali Zoo mencakup tiket, jam buka, aksesibilitas kursi roda, interaksi satwa, dan lokasi.', enDescription: 'Plan your Bali Zoo visit with guidance on tickets, hours, wheelchair accessibility, animal programs, and location.' },
+  'sukawati-art-market': { idTitle: 'Pasar Seni Sukawati: Panduan Belanja Gianyar', enTitle: 'Sukawati Art Market: Gianyar Shopping Guide', idDescription: 'Panduan berbelanja di Pasar Seni Sukawati mencakup tips menawar harga, jam operasional terbaik, jenis suvenir, dan akses.', enDescription: 'Shop at Sukawati Art Market with practical guidance on haggling tips, best visiting hours, souvenir types, and access.' },
+  'celuk-village': { idTitle: 'Desa Celuk: Pusat Kerajinan Perak Bali', enTitle: 'Celuk Village: Bali Silver Craft Center', idDescription: 'Panduan Desa Celuk mencakup wisata belanja perak, harga workshop perhiasan, jam operasional galeri, dan budaya pengrajin.', enDescription: 'Visit Celuk Village with guidance on silver shopping, jewelry workshop prices, gallery opening hours, and artisan culture.' },
+  'mas-village': { idTitle: 'Desa Mas: Pusat Ukiran Kayu Bali', enTitle: 'Mas Village: Bali Wood Carving Center', idDescription: 'Panduan berkunjung ke Desa Mas mencakup wisata kerajinan kayu, jam operasional bengkel, tips membeli patung, dan akses lokasi.', enDescription: 'Explore Mas Village with guidance on wood carving art, workshop opening hours, tips for buying sculptures, and location access.' },
+  'batuan-village': { idTitle: 'Desa Batuan: Panduan Seni Lukis dan Pura', enTitle: 'Batuan Village: Art and Temple Guide', idDescription: 'Panduan mengunjungi Desa Batuan mencakup galeri seni lukis tradisional, tiket Pura Puseh Batuan, jam buka, dan akses.', enDescription: 'Explore Batuan Village with guidance on traditional painting galleries, Batuan Temple tickets, opening hours, and access.' },
+  'batuan-temple': { idTitle: 'Pura Batuan: Panduan Arsitektur Abad ke-11', enTitle: 'Batuan Temple: 11th Century Architecture Guide', idDescription: 'Panduan mengunjungi Pura Batuan mencakup harga tiket, aturan pakaian (sarung), jam operasional, dan nilai sejarah.', enDescription: 'Visit Batuan Temple with guidance on entrance fees, sarong dress codes, opening hours, and historical significance.' },
+  'bali-bird-park': { idTitle: 'Bali Bird Park: Panduan Taman Burung Gianyar', enTitle: 'Bali Bird Park: Gianyar Wildlife Guide', idDescription: 'Panduan ke Bali Bird Park mencakup harga tiket, jam pertunjukan, interaksi satwa, fasilitas anak, dan akses lokasi.', enDescription: 'Visit Bali Bird Park with guidance on ticket prices, show schedules, animal interactions, family facilities, and access.' },
+  'bali-reptile-park': { idTitle: 'Bali Reptile Park: Panduan Satwa Gianyar', enTitle: 'Bali Reptile Park: Gianyar Wildlife Guide', idDescription: 'Panduan ke Bali Reptile Park mencakup harga tiket, interaksi dengan ular dan komodo, jam buka, dan tips keluarga.', enDescription: 'Visit Bali Reptile Park with guidance on ticket prices, animal encounters, opening hours, and family tips.' },
+  'kanto-lampo-waterfall': { idTitle: 'Air Terjun Kanto Lampo: Panduan Wisata Gianyar', enTitle: 'Kanto Lampo Waterfall: Gianyar Guide', idDescription: 'Panduan Air Terjun Kanto Lampo mencakup tiket masuk, tips foto, pemandu lokal, kondisi air, dan lokasi.', enDescription: 'Visit Kanto Lampo Waterfall with guidance on entrance fees, photo tips, local guides, water conditions, and location.' },
+  'kemenuh-butterfly-park': { idTitle: 'Kemenuh Butterfly Park: Panduan Wisata Edukasi', enTitle: 'Kemenuh Butterfly Park: Educational Guide', idDescription: 'Panduan Kemenuh Butterfly Park mencakup tiket, jam aktif kupu-kupu, fasilitas keluarga, dan akses wisata Gianyar.', enDescription: 'Explore Kemenuh Butterfly Park with guidance on tickets, active hours, family facilities, and Gianyar access.' },
 };
 
 function parseFrontmatter(raw) {

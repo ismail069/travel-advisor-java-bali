@@ -11,7 +11,7 @@ export const metadata = {
   title: { default: 'JawaBali Trip — Panduan Wisata Jawa dan Bali', template: '%s | JawaBali Trip' },
   description: 'Panduan destinasi, itinerary, budget, dan transportasi untuk merencanakan perjalanan di Jawa dan Bali.',
   applicationName: SITE_NAME,
-  authors: [{ name: OWNER_NAME, url: absoluteUrl('/tentang') }],
+  authors: [{ name: OWNER_NAME, url: absoluteUrl('/id/tentang') }],
   creator: OWNER_NAME,
   publisher: SITE_NAME,
   alternates: { canonical: '/' },
@@ -35,7 +35,7 @@ export default function RootLayout({ children }) {
           strategy="afterInteractive"
         />
       </head>
-      <body>
+      <body suppressHydrationWarning>
         <JsonLd data={organization} />
         <a href="#konten" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[100] focus:rounded-lg focus:bg-white focus:p-3">Lewati ke konten</a>
         <Header />

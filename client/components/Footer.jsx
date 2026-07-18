@@ -14,10 +14,14 @@ export default function Footer() {
   const pathname = usePathname();
   const english = pathname === '/en' || pathname.startsWith('/en/');
   const links = english ? [
-    ['/tentang', 'About'], ['/kontak', 'Contact'], ['/kebijakan-privasi', 'Privacy'],
-    ['/kebijakan-cookie', 'Cookies'], ['/ketentuan', 'Terms'], ['/disclaimer', 'Disclaimer'],
-    ['/kebijakan-editorial', 'Editorial Policy'], ['/atribusi-gambar', 'Image Credits']
-  ] : legal;
+    [`/en/tentang`, 'About'], [`/en/kontak`, 'Contact'], [`/en/kebijakan-privasi`, 'Privacy'],
+    [`/en/kebijakan-cookie`, 'Cookies'], [`/en/ketentuan`, 'Terms'], [`/en/disclaimer`, 'Disclaimer'],
+    [`/en/kebijakan-editorial`, 'Editorial Policy'], [`/en/atribusi-gambar`, 'Image Credits']
+  ] : [
+    [`/id/tentang`, 'Tentang'], [`/id/kontak`, 'Kontak'], [`/id/kebijakan-privasi`, 'Privasi'],
+    [`/id/kebijakan-cookie`, 'Cookie'], [`/id/ketentuan`, 'Ketentuan'], [`/id/disclaimer`, 'Disclaimer'],
+    [`/id/kebijakan-editorial`, 'Editorial'], [`/id/atribusi-gambar`, 'Atribusi gambar']
+  ];
   return <footer className="mt-16 border-t border-slate-200 bg-slate-950 text-slate-300">
     <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1.2fr_1fr]">
       <div><p className="text-xl font-black text-white">JawaBali Trip</p><p className="mt-3 max-w-xl text-sm leading-6">{english ? 'Independent travel guides managed by Ismail to help travelers plan clearer trips across Java and Bali.' : 'Panduan perjalanan independen yang dikelola Ismail untuk membantu wisatawan merencanakan perjalanan di Jawa dan Bali secara lebih jelas.'}</p><a href={`mailto:${CONTACT_EMAIL}`} className="mt-4 inline-block text-sm font-bold text-fuchsia-300">{CONTACT_EMAIL}</a></div>

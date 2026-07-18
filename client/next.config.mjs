@@ -11,6 +11,13 @@ const nextConfig = {
   turbopack: { root: projectRoot },
   experimental: {
     optimizePackageImports: ['lucide-react']
+  },
+  async redirects() {
+    return [
+      { source: '/destinasi', destination: '/id/destinasi', permanent: false },
+      { source: '/destinasi/:slug*', destination: '/id/destinasi/:slug*', permanent: false },
+      { source: '/trip-assistant', destination: '/id/trip-assistant', permanent: false }
+    ];
   }
 };
 

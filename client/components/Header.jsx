@@ -8,11 +8,11 @@ import { usePathname } from 'next/navigation';
 const navigation = {
   id: {
     tagline: 'Panduan perjalanan Jawa dan Bali', homeLabel: 'JawaBali Trip - Beranda', navLabel: 'Navigasi utama', mobileLabel: 'Navigasi mobile', open: 'Buka menu', close: 'Tutup menu',
-    links: [['/', 'Beranda'], ['/destinasi?pulau=Java', 'Panduan Jawa'], ['/id/bali', 'Panduan Bali'], ['/docs', 'Dokumentasi'], ['/trip-assistant', 'TripAssistant AI']]
+    links: [['/', 'Beranda'], ['/id/destinasi?pulau=Java', 'Panduan Jawa'], ['/id/bali', 'Panduan Bali'], ['/docs', 'Dokumentasi'], ['/id/trip-assistant', 'TripAssistant AI']]
   },
   en: {
     tagline: 'Independent Java and Bali travel guides', homeLabel: 'JawaBali Trip - Home', navLabel: 'Main navigation', mobileLabel: 'Mobile navigation', open: 'Open menu', close: 'Close menu',
-    links: [['/en', 'Home'], ['/destinasi?pulau=Java', 'Java Guides'], ['/en/bali', 'Bali Guides'], ['/docs', 'Docs'], ['/trip-assistant', 'TripAssistant']]
+    links: [['/en', 'Home'], ['/en/destinasi?pulau=Java', 'Java Guides'], ['/en/bali', 'Bali Guides'], ['/docs', 'Docs'], ['/en/trip-assistant', 'TripAssistant']]
   }
 };
 
