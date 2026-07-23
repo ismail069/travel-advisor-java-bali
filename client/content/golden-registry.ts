@@ -46,44 +46,68 @@ import Page44 from './destinations/id/bali/kanto-lampo-waterfall.mdx';
 import Page45 from './destinations/en/bali/kanto-lampo-waterfall.mdx';
 import Page46 from './destinations/id/bali/kemenuh-butterfly-park.mdx';
 import Page47 from './destinations/en/bali/kemenuh-butterfly-park.mdx';
-import Page48 from './destinations/id/bali/lovina-beach.mdx';
-import Page49 from './destinations/en/bali/lovina-beach.mdx';
-import Page50 from './destinations/id/bali/munduk.mdx';
-import Page51 from './destinations/en/bali/munduk.mdx';
-import Page52 from './destinations/id/bali/kelingking-beach.mdx';
-import Page53 from './destinations/en/bali/kelingking-beach.mdx';
-import Page54 from './destinations/id/bali/broken-beach.mdx';
-import Page55 from './destinations/en/bali/broken-beach.mdx';
-import Page56 from './destinations/id/bali/angels-billabong.mdx';
-import Page57 from './destinations/en/bali/angels-billabong.mdx';
-import Page58 from './destinations/id/bali/bali-botanic-garden.mdx';
-import Page59 from './destinations/en/bali/bali-botanic-garden.mdx';
-import Page60 from './destinations/id/bali/handara-gate.mdx';
-import Page61 from './destinations/en/bali/handara-gate.mdx';
-import Page62 from './destinations/id/bali/banyumala-twin-waterfalls.mdx';
-import Page63 from './destinations/en/bali/banyumala-twin-waterfalls.mdx';
-import Page64 from './destinations/id/bali/banjar-hot-springs.mdx';
-import Page65 from './destinations/en/bali/banjar-hot-springs.mdx';
-import Page66 from './destinations/id/bali/brahmavihara-arama.mdx';
-import Page67 from './destinations/en/bali/brahmavihara-arama.mdx';
-import Page68 from './destinations/id/bali/ubud-palace.mdx';
-import Page69 from './destinations/en/bali/ubud-palace.mdx';
-import Page70 from './destinations/id/bali/ubud-art-market.mdx';
-import Page71 from './destinations/en/bali/ubud-art-market.mdx';
-import Page72 from './destinations/id/bali/museum-puri-lukisan.mdx';
-import Page73 from './destinations/en/bali/museum-puri-lukisan.mdx';
-import Page74 from './destinations/id/bali/arma-museum.mdx';
-import Page75 from './destinations/en/bali/arma-museum.mdx';
-import Page76 from './destinations/id/bali/nusa-dua-beach.mdx';
-import Page77 from './destinations/en/bali/nusa-dua-beach.mdx';
-import Page78 from './destinations/id/bali/water-blow-nusa-dua.mdx';
-import Page79 from './destinations/en/bali/water-blow-nusa-dua.mdx';
-import Page80 from './destinations/id/bali/garuda-wisnu-kencana.mdx';
-import Page81 from './destinations/en/bali/garuda-wisnu-kencana.mdx';
-import Page82 from './destinations/id/bali/jimbaran-beach.mdx';
-import Page83 from './destinations/en/bali/jimbaran-beach.mdx';
-import Page84 from './destinations/id/bali/samasta-lifestyle-village.mdx';
-import Page85 from './destinations/en/bali/samasta-lifestyle-village.mdx';
+import Page48 from './destinations/id/bali/penglipuran-village.mdx';
+import Page49 from './destinations/en/bali/penglipuran-village.mdx';
+import Page50 from './destinations/id/bali/kehen-temple.mdx';
+import Page51 from './destinations/en/bali/kehen-temple.mdx';
+import Page52 from './destinations/id/bali/besakih-temple.mdx';
+import Page53 from './destinations/en/bali/besakih-temple.mdx';
+import Page54 from './destinations/id/bali/tirta-gangga.mdx';
+import Page55 from './destinations/en/bali/tirta-gangga.mdx';
+import Page56 from './destinations/id/bali/virgin-beach.mdx';
+import Page57 from './destinations/en/bali/virgin-beach.mdx';
+import Page58 from './destinations/id/bali/lempuyang-temple.mdx';
+import Page59 from './destinations/en/bali/lempuyang-temple.mdx';
+import Page60 from './destinations/id/bali/taman-ujung.mdx';
+import Page61 from './destinations/en/bali/taman-ujung.mdx';
+import Page62 from './destinations/id/bali/amed.mdx';
+import Page63 from './destinations/en/bali/amed.mdx';
+import Page64 from './destinations/id/bali/candidasa.mdx';
+import Page65 from './destinations/en/bali/candidasa.mdx';
+import Page66 from './destinations/id/bali/mount-agung.mdx';
+import Page67 from './destinations/en/bali/mount-agung.mdx';
+import Page68 from './destinations/id/bali/tulamben.mdx';
+import Page69 from './destinations/en/bali/tulamben.mdx';
+import Page70 from './destinations/id/bali/sidemen.mdx';
+import Page71 from './destinations/en/bali/sidemen.mdx';
+import Page72 from './destinations/id/bali/lovina-beach.mdx';
+import Page73 from './destinations/en/bali/lovina-beach.mdx';
+import Page74 from './destinations/id/bali/munduk.mdx';
+import Page75 from './destinations/en/bali/munduk.mdx';
+import Page76 from './destinations/id/bali/kelingking-beach.mdx';
+import Page77 from './destinations/en/bali/kelingking-beach.mdx';
+import Page78 from './destinations/id/bali/broken-beach.mdx';
+import Page79 from './destinations/en/bali/broken-beach.mdx';
+import Page80 from './destinations/id/bali/angels-billabong.mdx';
+import Page81 from './destinations/en/bali/angels-billabong.mdx';
+import Page82 from './destinations/id/bali/bali-botanic-garden.mdx';
+import Page83 from './destinations/en/bali/bali-botanic-garden.mdx';
+import Page84 from './destinations/id/bali/handara-gate.mdx';
+import Page85 from './destinations/en/bali/handara-gate.mdx';
+import Page86 from './destinations/id/bali/banyumala-twin-waterfalls.mdx';
+import Page87 from './destinations/en/bali/banyumala-twin-waterfalls.mdx';
+import Page88 from './destinations/id/bali/banjar-hot-springs.mdx';
+import Page89 from './destinations/en/bali/banjar-hot-springs.mdx';
+import Page90 from './destinations/id/bali/brahmavihara-arama.mdx';
+import Page91 from './destinations/en/bali/brahmavihara-arama.mdx';
+import Page92 from './destinations/id/bali/ubud-palace.mdx';
+import Page93 from './destinations/en/bali/ubud-palace.mdx';
+import Page94 from './destinations/id/bali/ubud-art-market.mdx';
+import Page95 from './destinations/en/bali/ubud-art-market.mdx';
+import Page96 from './destinations/id/bali/museum-puri-lukisan.mdx';
+import Page97 from './destinations/en/bali/museum-puri-lukisan.mdx';
+import Page98 from './destinations/id/bali/arma-museum.mdx';
+import Page99 from './destinations/en/bali/arma-museum.mdx';
+import Page100 from './destinations/id/bali/nusa-dua-beach.mdx';
+import Page101 from './destinations/en/bali/nusa-dua-beach.mdx';
+import Page102 from './destinations/id/bali/water-blow-nusa-dua.mdx';
+import Page103 from './destinations/en/bali/water-blow-nusa-dua.mdx';
+import Page104 from './destinations/id/bali/garuda-wisnu-kencana.mdx';
+import Page105 from './destinations/en/bali/garuda-wisnu-kencana.mdx';
+import Page106 from './destinations/id/bali/jimbaran-beach.mdx';
+import Page107 from './destinations/en/bali/jimbaran-beach.mdx';
+import Page108 from './destinations/id/bali/samasta-lifestyle-village.mdx';
+import Page109 from './destinations/en/bali/samasta-lifestyle-village.mdx';
 
 import type { ComponentType } from 'react';
 export const goldenRegistry: Record<string, ComponentType> = {
@@ -135,42 +159,66 @@ export const goldenRegistry: Record<string, ComponentType> = {
   'en/kanto-lampo-waterfall': Page45,
   'id/kemenuh-butterfly-park': Page46,
   'en/kemenuh-butterfly-park': Page47,
-  'id/lovina-beach': Page48,
-  'en/lovina-beach': Page49,
-  'id/munduk': Page50,
-  'en/munduk': Page51,
-  'id/kelingking-beach': Page52,
-  'en/kelingking-beach': Page53,
-  'id/broken-beach': Page54,
-  'en/broken-beach': Page55,
-  'id/angels-billabong': Page56,
-  'en/angels-billabong': Page57,
-  'id/bali-botanic-garden': Page58,
-  'en/bali-botanic-garden': Page59,
-  'id/handara-gate': Page60,
-  'en/handara-gate': Page61,
-  'id/banyumala-twin-waterfalls': Page62,
-  'en/banyumala-twin-waterfalls': Page63,
-  'id/banjar-hot-springs': Page64,
-  'en/banjar-hot-springs': Page65,
-  'id/brahmavihara-arama': Page66,
-  'en/brahmavihara-arama': Page67,
-  'id/ubud-palace': Page68,
-  'en/ubud-palace': Page69,
-  'id/ubud-art-market': Page70,
-  'en/ubud-art-market': Page71,
-  'id/museum-puri-lukisan': Page72,
-  'en/museum-puri-lukisan': Page73,
-  'id/arma-museum': Page74,
-  'en/arma-museum': Page75,
-  'id/nusa-dua-beach': Page76,
-  'en/nusa-dua-beach': Page77,
-  'id/water-blow-nusa-dua': Page78,
-  'en/water-blow-nusa-dua': Page79,
-  'id/garuda-wisnu-kencana': Page80,
-  'en/garuda-wisnu-kencana': Page81,
-  'id/jimbaran-beach': Page82,
-  'en/jimbaran-beach': Page83,
-  'id/samasta-lifestyle-village': Page84,
-  'en/samasta-lifestyle-village': Page85,
+  'id/penglipuran-village': Page48,
+  'en/penglipuran-village': Page49,
+  'id/kehen-temple': Page50,
+  'en/kehen-temple': Page51,
+  'id/besakih-temple': Page52,
+  'en/besakih-temple': Page53,
+  'id/tirta-gangga': Page54,
+  'en/tirta-gangga': Page55,
+  'id/virgin-beach': Page56,
+  'en/virgin-beach': Page57,
+  'id/lempuyang-temple': Page58,
+  'en/lempuyang-temple': Page59,
+  'id/taman-ujung': Page60,
+  'en/taman-ujung': Page61,
+  'id/amed': Page62,
+  'en/amed': Page63,
+  'id/candidasa': Page64,
+  'en/candidasa': Page65,
+  'id/mount-agung': Page66,
+  'en/mount-agung': Page67,
+  'id/tulamben': Page68,
+  'en/tulamben': Page69,
+  'id/sidemen': Page70,
+  'en/sidemen': Page71,
+  'id/lovina-beach': Page72,
+  'en/lovina-beach': Page73,
+  'id/munduk': Page74,
+  'en/munduk': Page75,
+  'id/kelingking-beach': Page76,
+  'en/kelingking-beach': Page77,
+  'id/broken-beach': Page78,
+  'en/broken-beach': Page79,
+  'id/angels-billabong': Page80,
+  'en/angels-billabong': Page81,
+  'id/bali-botanic-garden': Page82,
+  'en/bali-botanic-garden': Page83,
+  'id/handara-gate': Page84,
+  'en/handara-gate': Page85,
+  'id/banyumala-twin-waterfalls': Page86,
+  'en/banyumala-twin-waterfalls': Page87,
+  'id/banjar-hot-springs': Page88,
+  'en/banjar-hot-springs': Page89,
+  'id/brahmavihara-arama': Page90,
+  'en/brahmavihara-arama': Page91,
+  'id/ubud-palace': Page92,
+  'en/ubud-palace': Page93,
+  'id/ubud-art-market': Page94,
+  'en/ubud-art-market': Page95,
+  'id/museum-puri-lukisan': Page96,
+  'en/museum-puri-lukisan': Page97,
+  'id/arma-museum': Page98,
+  'en/arma-museum': Page99,
+  'id/nusa-dua-beach': Page100,
+  'en/nusa-dua-beach': Page101,
+  'id/water-blow-nusa-dua': Page102,
+  'en/water-blow-nusa-dua': Page103,
+  'id/garuda-wisnu-kencana': Page104,
+  'en/garuda-wisnu-kencana': Page105,
+  'id/jimbaran-beach': Page106,
+  'en/jimbaran-beach': Page107,
+  'id/samasta-lifestyle-village': Page108,
+  'en/samasta-lifestyle-village': Page109,
 };

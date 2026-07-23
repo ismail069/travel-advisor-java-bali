@@ -699,7 +699,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/sukawati-art-market.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah saya harus menawar harga?",
+        "answer": "Ya, menawar adalah bagian dari budaya berbelanja di sini. Tawar dengan sopan dan tersenyum, biasanya Anda bisa mendapatkan harga 30-50% lebih murah dari penawaran pertama."
+      },
+      {
+        "question": "Apakah ada fasilitas ATM di sekitar pasar?",
+        "answer": "Terdapat beberapa mesin ATM di sekitar pasar, namun sangat disarankan untuk membawa uang tunai secukupnya sebelum masuk ke area pasar untuk memudahkan transaksi."
+      },
+      {
+        "question": "Kapan pasar ini paling sepi?",
+        "answer": "Pasar cenderung lebih sepi di pagi hari saat baru buka (sekitar pukul 06:00 - 08:00) dan menjelang tutup di sore hari."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -713,7 +726,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/sukawati-art-market.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Do I have to haggle?",
+        "answer": "Yes, haggling is expected and part of the local shopping culture. Bargain politely and with a smile; you can often secure items for 30-50% less than the initial asking price."
+      },
+      {
+        "question": "Are there ATMs nearby?",
+        "answer": "There are ATMs in the vicinity, but it is highly recommended to bring enough small-denomination cash with you into the market to make transactions smoother."
+      },
+      {
+        "question": "When is the market least crowded?",
+        "answer": "The market is generally least crowded right after opening in the early morning (around 06:00 - 08:00) and just before closing."
+      }
+    ]
   },
   {
     "locale": "id",
@@ -727,7 +753,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/celuk-village.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah tiket masuk ke Desa Celuk berbayar?",
+        "answer": "Tidak, masuk ke area desa dan galeri-galeri sepenuhnya gratis. Anda hanya membayar jika membeli perhiasan atau mengikuti kelas membuat perak."
+      },
+      {
+        "question": "Apakah saya bisa menawar harga perhiasan?",
+        "answer": "Ya, tawar-menawar adalah praktik umum, terutama di toko dan bengkel keluarga kecil. Beberapa galeri besar yang melayani tur rombongan mungkin memiliki harga pas, namun Anda selalu bisa mencoba meminta diskon."
+      },
+      {
+        "question": "Berapa lama waktu untuk mengikuti kelas membuat perak?",
+        "answer": "Biasanya memakan waktu antara 2 hingga 3 jam, dari mendesain hingga memoles perhiasan jadi."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -741,7 +780,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/celuk-village.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Is there an entrance fee to Celuk Village?",
+        "answer": "No, entering the village and browsing the galleries is completely free. You only pay for your purchases or if you decide to take a jewelry-making class."
+      },
+      {
+        "question": "Can I haggle the jewelry prices?",
+        "answer": "Yes, haggling is common practice, especially in smaller family workshops. Larger tour-bus galleries might have fixed prices, but asking for a discount is always acceptable."
+      },
+      {
+        "question": "How long does a silver making class take?",
+        "answer": "It typically takes 2 to 3 hours from designing to polishing your finished piece of jewelry."
+      }
+    ]
   },
   {
     "locale": "id",
@@ -755,7 +807,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/mas-village.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah saya harus membayar untuk melihat orang mengukir?",
+        "answer": "Tidak, melihat para pengrajin bekerja adalah gratis. Anda hanya diharapkan bersikap sopan, dan tentu saja mereka akan senang jika Anda tertarik untuk melihat-lihat atau membeli karya mereka di galeri."
+      },
+      {
+        "question": "Apakah pengiriman ke luar negeri (shipping) tersedia?",
+        "answer": "Ya, sebagian besar galeri besar di Desa Mas sudah terbiasa mengirimkan patung kayu besar atau furnitur ke berbagai negara dan akan membantu mengatur pengirimannya."
+      },
+      {
+        "question": "Bagaimana cara membedakan kayu yang bagus?",
+        "answer": "Pengrajin biasanya akan menjelaskan jenis kayu kepada Anda. Kayu eboni (hitam) dan mahoni sangat berat dan keras, sedangkan kayu buaya atau suar memiliki warna dan serat yang unik."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -769,7 +834,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/mas-village.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Do I have to pay to watch the carvers?",
+        "answer": "No, watching the artisans at work is completely free. You are only expected to be respectful, though they naturally appreciate it if you browse or purchase from their gallery."
+      },
+      {
+        "question": "Is international shipping available for large items?",
+        "answer": "Yes, most of the larger galleries in Mas Village are very accustomed to shipping large sculptures and furniture internationally and will arrange the freight for you."
+      },
+      {
+        "question": "How can I tell the quality of the wood?",
+        "answer": "The artisans will usually explain the wood types to you. Ebony (black) and mahogany are very heavy and dense, while crocodile wood or suar wood have unique colors and grain patterns."
+      }
+    ]
   },
   {
     "locale": "id",
@@ -783,7 +861,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/batuan-village.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah saya harus membeli lukisan jika mengunjungi galeri seniman?",
+        "answer": "Tidak, Anda tidak diwajibkan membeli. Seniman biasanya senang memperlihatkan karya dan teknik mereka, namun memberi tip kecil atau donasi jika Anda tidak membeli sangat dihargai."
+      },
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk berkeliling di Pura Batuan?",
+        "answer": "Sekitar 30 hingga 45 menit sudah cukup untuk mengagumi arsitektur pura dan berfoto."
+      },
+      {
+        "question": "Apakah saya harus membawa sarung sendiri?",
+        "answer": "Untuk Pura Batuan, peminjaman sarung biasanya sudah termasuk dalam harga tiket masuk. Namun, membawa sarung sendiri juga diperbolehkan."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -797,7 +888,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/batuan-village.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Am I obligated to buy a painting if I visit an artist's home?",
+        "answer": "No, there is no obligation to purchase. Artists are usually proud to show their techniques, though leaving a small tip or donation if you don't buy anything is highly appreciated."
+      },
+      {
+        "question": "How long does it take to explore Batuan Temple?",
+        "answer": "Around 30 to 45 minutes is generally sufficient to admire the architecture and take photos."
+      },
+      {
+        "question": "Do I need to bring my own sarong?",
+        "answer": "For Batuan Temple, the use of a sarong is usually included in your entrance ticket. However, you are welcome to wear your own if you have one."
+      }
+    ]
   },
   {
     "locale": "id",
@@ -811,7 +915,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/batuan-temple.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah saya harus membawa sarung sendiri?",
+        "answer": "Tidak wajib. Anda akan dipinjamkan sarung beserta selendang (senteng) di loket tiket yang biayanya sudah termasuk dalam harga tiket masuk."
+      },
+      {
+        "question": "Bolehkah saya masuk saat sedang menstruasi?",
+        "answer": "Sesuai dengan aturan adat dan agama Hindu di Bali, wanita yang sedang menstruasi tidak diperkenankan memasuki area suci pura."
+      },
+      {
+        "question": "Apakah tempat ini ramai?",
+        "answer": "Ya, pura ini adalah destinasi yang cukup populer. Menjelang siang, pura ini sering dikunjungi oleh banyak rombongan tur. Datanglah lebih pagi untuk suasana yang lebih tenang."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -825,7 +942,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/batuan-temple.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Do I need to bring my own sarong?",
+        "answer": "No, it's not mandatory. You will be provided with a sarong and a sash at the ticket counter, the cost of which is included in your entrance fee."
+      },
+      {
+        "question": "Can I enter the temple if I am menstruating?",
+        "answer": "No. According to Balinese Hindu customs and religious rules, women who are menstruating are strictly forbidden from entering sacred temple grounds."
+      },
+      {
+        "question": "Does the temple get crowded?",
+        "answer": "Yes, it is a very popular destination. By mid-day, it often sees a high volume of tour groups. Arrive early in the morning for a more peaceful experience."
+      }
+    ]
   },
   {
     "locale": "id",
@@ -839,7 +969,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/bali-bird-park.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah harga tiket sudah termasuk menonton pertunjukan burung?",
+        "answer": "Ya, tiket masuk Anda sudah termasuk akses ke semua pertunjukan satwa, sesi memberi makan, dan bioskop 4D di dalam taman."
+      },
+      {
+        "question": "Berapa lama waktu yang ideal untuk dihabiskan di sini?",
+        "answer": "Sebagian besar pengunjung menghabiskan waktu sekitar 2 hingga 4 jam, terutama jika ingin menonton beberapa pertunjukan dan makan siang di restoran."
+      },
+      {
+        "question": "Bolehkah saya memberi makan burung secara mandiri?",
+        "answer": "Tidak. Anda hanya diperbolehkan memberi makan burung pada sesi yang telah ditentukan dan menggunakan makanan yang disediakan oleh staf demi kesehatan burung."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -853,7 +996,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/bali-bird-park.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Are the bird shows included in the ticket price?",
+        "answer": "Yes, your entrance ticket includes access to all animal shows, scheduled feeding sessions, and the 4D cinema within the park."
+      },
+      {
+        "question": "How much time should I plan to spend here?",
+        "answer": "Most visitors spend about 2 to 4 hours at the park, especially if they plan to watch several shows and have lunch at the restaurant."
+      },
+      {
+        "question": "Can I feed the birds on my own?",
+        "answer": "No. For the health and safety of the birds, you may only feed them during designated sessions using the food provided by the park staff."
+      }
+    ]
   },
   {
     "locale": "id",
@@ -867,7 +1023,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/bali-reptile-park.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah aman membawa balita ke taman ini?",
+        "answer": "Sangat aman. Semua kandang dirancang dengan standar keamanan yang ketat. Selama anak-anak selalu dalam pengawasan dan tidak memasukkan jari ke dalam kandang, mereka bisa belajar banyak tentang reptil dengan aman."
+      },
+      {
+        "question": "Apakah saya harus membayar ekstra untuk berfoto dengan ular?",
+        "answer": "Sesi foto menggunakan kamera atau *smartphone* Anda sendiri dengan reptil yang jinak biasanya sudah termasuk (gratis), namun staf selalu menghargai jika Anda memberikan tip sukarela."
+      },
+      {
+        "question": "Apakah tempat ini menyatu dengan Bali Bird Park?",
+        "answer": "Lokasinya bersebelahan dan sering dikelola bersama, namun mereka adalah dua area yang terpisah. Anda bisa membeli tiket khusus Reptile Park saja, atau tiket terusan untuk keduanya."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -881,7 +1050,20 @@
     "lastUpdated": "2026-07-17",
     "lastVerified": "2026-07-17",
     "image": "/images/destinations/phase-4/bali-reptile-park.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Is it safe to bring toddlers to this park?",
+        "answer": "Yes, it is very safe. All enclosures are built to strict safety standards. As long as children are supervised and do not poke their fingers into cages, it's a great educational environment."
+      },
+      {
+        "question": "Do I have to pay extra to take photos holding a snake?",
+        "answer": "Taking photos with your own camera or smartphone with the docile reptiles is usually included (free of charge), though tipping the keeper is always appreciated."
+      },
+      {
+        "question": "Is this park the same as Bali Bird Park?",
+        "answer": "They are located right next to each other and often co-managed, but they are separate parks. You can buy a ticket just for the Reptile Park or a combo ticket for both."
+      }
+    ]
   },
   {
     "locale": "id",
@@ -895,7 +1077,20 @@
     "lastUpdated": "2026-07-18",
     "lastVerified": "2026-07-18",
     "image": "/images/destinations/phase-4/kanto-lampo-waterfall.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah aman untuk berenang di air terjun ini?",
+        "answer": "Ini bukan air terjun yang ideal untuk 'berenang' karena airnya dangkal dan berbatu. Aktivitas utama di sini adalah berendam dan berfoto."
+      },
+      {
+        "question": "Apakah saya harus menyewa pemandu (guide)?",
+        "answer": "Tidak wajib. Namun, pemandu lokal yang berjaga di air terjun sangat membantu untuk mengambil foto dan menjaga barang Anda tetap kering. Memberi mereka tip sangat disarankan."
+      },
+      {
+        "question": "Bagaimana kondisi air terjun saat musim hujan?",
+        "answer": "Saat hujan lebat berhari-hari, debit air bisa menjadi sangat deras dan keruh (berwarna cokelat pekat), dan batu-batuan menjadi sangat berbahaya. Sebaiknya hindari kunjungan saat hujan lebat."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -909,7 +1104,20 @@
     "lastUpdated": "2026-07-18",
     "lastVerified": "2026-07-18",
     "image": "/images/destinations/phase-4/kanto-lampo-waterfall.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Is it safe to swim at this waterfall?",
+        "answer": "This isn't an ideal waterfall for 'swimming' as the pool is shallow and very rocky. The main activity here is wading and taking photos against the cascade."
+      },
+      {
+        "question": "Do I have to hire a guide?",
+        "answer": "It is not mandatory. However, the local guides stationed in the water are extremely helpful for taking your photos and keeping your electronics dry. Tipping them is highly recommended."
+      },
+      {
+        "question": "What is the waterfall like during the rainy season?",
+        "answer": "After heavy rains, the water volume increases dramatically and turns muddy brown, making the slippery rocks even more dangerous. It is best avoided immediately following severe downpours."
+      }
+    ]
   },
   {
     "locale": "id",
@@ -923,7 +1131,20 @@
     "lastUpdated": "2026-07-18",
     "lastVerified": "2026-07-18",
     "image": "/images/destinations/phase-4/kemenuh-butterfly-park.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Apakah tempat ini ber-AC?",
+        "answer": "Area taman utama berada di luar ruangan dengan atap jaring agar kupu-kupu mendapat sinar matahari alami. Namun, restoran memiliki area tempat duduk ber-AC."
+      },
+      {
+        "question": "Bolehkah saya menangkap kupu-kupu?",
+        "answer": "Tidak boleh ditangkap dengan paksa, tetapi jika Anda mengulurkan tangan berlahan atau diam, kupu-kupu sering kali akan hinggap dengan sendirinya."
+      },
+      {
+        "question": "Berapa lama waktu yang ideal di sini?",
+        "answer": "Anda bisa mengelilingi taman dalam waktu 30-45 menit, tetapi dengan istirahat, berfoto, dan bersantai di restoran, sediakan waktu 1 hingga 2 jam."
+      }
+    ]
   },
   {
     "locale": "en",
@@ -937,7 +1158,572 @@
     "lastUpdated": "2026-07-18",
     "lastVerified": "2026-07-18",
     "image": "/images/destinations/phase-4/kemenuh-butterfly-park.webp",
-    "faq": []
+    "faq": [
+      {
+        "question": "Is the park air-conditioned?",
+        "answer": "The main garden area is outdoors with a netted roof to allow natural sunlight for the butterflies. However, the restaurant offers air-conditioned seating."
+      },
+      {
+        "question": "Am I allowed to catch the butterflies?",
+        "answer": "You must not grab or catch them by force as their wings are fragile. However, if you stand still or gently extend a finger, they will often land on you voluntarily."
+      },
+      {
+        "question": "How much time should I spend here?",
+        "answer": "You can walk through the garden in 30-45 minutes, but with taking photos, viewing the pupa room, and relaxing at the restaurant, 1 to 2 hours is ideal."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "penglipuran-village",
+    "name": "Penglipuran Village",
+    "province": "Bali",
+    "regency": "Bangli",
+    "category": "Traditional Village",
+    "metaTitle": "Desa Penglipuran: Panduan Wisata Tradisional Bangli",
+    "metaDescription": "Panduan berkunjung ke Desa Penglipuran mencakup harga tiket, jam buka, aturan adat, dan fasilitas wisata di Bangli.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/penglipuran-village.webp",
+    "faq": [
+      {
+        "question": "Apakah saya boleh masuk ke dalam rumah warga?",
+        "answer": "Ya, warga Penglipuran sangat ramah dan sering membiarkan gerbang rumah mereka terbuka agar wisatawan dapat masuk ke pekarangan (natah) untuk melihat-lihat, namun pastikan untuk tetap sopan dan meminta izin."
+      },
+      {
+        "question": "Apa suvenir khas yang bisa dibeli di sini?",
+        "answer": "Banyak warga menjual kerajinan anyaman bambu, ukiran kayu, serta minuman herbal tradisional khas Bangli yang disebut Loloh Cemcem."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "penglipuran-village",
+    "name": "Penglipuran Village",
+    "province": "Bali",
+    "regency": "Bangli",
+    "category": "Traditional Village",
+    "metaTitle": "Penglipuran Village: Traditional Bangli Guide",
+    "metaDescription": "Visit Penglipuran Village with guidance on entrance fees, opening hours, traditional rules, and facilities in Bangli.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/penglipuran-village.webp",
+    "faq": [
+      {
+        "question": "Am I allowed to enter the locals' houses?",
+        "answer": "Yes, the residents are very welcoming and often leave their gates open for tourists to enter the courtyard (natah) and observe the layout. However, always be respectful and ask for permission."
+      },
+      {
+        "question": "What are typical souvenirs to buy here?",
+        "answer": "Locals sell bamboo woven crafts, wood carvings, and a traditional herbal drink unique to Bangli called Loloh Cemcem."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "kehen-temple",
+    "name": "Kehen Temple",
+    "province": "Bali",
+    "regency": "Bangli",
+    "category": "Hindu Temple",
+    "metaTitle": "Pura Kehen: Panduan Wisata Sejarah Bangli",
+    "metaDescription": "Panduan mengunjungi Pura Kehen mencakup harga tiket, aturan pakaian (sarung), jam buka, dan nilai sejarah di Bangli.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/kehen-temple.webp",
+    "faq": [
+      {
+        "question": "Apakah saya wajib memakai sarung?",
+        "answer": "Ya, seperti semua pura Hindu di Bali, mengenakan kain sarung dan selendang pinggang adalah wajib untuk menjaga kesucian tempat."
+      },
+      {
+        "question": "Apakah pura ini terlalu ramai?",
+        "answer": "Tidak. Pura Kehen jauh lebih sepi dibandingkan pura-pura besar lainnya, menjadikannya tempat yang sempurna untuk menikmati arsitektur kuno dengan tenang."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "kehen-temple",
+    "name": "Kehen Temple",
+    "province": "Bali",
+    "regency": "Bangli",
+    "category": "Hindu Temple",
+    "metaTitle": "Kehen Temple: Bangli Historical Guide",
+    "metaDescription": "Visit Kehen Temple with guidance on entrance fees, sarong dress codes, opening hours, and historical significance in Bangli.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/kehen-temple.webp",
+    "faq": [
+      {
+        "question": "Is a sarong mandatory?",
+        "answer": "Yes, as with all Hindu temples in Bali, wearing a sarong and sash is mandatory to maintain the sanctity of the site. They can be rented at the entrance."
+      },
+      {
+        "question": "Is the temple overly crowded?",
+        "answer": "No. Kehen Temple is much quieter than other major temples, making it a perfect place to peacefully admire ancient Balinese architecture."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "besakih-temple",
+    "name": "Besakih Temple",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Hindu Temple Complex",
+    "metaTitle": "Pura Besakih: Panduan Lengkap Pura Induk Bali",
+    "metaDescription": "Panduan Pura Besakih mencakup tiket masuk, aturan pemandu lokal, shuttle, jam buka, aturan pakaian, dan fasilitas.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/besakih-temple.webp",
+    "faq": [
+      {
+        "question": "Apakah saya diwajibkan menggunakan pemandu?",
+        "answer": "Tiket masuk internasional Anda sudah termasuk layanan pemandu lokal resmi. Disarankan untuk menggunakan jasa mereka guna memahami sejarah pura dan menghindari gangguan dari penjaja tidak resmi."
+      },
+      {
+        "question": "Bolehkah saya masuk ke halaman utama pura?",
+        "answer": "Sebagian besar halaman dalam (jeroan) dikhususkan secara ketat untuk umat yang sedang bersembahyang. Wisatawan hanya diperbolehkan melihat dari area luar dan tangga yang ditentukan."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "besakih-temple",
+    "name": "Besakih Temple",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Hindu Temple Complex",
+    "metaTitle": "Besakih Temple: The Mother Temple Guide",
+    "metaDescription": "Visit Besakih Temple with guidance on entrance fees, official local guides, shuttles, opening hours, dress codes, and facilities.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/besakih-temple.webp",
+    "faq": [
+      {
+        "question": "Am I required to use a guide?",
+        "answer": "Your international entrance ticket already includes an official local guide. It is highly recommended to accept their services to understand the history and to deter unauthorized touts."
+      },
+      {
+        "question": "Can I enter the main temple courtyards?",
+        "answer": "Most of the inner courtyards are strictly reserved for worshippers. Tourists are directed to view the altars from the exterior perimeters and designated stairways."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "tirta-gangga",
+    "name": "Tirta Gangga",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Water Palace",
+    "metaTitle": "Tirta Gangga: Panduan Taman Air Karangasem",
+    "metaDescription": "Panduan Tirta Gangga mencakup tiket masuk, jam buka, tips foto, kolam pemandian, dan fasilitas.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/tirta-gangga.webp",
+    "faq": [
+      {
+        "question": "Apakah pengunjung boleh berenang?",
+        "answer": "Anda tidak boleh berenang di kolam ikan koi utama, tetapi ada kolam pemandian khusus di kompleks ini yang bisa digunakan dengan membayar tiket tambahan."
+      },
+      {
+        "question": "Apakah saya harus memakai sarung?",
+        "answer": "Tirta Gangga pada dasarnya adalah taman air (bukan area pura murni), jadi berpakaian sopan sudah cukup. Sarung biasanya tidak diwajibkan kecuali Anda memasuki area pura suci kecil di ujung mata air."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "tirta-gangga",
+    "name": "Tirta Gangga",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Water Palace",
+    "metaTitle": "Tirta Gangga: Karangasem Water Palace Guide",
+    "metaDescription": "Visit Tirta Gangga with guidance on entrance fees, opening hours, photo tips, swimming pools, and facilities.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/tirta-gangga.webp",
+    "faq": [
+      {
+        "question": "Are visitors allowed to swim?",
+        "answer": "You cannot swim in the main koi ponds, but there is a designated spring-fed swimming pool in the complex that you can use for an additional fee."
+      },
+      {
+        "question": "Do I need to wear a sarong?",
+        "answer": "Tirta Gangga is primarily a water garden, so wearing normal modest clothing is fine. A sarong is not strictly required unless you intend to pray at the small temple near the main spring."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "virgin-beach",
+    "name": "Virgin Beach",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Beach",
+    "metaTitle": "Virgin Beach: Panduan Pantai Perasi Karangasem",
+    "metaDescription": "Panduan Virgin Beach Bali mencakup tiket, akses jalan, keamanan berenang, fasilitas, dan warung lokal.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/virgin-beach.webp",
+    "faq": [
+      {
+        "question": "Apakah aman untuk berenang di sini?",
+        "answer": "Umumnya aman untuk berenang, terutama di pagi hari ketika arus laut lebih tenang. Namun, pengunjung harus selalu waspada karena kadang-kadang ombak bisa menjadi besar; ikuti saran dari warga lokal."
+      },
+      {
+        "question": "Apakah jalan menuju pantai sudah diaspal?",
+        "answer": "Beberapa jalur akses masuk (seperti lewat Desa Perasi atau Bukit Asah) sudah lebih baik, namun beberapa bagian akhir menuju pantai masih cukup sempit dan berbatu."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "virgin-beach",
+    "name": "Virgin Beach",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Beach",
+    "metaTitle": "Virgin Beach: Karangasem Beach Guide",
+    "metaDescription": "Visit Virgin Beach with guidance on tickets, road access, swimming safety, facilities, and local warungs.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/virgin-beach.webp",
+    "faq": [
+      {
+        "question": "Is it safe to swim here?",
+        "answer": "It is generally safe for swimming, particularly in the morning when the sea is calm. However, always be cautious of undertows and heed advice from local vendors if the surf picks up."
+      },
+      {
+        "question": "Is the road to the beach paved?",
+        "answer": "The main access roads have improved, but the final descent to the parking area can still be narrow, steep, and a bit bumpy in places."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "lempuyang-temple",
+    "name": "Lempuyang Temple",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Hindu Temple Complex",
+    "metaTitle": "Pura Lempuyang: Panduan Gate of Heaven Bali",
+    "metaDescription": "Panduan Pura Lempuyang mencakup tiket, waktu antre foto, shuttle wajib, aturan sarung, dan jam buka.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/lempuyang-temple.webp",
+    "faq": [
+      {
+        "question": "Apakah pantulan air di foto itu asli?",
+        "answer": "Tidak. Tidak ada genangan air di bawah gerbang. Efek pantulan air tersebut diciptakan oleh staf lokal yang meletakkan cermin kecil di bawah lensa kamera ponsel Anda."
+      },
+      {
+        "question": "Bolehkah saya langsung naik membawa mobil sendiri?",
+        "answer": "Tidak. Semua kendaraan pribadi harus diparkir di terminal bawah, dan pengunjung wajib naik shuttle bus yang disediakan."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "lempuyang-temple",
+    "name": "Lempuyang Temple",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Hindu Temple Complex",
+    "metaTitle": "Lempuyang Temple: Gate of Heaven Guide",
+    "metaDescription": "Visit Lempuyang Temple with guidance on tickets, photo queue times, mandatory shuttles, sarong rules, and hours.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/lempuyang-temple.webp",
+    "faq": [
+      {
+        "question": "Is the water reflection in the photos real?",
+        "answer": "No. There is no water at the gate. The reflection is an optical illusion created by local staff who hold a small mirror underneath your smartphone camera lens."
+      },
+      {
+        "question": "Can I drive my own car up to the temple?",
+        "answer": "No. All private vehicles must park at the designated base terminal, and you must use the official shuttle bus to reach the temple."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "taman-ujung",
+    "name": "Taman Ujung",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Kebun botani dan rekreasi dataran tinggi",
+    "metaTitle": "Taman Ujung: Panduan Taman Air Karangasem",
+    "metaDescription": "Panduan Taman Ujung mencakup tiket, jam buka, izin pre-wedding, aturan drone, dan akses.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/taman-ujung.webp",
+    "faq": [
+      {
+        "question": "Apakah boleh menerbangkan drone di Taman Ujung?",
+        "answer": "Menerbangkan drone untuk keperluan rekreasi seringkali dibatasi atau memerlukan izin tertulis dan biaya khusus dari pihak manajemen, terutama karena banyaknya sesi foto komersial di lokasi. Pastikan untuk bertanya di loket tiket."
+      },
+      {
+        "question": "Apakah tiket masuk pre-wedding sama dengan turis biasa?",
+        "answer": "Tidak, fotografer dan pasangan yang melakukan sesi pemotretan profesional (pre-wedding) dikenakan tarif khusus yang jauh lebih mahal."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "taman-ujung",
+    "name": "Taman Ujung",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Botanic garden and highland recreation",
+    "metaTitle": "Taman Ujung: Karangasem Water Palace Guide",
+    "metaDescription": "Visit Taman Ujung with guidance on tickets, opening hours, pre-wedding shoot permits, drone rules, and access.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/taman-ujung.webp",
+    "faq": [
+      {
+        "question": "Can I fly a drone at Taman Ujung?",
+        "answer": "Recreational drone flying is often restricted or requires explicit permission and a special fee from the management, largely to protect the privacy of the many commercial photo shoots happening. Always ask at the ticket counter first."
+      },
+      {
+        "question": "Is the entrance fee for pre-wedding shoots the same as normal entry?",
+        "answer": "No, photographers and couples conducting professional photo sessions are charged a specific commercial location fee, which is significantly higher."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "amed",
+    "name": "Amed",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Coastal Area",
+    "metaTitle": "Amed Bali: Panduan Menyelam dan Snorkeling",
+    "metaDescription": "Panduan Amed mencakup titik snorkeling terbaik, akses pantai, desa nelayan, dan aktivitas bahari di Karangasem.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/amed.webp",
+    "faq": [
+      {
+        "question": "Apakah Amed cocok untuk pemula yang ingin belajar menyelam?",
+        "answer": "Sangat cocok. Amed memiliki perairan yang umumnya tenang dan banyak sekolah selam berlisensi internasional yang menawarkan kursus untuk pemula."
+      },
+      {
+        "question": "Berapa lama waktu perjalanan dari Bali Selatan (Kuta/Seminyak) ke Amed?",
+        "answer": "Perjalanan darat memakan waktu sekitar 2,5 hingga 3 jam, tergantung kondisi lalu lintas."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "amed",
+    "name": "Amed",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Coastal Area",
+    "metaTitle": "Amed Bali: Diving and Snorkeling Guide",
+    "metaDescription": "Explore Amed with guidance on the best snorkeling spots, beach access, fishing villages, and marine activities.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/amed.webp",
+    "faq": [
+      {
+        "question": "Is Amed suitable for beginner divers?",
+        "answer": "Absolutely. Amed features generally calm waters and numerous internationally certified dive schools offering beginner courses (like PADI Open Water)."
+      },
+      {
+        "question": "How long is the drive from South Bali (Kuta/Seminyak) to Amed?",
+        "answer": "The drive typically takes about 2.5 to 3 hours, depending on traffic conditions."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "candidasa",
+    "name": "Candidasa",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Coastal Town",
+    "metaTitle": "Candidasa: Panduan Wisata dan Lotus Lagoon",
+    "metaDescription": "Panduan Candidasa mencakup Lotus Lagoon gratis, akses pantai, restoran tepi laut, dan basis eksplorasi Karangasem.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/candidasa.webp",
+    "faq": [
+      {
+        "question": "Apakah saya bisa berenang di pantai Candidasa?",
+        "answer": "Sebagian besar garis pantai dilindungi oleh tanggul batu (sea walls) sehingga pantainya sempit. Anda bisa berenang saat air pasang surut, tetapi kebanyakan pengunjung memilih bersantai di kolam renang hotel atau pergi ke Virgin Beach."
+      },
+      {
+        "question": "Apakah saya perlu membayar untuk melihat Lotus Lagoon?",
+        "answer": "Tidak, Lotus Lagoon adalah fasilitas publik yang terletak persis di pinggir jalan utama dan gratis untuk dinikmati."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "candidasa",
+    "name": "Candidasa",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Coastal Town",
+    "metaTitle": "Candidasa: Lotus Lagoon and Visitor Guide",
+    "metaDescription": "Visit Candidasa with guidance on the free Lotus Lagoon, waterfront dining, beach access, and exploring East Bali.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/candidasa.webp",
+    "faq": [
+      {
+        "question": "Can I swim at the beaches in Candidasa?",
+        "answer": "Much of the shoreline is protected by sea walls, making the beach very narrow. You can swim at certain spots during low tide, but most visitors prefer hotel pools or taking a short trip to Virgin Beach."
+      },
+      {
+        "question": "Do I need to pay to see the Lotus Lagoon?",
+        "answer": "No, the Lotus Lagoon is a free public space located right beside the main road."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "mount-agung",
+    "name": "Mount Agung",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Volcano and Trekking Destination",
+    "metaTitle": "Gunung Agung: Panduan Pendakian Puncak Tertinggi Bali",
+    "metaDescription": "Panduan pendakian Gunung Agung mencakup rute Pura Besakih dan Pasar Agung, aturan pemandu wajib, cuaca, dan tingkat kesulitan.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/mount-agung.webp",
+    "faq": [
+      {
+        "question": "Apakah saya wajib menyewa pemandu lokal?",
+        "answer": "Ya, sangat diwajibkan. Selain karena medannya yang sangat berbahaya dan mudah membuat tersesat, ini juga merupakan aturan adat desa setempat."
+      },
+      {
+        "question": "Apakah gunung ini aman untuk didaki?",
+        "answer": "Gunung Agung adalah gunung berapi aktif. Jalur pendakian akan ditutup oleh pemerintah jika ada peningkatan aktivitas vulkanik. Selalu periksa status peringatan dari PVMBG (Pusat Vulkanologi) sebelum merencanakan pendakian."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "mount-agung",
+    "name": "Mount Agung",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Volcano and Trekking Destination",
+    "metaTitle": "Mount Agung: Bali Highest Peak Trekking Guide",
+    "metaDescription": "Prepare for a Mount Agung trek with guidance on routes, mandatory local guides, weather safety, and physical demands.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/mount-agung.webp",
+    "faq": [
+      {
+        "question": "Is a local guide strictly mandatory?",
+        "answer": "Yes. Beyond the severe navigation and safety risks of the loose volcanic terrain, it is a strict regulation enforced by the local village authorities."
+      },
+      {
+        "question": "Is the volcano safe to climb?",
+        "answer": "Mount Agung is an active volcano. Trails are closed immediately if volcanic activity increases. Always check current advisories from the Indonesian volcanology center before booking."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "tulamben",
+    "name": "Tulamben",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Diving and Snorkeling Destination",
+    "metaTitle": "Tulamben Bali: Panduan Menyelam USAT Liberty",
+    "metaDescription": "Panduan Tulamben mencakup lokasi bangkai kapal USAT Liberty, pantai batu vulkanik, biaya menyelam, dan akses dari pesisir.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/tulamben.webp",
+    "faq": [
+      {
+        "question": "Apakah saya bisa melihat bangkai kapal USAT Liberty hanya dengan snorkeling?",
+        "answer": "Ya! Bagian atas kapal berada di kedalaman sekitar 3 hingga 5 meter. Jika air sedang jernih, bentuk kapal dan gerombolan ikan sangat jelas terlihat dari permukaan."
+      },
+      {
+        "question": "Apakah pantainya bagus untuk anak-anak bermain?",
+        "answer": "Tidak. Pantai ini seluruhnya terdiri dari batu keras dan ombak yang memecah di pinggir (shore break) bisa cukup kuat, sehingga kurang ideal untuk tempat bermain anak kecil."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "tulamben",
+    "name": "Tulamben",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Diving and Snorkeling Destination",
+    "metaTitle": "Tulamben Bali: USAT Liberty Diving Guide",
+    "metaDescription": "Explore Tulamben with guidance on diving the USAT Liberty shipwreck, volcanic stone beaches, dive costs, and shore access.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/tulamben.webp",
+    "faq": [
+      {
+        "question": "Can I see the USAT Liberty wreck just by snorkeling?",
+        "answer": "Yes! The highest point of the wreck sits at a depth of about 3 to 5 meters. On a clear day, snorkelers can easily see the structure and huge schools of fish."
+      },
+      {
+        "question": "Is the beach good for children to play on?",
+        "answer": "No. The beach is entirely made of large, loose volcanic stones, and the shore break can sometimes be tricky. It is not a typical sandy beach for lounging or building sandcastles."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "sidemen",
+    "name": "Sidemen",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Rural Valley and Cultural Area",
+    "metaTitle": "Lembah Sidemen: Panduan Wisata Desa Karangasem",
+    "metaDescription": "Panduan Sidemen mencakup pemandangan sawah terasering, desa tradisional, resor butik, dan pesona pedesaan yang tenang di Bali Timur.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/sidemen.webp",
+    "faq": [
+      {
+        "question": "Apakah ada pusat perbelanjaan atau klub malam di Sidemen?",
+        "answer": "Tidak. Daya tarik utama Sidemen adalah ketenangannya. Hiburan malam biasanya hanya berupa makan malam santai di restoran hotel."
+      },
+      {
+        "question": "Bisakah saya menjelajahi sawah sendirian tanpa pemandu?",
+        "answer": "Bisa, tetapi jalur di persawahan sering kali membingungkan, melewati batas properti pribadi, dan bisa berlumpur. Menyewa pemandu lokal sangat disarankan."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "sidemen",
+    "name": "Sidemen",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Rural Valley and Cultural Area",
+    "metaTitle": "Sidemen Valley: Karangasem Village Guide",
+    "metaDescription": "Visit Sidemen Valley with guidance on scenic rice terraces, traditional villages, boutique eco-resorts, and a peaceful rural atmosphere.",
+    "lastUpdated": "2026-07-22",
+    "lastVerified": "2026-07-22",
+    "image": "/images/destinations/phase-4/sidemen.webp",
+    "faq": [
+      {
+        "question": "Are there shopping malls or nightclubs in Sidemen?",
+        "answer": "No. The entire appeal of Sidemen is its rustic tranquility. Evening entertainment is generally limited to a quiet dinner at your resort."
+      },
+      {
+        "question": "Can I explore the rice terraces alone without a guide?",
+        "answer": "You can, but the paths can be confusing, cross private farm boundaries, and get very muddy. Hiring a local guide is highly recommended."
+      }
+    ]
   },
   {
     "locale": "id",

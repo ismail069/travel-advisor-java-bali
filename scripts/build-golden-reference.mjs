@@ -55,6 +55,20 @@ const imageBySlug = {
   'bali-reptile-park': '/images/destinations/phase-4/bali-reptile-park.webp',
   'kanto-lampo-waterfall': '/images/destinations/phase-4/kanto-lampo-waterfall.webp',
   'kemenuh-butterfly-park': '/images/destinations/phase-4/kemenuh-butterfly-park.webp',
+  'tibumana-waterfall': '/images/destinations/phase-4/tibumana-waterfall.webp',
+  'tukad-cepung-waterfall': '/images/destinations/phase-4/tukad-cepung-waterfall.webp',
+  'penglipuran-village': '/images/destinations/phase-4/penglipuran-village.webp',
+  'kehen-temple': '/images/destinations/phase-4/kehen-temple.webp',
+  'besakih-temple': '/images/destinations/phase-4/besakih-temple.webp',
+  'tirta-gangga': '/images/destinations/phase-4/tirta-gangga.webp',
+  'virgin-beach': '/images/destinations/phase-4/virgin-beach.webp',
+  'lempuyang-temple': '/images/destinations/phase-4/lempuyang-temple.webp',
+  'taman-ujung': '/images/destinations/phase-4/taman-ujung.webp',
+  'amed': '/images/destinations/phase-4/amed.webp',
+  'candidasa': '/images/destinations/phase-4/candidasa.webp',
+  'mount-agung': '/images/destinations/phase-4/mount-agung.webp',
+  'tulamben': '/images/destinations/phase-4/tulamben.webp',
+  'sidemen': '/images/destinations/phase-4/sidemen.webp',
 };
 const phase4Metadata = {
   'campuhan-ridge-walk': { idTitle: 'Campuhan Ridge Walk: Panduan Jalur Ubud', enTitle: 'Campuhan Ridge Walk: Ubud Trail Guide', idDescription: 'Panduan Campuhan Ridge Walk di Ubud: waktu terbaik, kondisi jalur, akses, fasilitas, dan tips berjalan aman.', enDescription: 'Plan Campuhan Ridge Walk in Ubud with practical guidance on timing, trail conditions, access, facilities, and walking safely.' },
@@ -88,6 +102,20 @@ const phase4Metadata = {
   'bali-reptile-park': { idTitle: 'Bali Reptile Park: Panduan Satwa Gianyar', enTitle: 'Bali Reptile Park: Gianyar Wildlife Guide', idDescription: 'Panduan ke Bali Reptile Park mencakup harga tiket, interaksi dengan ular dan komodo, jam buka, dan tips keluarga.', enDescription: 'Visit Bali Reptile Park with guidance on ticket prices, animal encounters, opening hours, and family tips.' },
   'kanto-lampo-waterfall': { idTitle: 'Air Terjun Kanto Lampo: Panduan Wisata Gianyar', enTitle: 'Kanto Lampo Waterfall: Gianyar Guide', idDescription: 'Panduan Air Terjun Kanto Lampo mencakup tiket masuk, tips foto, pemandu lokal, kondisi air, dan lokasi.', enDescription: 'Visit Kanto Lampo Waterfall with guidance on entrance fees, photo tips, local guides, water conditions, and location.' },
   'kemenuh-butterfly-park': { idTitle: 'Kemenuh Butterfly Park: Panduan Wisata Edukasi', enTitle: 'Kemenuh Butterfly Park: Educational Guide', idDescription: 'Panduan Kemenuh Butterfly Park mencakup tiket, jam aktif kupu-kupu, fasilitas keluarga, dan akses wisata Gianyar.', enDescription: 'Explore Kemenuh Butterfly Park with guidance on tickets, active hours, family facilities, and Gianyar access.' },
+  'tibumana-waterfall': { idTitle: 'Air Terjun Tibumana: Panduan Wisata Bangli', enTitle: 'Tibumana Waterfall: Bangli Visitor Guide', idDescription: 'Panduan Air Terjun Tibumana mencakup lokasi, harga tiket, jam buka, dan tips wisata alam di Bangli.', enDescription: 'Visit Tibumana Waterfall with guidance on location, entrance fees, opening hours, and nature tips in Bangli.' },
+  'tukad-cepung-waterfall': { idTitle: 'Air Terjun Tukad Cepung: Panduan Wisata Bangli', enTitle: 'Tukad Cepung Waterfall: Bangli Visitor Guide', idDescription: 'Panduan Air Terjun Tukad Cepung mencakup lokasi gua, harga tiket, jam buka, dan tips fotografi wisata di Bangli.', enDescription: 'Visit Tukad Cepung Waterfall with guidance on cave location, entrance fees, opening hours, and photography tips in Bangli.' },
+  'penglipuran-village': { idTitle: 'Desa Penglipuran: Panduan Wisata Tradisional Bangli', enTitle: 'Penglipuran Village: Traditional Bangli Guide', idDescription: 'Panduan berkunjung ke Desa Penglipuran mencakup harga tiket, jam buka, aturan adat, dan fasilitas wisata di Bangli.', enDescription: 'Visit Penglipuran Village with guidance on entrance fees, opening hours, traditional rules, and facilities in Bangli.' },
+  'kehen-temple': { idTitle: 'Pura Kehen: Panduan Wisata Sejarah Bangli', enTitle: 'Kehen Temple: Bangli Historical Guide', idDescription: 'Panduan mengunjungi Pura Kehen mencakup harga tiket, aturan pakaian (sarung), jam buka, dan nilai sejarah di Bangli.', enDescription: 'Visit Kehen Temple with guidance on entrance fees, sarong dress codes, opening hours, and historical significance in Bangli.' },
+  'besakih-temple': { idTitle: 'Pura Besakih: Panduan Lengkap Pura Induk Bali', enTitle: 'Besakih Temple: The Mother Temple Guide', idDescription: 'Panduan Pura Besakih mencakup tiket masuk, aturan pemandu lokal, shuttle, jam buka, aturan pakaian, dan fasilitas.', enDescription: 'Visit Besakih Temple with guidance on entrance fees, official local guides, shuttles, opening hours, dress codes, and facilities.' },
+  'tirta-gangga': { idTitle: 'Tirta Gangga: Panduan Taman Air Karangasem', enTitle: 'Tirta Gangga: Karangasem Water Palace Guide', idDescription: 'Panduan Tirta Gangga mencakup tiket masuk, jam buka, tips foto, kolam pemandian, dan fasilitas.', enDescription: 'Visit Tirta Gangga with guidance on entrance fees, opening hours, photo tips, swimming pools, and facilities.' },
+  'virgin-beach': { idTitle: 'Virgin Beach: Panduan Pantai Perasi Karangasem', enTitle: 'Virgin Beach: Karangasem Beach Guide', idDescription: 'Panduan Virgin Beach Bali mencakup tiket, akses jalan, keamanan berenang, fasilitas, dan warung lokal.', enDescription: 'Visit Virgin Beach with guidance on tickets, road access, swimming safety, facilities, and local warungs.' },
+  'lempuyang-temple': { idTitle: 'Pura Lempuyang: Panduan Gate of Heaven Bali', enTitle: 'Lempuyang Temple: Gate of Heaven Guide', idDescription: 'Panduan Pura Lempuyang mencakup tiket, waktu antre foto, shuttle wajib, aturan sarung, dan jam buka.', enDescription: 'Visit Lempuyang Temple with guidance on tickets, photo queue times, mandatory shuttles, sarong rules, and hours.' },
+  'taman-ujung': { idTitle: 'Taman Ujung: Panduan Taman Air Karangasem', enTitle: 'Taman Ujung: Karangasem Water Palace Guide', idDescription: 'Panduan Taman Ujung mencakup tiket, jam buka, izin pre-wedding, aturan drone, dan akses.', enDescription: 'Visit Taman Ujung with guidance on tickets, opening hours, pre-wedding shoot permits, drone rules, and access.' },
+  'amed': { idTitle: 'Amed Bali: Panduan Menyelam dan Snorkeling', enTitle: 'Amed Bali: Diving and Snorkeling Guide', idDescription: 'Panduan Amed mencakup titik snorkeling terbaik, akses pantai, desa nelayan, dan aktivitas bahari di Karangasem.', enDescription: 'Explore Amed with guidance on the best snorkeling spots, beach access, fishing villages, and marine activities.' },
+  'candidasa': { idTitle: 'Candidasa: Panduan Wisata dan Lotus Lagoon', enTitle: 'Candidasa: Lotus Lagoon and Visitor Guide', idDescription: 'Panduan Candidasa mencakup Lotus Lagoon gratis, akses pantai, restoran tepi laut, dan basis eksplorasi Karangasem.', enDescription: 'Visit Candidasa with guidance on the free Lotus Lagoon, waterfront dining, beach access, and exploring East Bali.' },
+  'mount-agung': { idTitle: 'Gunung Agung: Panduan Pendakian Puncak Tertinggi Bali', enTitle: 'Mount Agung: Bali Highest Peak Trekking Guide', idDescription: 'Panduan pendakian Gunung Agung mencakup rute Pura Besakih dan Pasar Agung, aturan pemandu wajib, cuaca, dan tingkat kesulitan.', enDescription: 'Prepare for a Mount Agung trek with guidance on routes, mandatory local guides, weather safety, and physical demands.' },
+  'tulamben': { idTitle: 'Tulamben Bali: Panduan Menyelam USAT Liberty', enTitle: 'Tulamben Bali: USAT Liberty Diving Guide', idDescription: 'Panduan Tulamben mencakup lokasi bangkai kapal USAT Liberty, pantai batu vulkanik, biaya menyelam, dan akses dari pesisir.', enDescription: 'Explore Tulamben with guidance on diving the USAT Liberty shipwreck, volcanic stone beaches, dive costs, and shore access.' },
+  'sidemen': { idTitle: 'Lembah Sidemen: Panduan Wisata Desa Karangasem', enTitle: 'Sidemen Valley: Karangasem Village Guide', idDescription: 'Panduan Sidemen mencakup pemandangan sawah terasering, desa tradisional, resor butik, dan pesona pedesaan yang tenang di Bali Timur.', enDescription: 'Visit Sidemen Valley with guidance on scenic rice terraces, traditional villages, boutique eco-resorts, and a peaceful rural atmosphere.' },
 };
 
 function parseFrontmatter(raw) {
@@ -259,11 +287,14 @@ const registry = [];
 const manifest = [];
 const sourceFiles = (await Promise.all(sourceDirs.map(async (dir) => (await fs.readdir(dir)).filter((name) => name.endsWith('.mdx')).sort().map((name) => path.join(dir, name))))).flat();
 for (const sourceFile of sourceFiles) {
-  const { data, body } = parseFrontmatter(await fs.readFile(sourceFile, 'utf8'));
-  const beforeId = body.slice(0, body.indexOf('## Ikhtisar — Bahasa Indonesia'));
-  const idNarrative = body.slice(body.indexOf('## Ikhtisar — Bahasa Indonesia'), body.indexOf('## Overview — English'));
+  const rawContent = await fs.readFile(sourceFile, 'utf8');
+  const { data, body } = parseFrontmatter(rawContent.replace(/\\u2014/g, '—').replace(/\\u2013/g, '–'));
+  const ikhtisarMatch = body.match(/## Ikhtisar[\s\S]{1,5}Bahasa Indonesia/);
+  const overviewMatch = body.match(/## Overview[\s\S]{1,5}English/);
+  const beforeId = body.slice(0, ikhtisarMatch ? ikhtisarMatch.index : body.length);
+  const idNarrative = ikhtisarMatch && overviewMatch ? body.slice(ikhtisarMatch.index, overviewMatch.index) : (ikhtisarMatch ? body.slice(ikhtisarMatch.index) : '');
   const operationalStart = Math.min(...['<Accessibility', '<Facilities', '<TicketInformation', '<OpeningHours', '<NearbyDestinations'].map((tag) => body.indexOf(tag)).filter((index) => index >= 0));
-  const enNarrative = body.slice(body.indexOf('## Overview — English'), operationalStart);
+  const enNarrative = overviewMatch ? body.slice(overviewMatch.index, operationalStart === Infinity ? body.length : operationalStart) : '';
   const operations = ['Accessibility', 'Facilities', 'TicketInformation', 'OpeningHours', 'NearbyDestinations']
     .map((component) => body.match(new RegExp(`<${component}[\\s\\S]*?\\/>`))?.[0] || '')
     .filter(Boolean)

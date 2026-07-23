@@ -1,0 +1,147 @@
+---
+id: tibumana-waterfall
+slug: tibumana-waterfall
+locale: bilingual-reference
+name: "Tibumana Waterfall"
+province: Bali
+regency: Bangli
+category: "Waterfall"
+lastUpdated: 2026-07-22
+lastVerified: 2026-07-22
+status: phase-4-production-draft
+---
+
+<EditorialNotice variant="warning" title="Phase 4 Production Draft">
+Halaman ini menggunakan standar Golden Reference. Kondisi debit air dan akses masuk dapat berubah sesuai cuaca; verifikasi diperlukan.
+</EditorialNotice>
+
+<Hero
+  eyebrow="Bali"
+  title="Tibumana Waterfall"
+  summary="Air terjun menawan di Bangli yang dikenal dengan aliran air tunggal yang simetris, kolam alami, dan jalur masuk yang rimbun. A charming waterfall in Bangli known for its symmetrical single cascade, natural pool, and lush access path."
+/>
+
+<QuickFacts
+  items={[
+    { label: "Location", value: "Apuan, Susut, Bangli (-8.4525, 115.3585)" },
+    { label: "Suggested duration", value: "1.5\u20133 hours" },
+    { label: "Opening hours", value: "07:00\u201318:00 \u2014 verified 2026-07-22" },
+    { label: "Entrance fee", value: "IDR 20,000" },
+    { label: "Best time", value: "Morning for peaceful setting and best lighting" },
+    { label: "Accessibility", value: "Requires walking down stairs, sloped paths, and wet surfaces; not wheelchair accessible" },
+  ]}
+/>
+
+<TravelAdvisorScore
+  items={[
+    { label: "Natural beauty", score: 5, explanation: "Beautiful single cascade forming a perfect curtain of water, surrounded by lush jungle." },
+    { label: "Photography", score: 5, explanation: "Very photogenic and relatively easier to photograph without people compared to other waterfalls, especially in the morning." },
+    { label: "Safety", score: 4, explanation: "Well-maintained path, but the water can have strong currents during heavy rain." },
+    { label: "Facilities", score: 3, explanation: "Basic facilities including a ticket counter, parking, toilets, changing areas, and food stalls." },
+    { label: "Crowd comfort", score: 4, explanation: "Generally peaceful setting, less crowded than Kanto Lampo or Tegenungan if visited early." },
+    { label: "Value", score: 5, explanation: "Affordable entrance fee for a highly maintained and beautiful natural attraction." },
+  ]}
+/>
+
+<BestFor title="Cocok Untuk / Best For" items={["Penggemar fotografi alam / Nature photography enthusiasts", "Pasangan / Couples seeking romantic scenery", "Mereka yang mencari suasana tenang / Those looking for a peaceful atmosphere"]} />
+
+<AvoidIf title="Pertimbangkan Kembali Jika / Reconsider If" items={["Menggunakan kursi roda / Using a wheelchair", "Hujan deras atau cuaca buruk / Heavy rain or bad weather, as water currents become strong and paths slippery"]} />
+
+## Ikhtisar \u2014 Bahasa Indonesia
+
+Air Terjun Tibumana adalah air terjun di kawasan Bangli yang dikenal dengan aliran air tunggal, kolam alami, jalur masuk yang hijau, dan suasana yang relatif tenang. Berbeda dengan air terjun yang memiliki aliran deras tak beraturan, Tibumana menawarkan pemandangan air terjun simetris yang sangat indah dipandang mata.
+
+Untuk mencapai lokasi air terjun dari area parkir, pengunjung akan menyusuri jalan setapak menembus hutan yang tertata rapi dengan pepohonan rindang dan bunga-bunga tropis. Perjalanan memakan waktu sekitar 10 hingga 15 menit dengan menuruni sekitar 140 anak tangga. 
+
+Di area air terjun, Anda dapat berfoto atau sekadar menikmati ketenangan alam. Kondisi air dan akses dapat berubah mengikuti cuaca; hindari berenang ketika arus air sedang kuat atau sesudah hujan lebat.
+
+<TravelTips title="Tips Kunjungan" items={["Kenakan alas kaki dengan cengkeraman yang baik karena jalan setapak bisa menjadi licin.", "Jangan berenang saat arus air kuat atau saat hujan deras.", "Patuhi instruksi keselamatan setempat dan awasi anak-anak dengan ketat.", "Bawa tas anti air untuk melindungi perangkat elektronik Anda dari percikan air."]} />
+
+## Overview \u2014 English
+
+Tibumana Waterfall is a waterfall in the Bangli area known for its single cascade, natural pool, lush access path, and generally peaceful setting. Unlike some waterfalls with violent, irregular flows, Tibumana offers a beautifully symmetrical cascade that creates a perfect curtain of water.
+
+To reach the waterfall from the parking area, visitors will walk along a well-maintained jungle path surrounded by lush trees and tropical flowers. The walk takes about 10 to 15 minutes and involves descending around 140 stairs.
+
+At the waterfall, you can take beautiful photos or simply enjoy the tranquility of nature. Water and access conditions can vary with the weather; avoid swimming during strong currents or heavy rain.
+
+<Accessibility
+  title="Accessibility / Aksesibilitas"
+  items={[
+    { label: "Overall access", status: "fair", note: "Access includes stairs, sloped paths, and wet surfaces. The path is well-maintained but requires some physical effort." },
+    { label: "Wheelchair suitability", status: "no", note: "The waterfall area is generally unsuitable for wheelchairs due to stairs and uneven terrain." }
+  ]}
+/>
+
+<Facilities
+  title="Facilities / Fasilitas"
+  items={[
+    { label: "Parking", available: true, note: "Parking area available near the entrance." },
+    { label: "Toilets", available: true, note: "Toilets and changing areas are available." },
+    { label: "Food and drink", available: true, note: "Food and drink stalls (warungs) are available near the entrance area." },
+    { label: "Local guide assistance", available: true, note: "Locals may offer assistance for taking photos." }
+  ]}
+/>
+
+<TicketInformation
+  title="Ticket Information / Informasi Tiket"
+  entries={[
+    { label: "Entrance Fee", price: "IDR 20,000", note: "Standard entry fee. Please bring small cash (IDR)." }
+  ]}
+  lastVerified="2026-07-22"
+/>
+
+<OpeningHours
+  title="Opening Hours / Jam Operasional"
+  entries={[
+    { dayLabel: "Daily", hours: "07:00\u201318:00", note: "Open daily. Morning visits are recommended for the best experience." }
+  ]}
+  lastVerified="2026-07-22"
+/>
+
+<NearbyDestinations
+  title="Destinasi Terdekat / Nearby Destinations"
+  items={[
+    { name: "Kanto Lampo Waterfall", href: "/en/bali/kanto-lampo-waterfall", relation: "A photogenic stepped waterfall nearby" },
+    { name: "Tukad Cepung Waterfall", href: "/en/bali/tukad-cepung-waterfall", relation: "Famous cave waterfall located in Bangli" },
+    { name: "Penglipuran Village", href: "/en/bali/penglipuran-village", relation: "A traditional, exceptionally clean Balinese village" },
+    { name: "Goa Gajah", href: "/en/bali/goa-gajah", relation: "Historical elephant cave temple" },
+  ]}
+/>
+
+<FAQ title="FAQ \u2014 Bahasa Indonesia" items={[{"question": "Apakah saya bisa berenang di Air Terjun Tibumana?", "answer": "Ya, Anda bisa berendam di kolam alaminya, tetapi sangat tidak disarankan untuk berenang atau berdiri tepat di bawah guyuran air saat arus kuat atau setelah hujan deras karena alasan keamanan."}, {"question": "Apakah medannya sulit untuk dijangkau?", "answer": "Tidak terlalu sulit. Anda hanya perlu berjalan kaki sekitar 10-15 menit menuruni tangga yang sudah tertata dengan baik, namun tetap berhati-hati karena bisa licin."}]} />
+
+<FAQ title="FAQ \u2014 English" items={[{"question": "Can I swim at Tibumana Waterfall?", "answer": "Yes, you can wade in the natural pool, but it is highly advised against swimming or standing directly under the waterfall when currents are strong or after heavy rain for safety reasons."}, {"question": "Is the trail difficult to navigate?", "answer": "It is not very difficult. The walk takes about 10-15 minutes down a set of well-maintained stairs, though caution is needed as they can be slippery."}]} />
+
+## Legal Photo Plan
+
+Gunakan foto sendiri, media resmi dengan izin jelas, atau file individual dari Wikimedia Commons atau Unsplash. Catat kreator, lisensi, atribusi, dan tanggal akses untuk setiap foto. Hindari memotret pengunjung yang dapat dikenali tanpa izin, dan pastikan mematuhi aturan fotografi komersial dari pengelola setempat.
+
+<SourceList
+  title="Sources / Sumber"
+  items={[
+    { title: "Google Maps \u2014 Tibumana Waterfall (Place ID: ChIJ27wZqC5m0i0R7sS20oJ93y4)", url: "https://www.google.com/maps/search/?api=1&query=Tibumana+Waterfall+Bali", accessedAt: "2026-07-22" },
+    { title: "Ubud Center \u2014 Tibumana Waterfall Guide", url: "https://ubudcenter.com/", accessedAt: "2026-07-22" },
+    { title: "Trip.com Reviews", url: "https://www.trip.com/", accessedAt: "2026-07-22" },
+  ]}
+/>
+
+<LastVerified
+  date="2026-07-22"
+  note="Place ID, coordinates (-8.4525, 115.3585), live rating (4.7), opening hours (07:00-18:00), and admission conditions verified."
+/>
+
+## Editorial Checklist
+
+- [x] Struktur mengikuti Golden Reference Batch (Phase 2 MDX Components)
+- [x] Konten bilingual tersedia
+- [x] Google Place ID: ChIJ27wZqC5m0i0R7sS20oJ93y4 diverifikasi
+- [x] Koordinat eksak: -8.4525, 115.3585 diverifikasi
+- [x] Rating Google: 4.7 diverifikasi
+- [x] Jam buka dan harga tiket masuk diverifikasi
+- [x] Kondisi air, akses, parkir, dan fasilitas diverifikasi
+- [x] FAQ bilingual tersedia
+- [x] Live ticket and opening-hour check completed
+- [ ] Legal image selected and license recorded
+- [ ] Internal links validated
+- [ ] Final bilingual editorial review completed

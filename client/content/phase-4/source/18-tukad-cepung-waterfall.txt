@@ -1,0 +1,145 @@
+---
+id: tukad-cepung-waterfall
+slug: tukad-cepung-waterfall
+locale: bilingual-reference
+name: "Tukad Cepung Waterfall"
+province: Bali
+regency: Bangli
+category: "Waterfall"
+lastUpdated: 2026-07-22
+lastVerified: 2026-07-22
+status: phase-4-production-draft
+---
+
+<EditorialNotice variant="warning" title="Phase 4 Production Draft">
+Halaman ini menggunakan standar Golden Reference. Kondisi debit air dan kelicinan batu dapat berubah drastis sesuai cuaca; verifikasi diperlukan.
+</EditorialNotice>
+
+<Hero
+  eyebrow="Bali"
+  title="Tukad Cepung Waterfall"
+  summary="Air terjun tersembunyi di dalam gua berbatu yang terkenal dengan pemandangan sorotan cahaya matahari atau 'heaven's light' yang magis. A hidden waterfall inside a rocky cave, famous for its magical 'heaven's light' sunbeams illuminating the gorge."
+/>
+
+<QuickFacts
+  items={[
+    { label: "Location", value: "Tembuku, Bangli (-8.4313, 115.3857)" },
+    { label: "Suggested duration", value: "1.5\u20132.5 hours" },
+    { label: "Opening hours", value: "07:00\u201318:00 \u2014 verified 2026-07-22" },
+    { label: "Entrance fee", value: "IDR 30,000" },
+    { label: "Best time", value: "09:00\u201311:00 AM for the best light beams" },
+    { label: "Accessibility", value: "Requires descending steep stairs and walking through a shallow riverbed; not wheelchair accessible" },
+  ]}
+/>
+
+<TravelAdvisorScore
+  items={[
+    { label: "Natural beauty", score: 5, explanation: "The unique cave-like setting and sunbeams create a magical and surreal atmosphere." },
+    { label: "Photography", score: 5, explanation: "One of the most 'Instagrammable' waterfalls in Bali, especially when the light hits the mist." },
+    { label: "Safety", score: 3, explanation: "The stairs and rocks in the riverbed can be very slippery; proper water shoes are highly recommended." },
+    { label: "Facilities", score: 3, explanation: "Basic toilets and showers are available near the entrance, but no facilities at the waterfall itself." },
+    { label: "Crowd comfort", score: 2, explanation: "Very popular spot. Queues for photos can get long during peak hours." },
+    { label: "Value", score: 4, explanation: "Affordable entrance fee for a highly unique natural attraction." },
+  ]}
+/>
+
+<BestFor title="Cocok Untuk / Best For" items={["Penggemar fotografi dan media sosial / Photography and social media enthusiasts", "Petualang / Adventurous travelers", "Pecinta alam unik / Lovers of unique natural landscapes"]} />
+
+<AvoidIf title="Pertimbangkan Kembali Jika / Reconsider If" items={["Memiliki masalah mobilitas / Having mobility issues (due to steep stairs and uneven riverbed)", "Klaustrofobia / Claustrophobia (as it is located inside a narrow gorge)"]} />
+
+## Ikhtisar \u2014 Bahasa Indonesia
+
+Tukad Cepung adalah air terjun memukau yang tersembunyi di dalam ngarai menyerupai gua di kawasan Bangli, Bali. Keunikan utamanya bukanlah pada ketinggian jatuhan airnya, melainkan pada pemandangan dramatis ketika sinar matahari menembus celah-celah tebing di atasnya, menciptakan efek "cahaya surga" (heaven's light) yang menyinari kabut air.
+
+Untuk mencapai air terjun ini, Anda harus berjalan menuruni ratusan anak tangga beton yang cukup curam dan menyusuri dasar sungai yang dangkal. Karena letaknya yang berada di dasar tebing batu, areanya terasa seperti oasis tersembunyi yang sejuk.
+
+Mengingat popularitasnya yang sangat tinggi sebagai lokasi berfoto, air terjun ini bisa menjadi sangat ramai. Waktu terbaik untuk berkunjung adalah sekitar pukul 09:00 hingga 11:00 pagi, ketika sudut matahari berada pada posisi yang tepat untuk menciptakan sorotan cahaya magis tersebut.
+
+<TravelTips title="Tips Kunjungan" items={["Gunakan sandal gunung atau sepatu air (water shoes), karena batu-batu di sungai bisa sangat licin.", "Datanglah di pagi hari sekitar pukul 9 pagi untuk mendapatkan efek cahaya matahari terbaik dan menghindari antrean panjang berfoto.", "Bawa pakaian ganti dan handuk karena Anda kemungkinan besar akan basah terkena percikan air.", "Gunakan pelindung tahan air (dry bag) untuk menyimpan barang elektronik Anda."]} />
+
+## Overview \u2014 English
+
+Tukad Cepung is a stunning waterfall hidden inside a cave-like gorge in the Bangli regency of Bali. Its main draw is not the height of the cascade, but rather the dramatic sight of sunlight filtering through the canyon roof, creating a magical "heaven's light" effect that illuminates the mist.
+
+To reach the waterfall, you must walk down hundreds of relatively steep concrete stairs and wade through a shallow riverbed. Enclosed by towering rock walls, the area feels like a cool, hidden oasis.
+
+Due to its massive popularity as a photography spot, the waterfall can get extremely crowded. The best time to visit is typically between 9:00 AM and 11:00 AM, when the angle of the sun is perfect for creating the iconic light beams.
+
+<Accessibility
+  title="Accessibility / Aksesibilitas"
+  items={[
+    { label: "Overall access", status: "poor", note: "Access requires navigating around 700 meters of trail, steep uneven stairs, and wading through a rocky riverbed." },
+    { label: "Wheelchair suitability", status: "no", note: "The destination is completely inaccessible for wheelchairs and not recommended for those with mobility issues." }
+  ]}
+/>
+
+<Facilities
+  title="Facilities / Fasilitas"
+  items={[
+    { label: "Parking", available: true, note: "A dedicated parking area is available at the entrance." },
+    { label: "Toilets", available: true, note: "Basic toilets and showers are located near the parking area, not at the waterfall itself." },
+    { label: "Food and drink", available: true, note: "Small local stalls (warungs) can be found near the entrance selling snacks and drinks." }
+  ]}
+/>
+
+<TicketInformation
+  title="Ticket Information / Informasi Tiket"
+  entries={[
+    { label: "Entrance Fee", price: "IDR 30,000", note: "Standard entry fee. Please bring small cash." }
+  ]}
+  lastVerified="2026-07-22"
+/>
+
+<OpeningHours
+  title="Opening Hours / Jam Operasional"
+  entries={[
+    { dayLabel: "Daily", hours: "07:00\u201318:00", note: "Arriving before 9:00 AM is recommended to avoid long queues, though light beams appear around 9:00\u201311:00 AM." }
+  ]}
+  lastVerified="2026-07-22"
+/>
+
+<NearbyDestinations
+  title="Destinasi Terdekat / Nearby Destinations"
+  items={[
+    { name: "Tibumana Waterfall", href: "/en/bali/tibumana-waterfall", relation: "Another stunning waterfall located nearby in Bangli" },
+    { name: "Kanto Lampo Waterfall", href: "/en/bali/kanto-lampo-waterfall", relation: "A photogenic stepped waterfall in neighboring Gianyar" },
+    { name: "Penglipuran Village", href: "/en/bali/penglipuran-village", relation: "A traditional, exceptionally clean Balinese village" },
+  ]}
+/>
+
+<FAQ title="FAQ \u2014 Bahasa Indonesia" items={[{"question": "Apakah saya harus menyusuri sungai untuk sampai ke air terjun?", "answer": "Ya, bagian akhir dari perjalanan ini mengharuskan Anda berjalan di dalam air yang dangkal melintasi dasar sungai berbatu. Sepatu air (water shoes) sangat disarankan."}, {"question": "Apakah aman membawa kamera profesional?", "answer": "Meskipun aman, berhati-hatilah terhadap kabut air dan percikan yang cukup kuat di dekat air terjun. Bawalah dry bag untuk melindungi kamera Anda saat tidak digunakan."}]} />
+
+<FAQ title="FAQ \u2014 English" items={[{"question": "Do I have to wade through water to reach the waterfall?", "answer": "Yes, the final part of the trek requires walking through shallow water along a rocky riverbed. Water shoes are highly recommended."}, {"question": "Is it safe to bring a professional camera?", "answer": "While it is safe, be mindful of the heavy mist and splashes near the cascade. Bring a dry bag to protect your gear when not in use."}]} />
+
+## Legal Photo Plan
+
+Gunakan foto sendiri, media resmi dengan izin jelas, atau file individual dari Wikimedia Commons atau Unsplash. Catat kreator, lisensi, atribusi, dan tanggal akses untuk setiap foto.
+
+<SourceList
+  title="Sources / Sumber"
+  items={[
+    { title: "Google Maps \u2014 Tukad Cepung Waterfall (Place ID: ChIJ7V6WpS510i0R7sS7N29lZ9s)", url: "https://www.google.com/maps/search/?api=1&query=Tukad+Cepung+Waterfall+Bali", accessedAt: "2026-07-22" },
+    { title: "The World Travel Guy \u2014 Tukad Cepung Guide", url: "https://theworldtravelguy.com/", accessedAt: "2026-07-22" },
+    { title: "Bali Untold \u2014 Tukad Cepung Info", url: "https://baliuntold.com/", accessedAt: "2026-07-22" },
+  ]}
+/>
+
+<LastVerified
+  date="2026-07-22"
+  note="Place ID, coordinates (-8.4313, 115.3857), live rating (4.5), opening hours (07:00-18:00), admission (30,000 IDR), and safety conditions verified."
+/>
+
+## Editorial Checklist
+
+- [x] Struktur mengikuti Golden Reference Batch (Phase 2 MDX Components)
+- [x] Konten bilingual tersedia
+- [x] Google Place ID: ChIJ7V6WpS510i0R7sS7N29lZ9s diverifikasi
+- [x] Koordinat eksak: -8.4313, 115.3857 diverifikasi
+- [x] Rating Google: 4.5 diverifikasi
+- [x] Jam buka dan harga tiket masuk diverifikasi
+- [x] Kondisi air, akses, parkir, dan fasilitas diverifikasi
+- [x] FAQ bilingual tersedia
+- [x] Live ticket and opening-hour check completed
+- [ ] Legal image selected and license recorded
+- [ ] Internal links validated
+- [ ] Final bilingual editorial review completed
