@@ -7,7 +7,7 @@
     "dev": "next dev -H 0.0.0.0 -p 5173",
     "docs:index": "node ../scripts/build-docs-index.mjs",
     "golden:index": "node ../scripts/build-golden-reference.mjs",
-    "prebuild": "npm run docs:index && npm run golden:index",
+    "prebuild": "npm run golden:index",
     "build": "next build",
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --max-warnings=0",

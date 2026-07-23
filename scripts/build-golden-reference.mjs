@@ -69,6 +69,12 @@ const imageBySlug = {
   'mount-agung': '/images/destinations/phase-4/mount-agung.webp',
   'tulamben': '/images/destinations/phase-4/tulamben.webp',
   'sidemen': '/images/destinations/phase-4/sidemen.webp',
+  'kusamba-beach': '/images/destinations/phase-4/kusamba-beach.webp',
+  'goa-lawah-temple': '/images/destinations/phase-4/goa-lawah-temple.webp',
+  'puputan-klungkung-monument': '/images/destinations/phase-4/puputan-klungkung-monument.webp',
+  'kerta-gosa': '/images/destinations/phase-4/kerta-gosa.webp',
+  'blue-lagoon-beach': '/images/destinations/phase-4/blue-lagoon-beach.webp',
+  'padangbai': '/images/destinations/phase-4/padangbai.webp',
 };
 const phase4Metadata = {
   'campuhan-ridge-walk': { idTitle: 'Campuhan Ridge Walk: Panduan Jalur Ubud', enTitle: 'Campuhan Ridge Walk: Ubud Trail Guide', idDescription: 'Panduan Campuhan Ridge Walk di Ubud: waktu terbaik, kondisi jalur, akses, fasilitas, dan tips berjalan aman.', enDescription: 'Plan Campuhan Ridge Walk in Ubud with practical guidance on timing, trail conditions, access, facilities, and walking safely.' },
@@ -116,6 +122,12 @@ const phase4Metadata = {
   'mount-agung': { idTitle: 'Gunung Agung: Panduan Pendakian Puncak Tertinggi Bali', enTitle: 'Mount Agung: Bali Highest Peak Trekking Guide', idDescription: 'Panduan pendakian Gunung Agung mencakup rute Pura Besakih dan Pasar Agung, aturan pemandu wajib, cuaca, dan tingkat kesulitan.', enDescription: 'Prepare for a Mount Agung trek with guidance on routes, mandatory local guides, weather safety, and physical demands.' },
   'tulamben': { idTitle: 'Tulamben Bali: Panduan Menyelam USAT Liberty', enTitle: 'Tulamben Bali: USAT Liberty Diving Guide', idDescription: 'Panduan Tulamben mencakup lokasi bangkai kapal USAT Liberty, pantai batu vulkanik, biaya menyelam, dan akses dari pesisir.', enDescription: 'Explore Tulamben with guidance on diving the USAT Liberty shipwreck, volcanic stone beaches, dive costs, and shore access.' },
   'sidemen': { idTitle: 'Lembah Sidemen: Panduan Wisata Desa Karangasem', enTitle: 'Sidemen Valley: Karangasem Village Guide', idDescription: 'Panduan Sidemen mencakup pemandangan sawah terasering, desa tradisional, resor butik, dan pesona pedesaan yang tenang di Bali Timur.', enDescription: 'Visit Sidemen Valley with guidance on scenic rice terraces, traditional villages, boutique eco-resorts, and a peaceful rural atmosphere.' },
+  'kusamba-beach': { idTitle: 'Pantai Kusamba Bali: Panduan Wisata dan Pembuatan Garam', enTitle: 'Kusamba Beach: Salt Making Guide', idDescription: 'Panduan Pantai Kusamba mencakup pembuatan garam laut tradisional, perahu nelayan jukung, dan suasana pesisir otentik di Klungkung.', enDescription: 'Visit Kusamba Beach with guidance on traditional artisanal salt making, fishing boats, and discovering authentic Balinese coastal life.' },
+  'goa-lawah-temple': { idTitle: 'Pura Goa Lawah: Panduan Wisata Gua Kelelawar Bali', enTitle: 'Goa Lawah Temple: Bat Cave Guide', idDescription: 'Panduan Pura Goa Lawah mencakup gua kelelawar suci, tiket masuk, aturan berpakaian, dan fungsi pura dalam ritual Hindu.', enDescription: 'Explore Goa Lawah Temple with guidance on the sacred bat cave, entrance fees, dress codes, and its role in Balinese rituals.' },
+  'puputan-klungkung-monument': { idTitle: 'Monumen Puputan Klungkung: Panduan Wisata Sejarah Bali', enTitle: 'Puputan Klungkung Monument: History Guide', idDescription: 'Panduan Monumen Puputan Klungkung mencakup sejarah perlawanan 1908, museum diorama, tiket gratis, dan akses di Semarapura.', enDescription: 'Visit the Puputan Klungkung Monument with guidance on the 1908 history, museum dioramas, free admission, and central location.' },
+  'kerta-gosa': { idTitle: 'Kerta Gosa Klungkung: Panduan Paviliun Pengadilan Kerajaan', enTitle: 'Kerta Gosa: Royal Court Pavilion Guide', idDescription: 'Panduan Kerta Gosa mencakup lukisan gaya Kamasan, paviliun pengadilan kerajaan, tiket masuk, dan arsitektur bersejarah di Klungkung.', enDescription: 'Explore Kerta Gosa with guidance on Kamasan-style ceiling paintings, royal court history, entrance fees, and Balinese architecture.' },
+  'blue-lagoon-beach': { idTitle: 'Blue Lagoon Beach: Panduan Snorkeling Padangbai', enTitle: 'Blue Lagoon Beach: Padangbai Snorkeling Guide', idDescription: 'Panduan Blue Lagoon Beach mencakup titik snorkeling terbaik, akses pantai, harga sewa alat, dan kondisi laut di Padangbai.', enDescription: 'Explore Blue Lagoon Beach with guidance on shore snorkeling, equipment rentals, beach access, and marine conditions.' },
+  'padangbai': { idTitle: 'Pelabuhan Padangbai: Panduan Transit Gili & Lombok', enTitle: 'Padangbai Port: Gili & Lombok Transit Guide', idDescription: 'Panduan pelabuhan Padangbai mencakup tiket fast boat ke Gili, peringatan calo transportasi, akses pantai, dan penginapan.', enDescription: 'Navigate Padangbai port with guidance on fast boats to the Gili islands, local transport warnings, beach access, and diving.' },
 };
 
 function parseFrontmatter(raw) {

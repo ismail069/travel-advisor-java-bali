@@ -1727,6 +1727,282 @@
   },
   {
     "locale": "id",
+    "slug": "kusamba-beach",
+    "name": "Kusamba Beach",
+    "province": "Bali",
+    "regency": "Klungkung",
+    "category": "Traditional Coastal Village and Beach",
+    "metaTitle": "Pantai Kusamba Bali: Panduan Wisata dan Pembuatan Garam",
+    "metaDescription": "Panduan Pantai Kusamba mencakup pembuatan garam laut tradisional, perahu nelayan jukung, dan suasana pesisir otentik di Klungkung.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/kusamba-beach.webp",
+    "faq": [
+      {
+        "question": "Apakah saya pasti akan melihat pembuatan garam jika datang ke Kusamba?",
+        "answer": "Tidak selalu. Proses ini sangat bergantung pada cuaca. Jika mendung atau baru saja hujan, para petani tidak bisa menjemur garam."
+      },
+      {
+        "question": "Apakah pantai ini aman untuk berenang?",
+        "answer": "Tidak disarankan. Kusamba adalah pantai pelabuhan dan nelayan yang sibuk dengan arus ombak yang sering kali kuat."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "kusamba-beach",
+    "name": "Kusamba Beach",
+    "province": "Bali",
+    "regency": "Klungkung",
+    "category": "Traditional Coastal Village and Beach",
+    "metaTitle": "Kusamba Beach: Salt Making Guide",
+    "metaDescription": "Visit Kusamba Beach with guidance on traditional artisanal salt making, fishing boats, and discovering authentic Balinese coastal life.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/kusamba-beach.webp",
+    "faq": [
+      {
+        "question": "Am I guaranteed to see the salt making if I visit?",
+        "answer": "No. The process is entirely dependent on the weather. If it is cloudy or has recently rained, the farmers cannot evaporate the brine."
+      },
+      {
+        "question": "Is the beach safe for swimming?",
+        "answer": "It is not recommended. Kusamba is a busy working beach with fast boat traffic, fishing gear, and often strong currents."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "goa-lawah-temple",
+    "name": "Goa Lawah Temple",
+    "province": "Bali",
+    "regency": "Klungkung",
+    "category": "Hindu Temple",
+    "metaTitle": "Pura Goa Lawah: Panduan Wisata Gua Kelelawar Bali",
+    "metaDescription": "Panduan Pura Goa Lawah mencakup gua kelelawar suci, tiket masuk, aturan berpakaian, dan fungsi pura dalam ritual Hindu.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/goa-lawah-temple.webp",
+    "faq": [
+      {
+        "question": "Bolehkah pengunjung masuk ke dalam gua?",
+        "answer": "Tidak. Gua adalah area yang sangat disucikan dan berbahaya. Pengunjung dan umat Hindu hanya boleh bersembahyang dan melihat dari pelataran di depan mulut gua."
+      },
+      {
+        "question": "Apakah saya boleh berfoto dengan latar belakang gua?",
+        "answer": "Boleh, selama Anda berdiri di area publik yang diizinkan dan tidak menghalangi umat yang sedang melaksanakan upacara."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "goa-lawah-temple",
+    "name": "Goa Lawah Temple",
+    "province": "Bali",
+    "regency": "Klungkung",
+    "category": "Hindu Temple",
+    "metaTitle": "Goa Lawah Temple: Bat Cave Guide",
+    "metaDescription": "Explore Goa Lawah Temple with guidance on the sacred bat cave, entrance fees, dress codes, and its role in Balinese rituals.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/goa-lawah-temple.webp",
+    "faq": [
+      {
+        "question": "Are visitors allowed to enter the cave?",
+        "answer": "No. The cave is a highly sacred space. Visitors and worshippers alike must remain in the courtyards facing the cave entrance."
+      },
+      {
+        "question": "Can I take photos of the cave?",
+        "answer": "Yes, provided you stay in the designated public areas, do not use flash, and do not block or disturb the ongoing ceremonies."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "puputan-klungkung-monument",
+    "name": "Puputan Klungkung Monument",
+    "province": "Bali",
+    "regency": "Klungkung",
+    "category": "Historical Monument and Museum",
+    "metaTitle": "Monumen Puputan Klungkung: Panduan Wisata Sejarah Bali",
+    "metaDescription": "Panduan Monumen Puputan Klungkung mencakup sejarah perlawanan 1908, museum diorama, tiket gratis, dan akses di Semarapura.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/puputan-klungkung-monument.webp",
+    "faq": [
+      {
+        "question": "Berapa lama waktu yang dibutuhkan untuk melihat monumen ini?",
+        "answer": "Cukup 30 menit hingga 1 jam. Anda bisa berfoto di luar lalu melihat diorama di museum bawahnya."
+      },
+      {
+        "question": "Apakah saya perlu pemandu (guide)?",
+        "answer": "Tidak wajib. Terdapat deskripsi pada diorama di dalam museum yang cukup menjelaskan jalannya sejarah."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "puputan-klungkung-monument",
+    "name": "Puputan Klungkung Monument",
+    "province": "Bali",
+    "regency": "Klungkung",
+    "category": "Historical Monument and Museum",
+    "metaTitle": "Puputan Klungkung Monument: History Guide",
+    "metaDescription": "Visit the Puputan Klungkung Monument with guidance on the 1908 history, museum dioramas, free admission, and central location.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/puputan-klungkung-monument.webp",
+    "faq": [
+      {
+        "question": "How much time do I need here?",
+        "answer": "About 30 minutes to 1 hour is plenty to photograph the monument and view the historical dioramas inside."
+      },
+      {
+        "question": "Do I need to hire a guide?",
+        "answer": "Not necessary. The museum has descriptions that outline the history of the 1908 battle clearly enough for self-guided visits."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "kerta-gosa",
+    "name": "Kerta Gosa",
+    "province": "Bali",
+    "regency": "Klungkung",
+    "category": "Historic Pavilion and Museum Complex",
+    "metaTitle": "Kerta Gosa Klungkung: Panduan Paviliun Pengadilan Kerajaan",
+    "metaDescription": "Panduan Kerta Gosa mencakup lukisan gaya Kamasan, paviliun pengadilan kerajaan, tiket masuk, dan arsitektur bersejarah di Klungkung.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/kerta-gosa.webp",
+    "faq": [
+      {
+        "question": "Apakah saya perlu memakai sarung untuk masuk ke Kerta Gosa?",
+        "answer": "Kerta Gosa dulunya adalah pengadilan kerajaan, bukan pura murni, jadi pakaian kasual yang sopan sudah cukup. Sarung biasanya diwajibkan jika ada upacara khusus di area tersebut."
+      },
+      {
+        "question": "Apakah lukisan di langit-langit itu masih asli?",
+        "answer": "Lukisan aslinya dibuat pada akhir abad ke-18. Karena lapuk, lukisan tersebut telah direstorasi secara hati-hati pada abad ke-20 oleh para seniman Kamasan untuk mempertahankan keasliannya."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "kerta-gosa",
+    "name": "Kerta Gosa",
+    "province": "Bali",
+    "regency": "Klungkung",
+    "category": "Historic Pavilion and Museum Complex",
+    "metaTitle": "Kerta Gosa: Royal Court Pavilion Guide",
+    "metaDescription": "Explore Kerta Gosa with guidance on Kamasan-style ceiling paintings, royal court history, entrance fees, and Balinese architecture.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/kerta-gosa.webp",
+    "faq": [
+      {
+        "question": "Do I need to wear a sarong to enter Kerta Gosa?",
+        "answer": "Kerta Gosa was a royal court rather than a pure temple, so modest casual wear is generally acceptable. Sarongs are only required if a specific ceremony is taking place."
+      },
+      {
+        "question": "Are the ceiling paintings original?",
+        "answer": "The original paintings date back to the late 18th century. Due to weathering, they were painstakingly restored in the 20th century by local Kamasan artists to preserve their original style."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "blue-lagoon-beach",
+    "name": "Blue Lagoon Beach",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Beach, Snorkeling, and Diving Site",
+    "metaTitle": "Blue Lagoon Beach: Panduan Snorkeling Padangbai",
+    "metaDescription": "Panduan Blue Lagoon Beach mencakup titik snorkeling terbaik, akses pantai, harga sewa alat, dan kondisi laut di Padangbai.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/blue-lagoon-beach.webp",
+    "faq": [
+      {
+        "question": "Apakah saya perlu bisa berenang dengan baik untuk snorkeling di sini?",
+        "answer": "Air di tepi sangat dangkal dan tenang di pagi hari. Anda bisa menyewa jaket pelampung di warung jika merasa kurang percaya diri."
+      },
+      {
+        "question": "Apakah pantainya berpasir putih?",
+        "answer": "Ya, pantainya berpasir putih agak kasar, namun di batas air laut terdapat banyak batu karang, sehingga menggunakan sepatu air sangat disarankan."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "blue-lagoon-beach",
+    "name": "Blue Lagoon Beach",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Beach, Snorkeling, and Diving Site",
+    "metaTitle": "Blue Lagoon Beach: Padangbai Snorkeling Guide",
+    "metaDescription": "Explore Blue Lagoon Beach with guidance on shore snorkeling, equipment rentals, beach access, and marine conditions.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/blue-lagoon-beach.webp",
+    "faq": [
+      {
+        "question": "Do I need to be a strong swimmer to snorkel here?",
+        "answer": "The water is very shallow and calm in the mornings. If you are not a confident swimmer, you can easily rent a life jacket from the local warungs."
+      },
+      {
+        "question": "Is it a white sand beach?",
+        "answer": "Yes, it has coarse white sand, but the shoreline entry into the water is quite rocky and full of broken coral, so water shoes are highly recommended."
+      }
+    ]
+  },
+  {
+    "locale": "id",
+    "slug": "padangbai",
+    "name": "Padangbai",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Port Town and Coastal Destination",
+    "metaTitle": "Pelabuhan Padangbai: Panduan Transit Gili & Lombok",
+    "metaDescription": "Panduan pelabuhan Padangbai mencakup tiket fast boat ke Gili, peringatan calo transportasi, akses pantai, dan penginapan.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/padangbai.webp",
+    "faq": [
+      {
+        "question": "Apakah aman memesan taksi online (Grab/Gojek) dari Pelabuhan Padangbai?",
+        "answer": "Sering kali bermasalah. Sopir transportasi online biasanya tidak diizinkan masuk ke pelabuhan oleh organisasi transportasi lokal. Anda mungkin harus berjalan kaki cukup jauh ke jalan raya utama untuk titik penjemputan."
+      },
+      {
+        "question": "Berapa lama perjalanan kapal cepat ke Gili Trawangan?",
+        "answer": "Biasanya memakan waktu sekitar 1,5 hingga 2 jam dalam kondisi laut yang normal."
+      }
+    ]
+  },
+  {
+    "locale": "en",
+    "slug": "padangbai",
+    "name": "Padangbai",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Port Town and Coastal Destination",
+    "metaTitle": "Padangbai Port: Gili & Lombok Transit Guide",
+    "metaDescription": "Navigate Padangbai port with guidance on fast boats to the Gili islands, local transport warnings, beach access, and diving.",
+    "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-23",
+    "image": "/images/destinations/phase-4/padangbai.webp",
+    "faq": [
+      {
+        "question": "Is it safe to order a Grab or Gojek from Padangbai Port?",
+        "answer": "It is highly problematic. Ride-hailing drivers are heavily restricted by local transport syndicates. You will likely have to carry your luggage up to the main highway outside town to be picked up."
+      },
+      {
+        "question": "How long is the fast boat ride to Gili Trawangan?",
+        "answer": "It typically takes about 1.5 to 2 hours in normal sea conditions."
+      }
+    ]
+  },
+  {
+    "locale": "id",
     "slug": "lovina-beach",
     "name": "Lovina Beach",
     "province": "Bali",
