@@ -16,13 +16,15 @@ async function apiFetch(path, options = {}) {
   if (!response.ok) throw new Error(`API request failed (${response.status})`);
   return response.json();
 }
+import fallbackDestinations from './fallback-destinations.json' with { type: "json" };
 
 export async function getDestinations() {
   try {
     const data = await apiFetch('/destinations');
     return (data.destinations || []).map(applyEnhancement);
   } catch {
-    return [];
+    console.warn('API request failed, using fallback destinations.');
+    return fallbackDestinations.map(applyEnhancement);
   }
 }
 
