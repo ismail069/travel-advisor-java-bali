@@ -33,7 +33,9 @@ export async function getDestination(id) {
     const data = await apiFetch(`/destinations/${id}`);
     return applyEnhancement(data.destination || null);
   } catch {
-    return null;
+    console.warn(`API request failed, using fallback destination for id ${id}.`);
+    const destination = fallbackDestinations.find(d => d.id === Number(id));
+    return destination ? applyEnhancement(destination) : null;
   }
 }
 
