@@ -31,9 +31,7 @@ export default function Footer() {
         <p className="mt-4 max-w-xl text-base leading-relaxed">
           {english ? 'Independent travel guides managed by the JawaBali Trip Team to help travelers plan clearer trips across Java and Bali.' : 'Panduan perjalanan independen yang dikelola tim JawaBali Trip untuk membantu wisatawan merencanakan perjalanan di Jawa dan Bali secara lebih jelas dan terstruktur.'}
         </p>
-        <a href={`mailto:${CONTACT_EMAIL}`} className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-sm font-bold text-fuchsia-400 transition-colors hover:bg-slate-800 hover:text-fuchsia-300">
-          {CONTACT_EMAIL}
-        </a>
+
       </div>
       <nav className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm font-medium" aria-label={english ? 'Site information' : 'Informasi situs'}>
         {links.map(([href, label]) => (
