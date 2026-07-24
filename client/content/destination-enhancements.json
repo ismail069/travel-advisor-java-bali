@@ -1738,5 +1738,29 @@
     "editorial_status": "draft_needs_fact_check",
     "author": "JawaBali Trip Team",
     "updated_at_draft": "2026-07-16"
+  },
+  {
+    "id": 162,
+    "image_url": "/images/destinations/phase-4/tenganan-pegringsingan-village.jpg",
+    "latitude": -8.4775,
+    "longitude": 115.56639,
+    "rating": 4.6,
+    "review_count": 1200
+  },
+  {
+    "id": 163,
+    "image_url": "/images/destinations/phase-4/silayukti-temple.jpg",
+    "latitude": -8.53,
+    "longitude": 115.509,
+    "rating": 4.7,
+    "review_count": 800
+  },
+  {
+    "id": 164,
+    "image_url": "/images/destinations/phase-4/bias-tugel-beach.jpg",
+    "latitude": -8.5363,
+    "longitude": 115.5089,
+    "rating": 4.8,
+    "review_count": 1500
   }
 ]

@@ -2003,6 +2003,48 @@
   },
   {
     "locale": "id",
+    "slug": "tenganan-pegringsingan-village",
+    "name": "Tenganan Pegringsingan Village",
+    "lastUpdated": "2026-07-24",
+    "faq": []
+  },
+  {
+    "locale": "en",
+    "slug": "tenganan-pegringsingan-village",
+    "name": "Tenganan Pegringsingan Village",
+    "lastUpdated": "2026-07-24",
+    "faq": []
+  },
+  {
+    "locale": "id",
+    "slug": "silayukti-temple",
+    "name": "Silayukti Temple",
+    "lastUpdated": "2026-07-24",
+    "faq": []
+  },
+  {
+    "locale": "en",
+    "slug": "silayukti-temple",
+    "name": "Silayukti Temple",
+    "lastUpdated": "2026-07-24",
+    "faq": []
+  },
+  {
+    "locale": "id",
+    "slug": "bias-tugel-beach",
+    "name": "Bias Tugel Beach",
+    "lastUpdated": "2026-07-23",
+    "faq": []
+  },
+  {
+    "locale": "en",
+    "slug": "bias-tugel-beach",
+    "name": "Bias Tugel Beach",
+    "lastUpdated": "2026-07-23",
+    "faq": []
+  },
+  {
+    "locale": "id",
     "slug": "lovina-beach",
     "name": "Lovina Beach",
     "province": "Bali",

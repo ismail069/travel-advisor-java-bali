@@ -1,4 +1,5 @@
 import LegalPage from '@/components/LegalPage';
+import { CONTACT_EMAIL } from '@/lib/site';
 
 export async function generateMetadata({ params }) {
   const locale = (await params).locale;
