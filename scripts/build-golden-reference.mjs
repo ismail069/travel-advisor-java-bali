@@ -16,66 +16,54 @@ const imageBySlug = {
   'tanah-lot': '/images/destinations/licensed/135-pura-tanah-lot.webp',
   'uluwatu-temple': '/images/destinations/licensed/134-pura-uluwatu.webp',
   'tegallalang-rice-terrace': '/images/destinations/golden/tegallalang-rice-terrace.webp',
-  'sacred-monkey-forest-ubud': '/images/destinations/golden/sacred-monkey-forest-ubud.webp',
   'tirta-empul-temple': '/images/destinations/golden/tirta-empul-temple.webp',
-  'campuhan-ridge-walk': '/images/destinations/phase-4/campuhan-ridge-walk.webp',
-  'goa-gajah': '/images/destinations/phase-4/goa-gajah.webp',
-  'jatiluwih-rice-terraces': '/images/destinations/phase-4/jatiluwih-rice-terraces.webp',
-  'ulun-danu-beratan-temple': '/images/destinations/phase-4/ulun-danu-beratan-temple.webp',
-  'sekumpul-waterfall': '/images/destinations/phase-4/sekumpul-waterfall.webp',
-  'lovina-beach': '/images/destinations/phase-4/lovina-beach.webp',
-  'munduk': '/images/destinations/phase-4/munduk.webp',
-  'kelingking-beach': '/images/destinations/phase-4/kelingking-beach.webp',
-  'broken-beach': '/images/destinations/phase-4/broken-beach.webp',
-  'angels-billabong': '/images/destinations/phase-4/angels-billabong.webp',
-  'bali-botanic-garden': '/images/destinations/phase-4/bali-botanic-garden.webp',
-  'handara-gate': '/images/destinations/phase-4/handara-gate.webp',
-  'banyumala-twin-waterfalls': '/images/destinations/phase-4/banyumala-twin-waterfalls.webp',
-  'banjar-hot-springs': '/images/destinations/phase-4/banjar-hot-springs.webp',
-  'brahmavihara-arama': '/images/destinations/phase-4/brahmavihara-arama.webp',
-  'ubud-palace': '/images/destinations/phase-4/ubud-palace.webp',
-  'ubud-art-market': '/images/destinations/phase-4/ubud-art-market.webp',
-  'saraswati-temple-ubud': '/images/destinations/phase-4/saraswati-temple-ubud.jpg',
-  'blanco-renaissance-museum': '/images/destinations/phase-4/blanco-renaissance-museum.webp',
-  'museum-puri-lukisan': '/images/destinations/phase-4/museum-puri-lukisan.webp',
-  'neka-art-museum': '/images/destinations/phase-4/neka-art-museum.jpg',
-  'arma-museum': '/images/destinations/phase-4/arma-museum.webp',
-  'nusa-dua-beach': '/images/destinations/phase-4/nusa-dua-beach.webp',
-  'water-blow-nusa-dua': '/images/destinations/phase-4/water-blow-nusa-dua.webp',
-  'garuda-wisnu-kencana': '/images/destinations/phase-4/garuda-wisnu-kencana.webp',
-  'jimbaran-beach': '/images/destinations/phase-4/jimbaran-beach.webp',
-  'tegenungan-waterfall': '/images/destinations/phase-4/tegenungan-waterfall.webp',
-  'bali-zoo': '/images/destinations/phase-4/bali-zoo.webp',
-  'sukawati-art-market': '/images/destinations/phase-4/sukawati-art-market.webp',
-  'celuk-village': '/images/destinations/phase-4/celuk-village.webp',
-  'mas-village': '/images/destinations/phase-4/mas-village.webp',
-  'batuan-village': '/images/destinations/phase-4/batuan-village.webp',
-  'batuan-temple': '/images/destinations/phase-4/batuan-temple.webp',
-  'bali-bird-park': '/images/destinations/phase-4/bali-bird-park.webp',
-  'bali-reptile-park': '/images/destinations/phase-4/bali-reptile-park.webp',
-  'kanto-lampo-waterfall': '/images/destinations/phase-4/kanto-lampo-waterfall.webp',
-  'kemenuh-butterfly-park': '/images/destinations/phase-4/kemenuh-butterfly-park.webp',
-  'tibumana-waterfall': '/images/destinations/phase-4/tibumana-waterfall.webp',
-  'tukad-cepung-waterfall': '/images/destinations/phase-4/tukad-cepung-waterfall.webp',
-  'penglipuran-village': '/images/destinations/phase-4/penglipuran-village.webp',
-  'kehen-temple': '/images/destinations/phase-4/kehen-temple.webp',
-  'besakih-temple': '/images/destinations/phase-4/besakih-temple.webp',
-  'tirta-gangga': '/images/destinations/phase-4/tirta-gangga.webp',
-  'virgin-beach': '/images/destinations/phase-4/virgin-beach.webp',
-  'lempuyang-temple': '/images/destinations/phase-4/lempuyang-temple.webp',
-  'taman-ujung': '/images/destinations/phase-4/taman-ujung.webp',
-  'amed': '/images/destinations/phase-4/amed.webp',
-  'candidasa': '/images/destinations/phase-4/candidasa.webp',
-  'mount-agung': '/images/destinations/phase-4/mount-agung.webp',
-  'tulamben': '/images/destinations/phase-4/tulamben.webp',
-  'sidemen': '/images/destinations/phase-4/sidemen.webp',
-  'kusamba-beach': '/images/destinations/phase-4/kusamba-beach.webp',
-  'goa-lawah-temple': '/images/destinations/phase-4/goa-lawah-temple.webp',
-  'puputan-klungkung-monument': '/images/destinations/phase-4/puputan-klungkung-monument.webp',
-  'kerta-gosa': '/images/destinations/phase-4/kerta-gosa.webp',
-  'blue-lagoon-beach': '/images/destinations/phase-4/blue-lagoon-beach.webp',
-  'padangbai': '/images/destinations/phase-4/padangbai.webp',
 };
+
+// Dynamically auto-resolve phase-4 extensions
+import fsSync from 'node:fs';
+const phase4Dir = path.join(repo, 'client/public/images/destinations/phase-4');
+const phase4Files = fsSync.existsSync(phase4Dir) ? fsSync.readdirSync(phase4Dir) : [];
+const phase4Map = new Map();
+for (const file of phase4Files) {
+  const ext = path.extname(file);
+  const base = path.basename(file, ext);
+  phase4Map.set(base, `/images/destinations/phase-4/${file}`);
+}
+const goldenDir = path.join(repo, 'client/public/images/destinations/golden');
+const goldenFiles = fsSync.existsSync(goldenDir) ? fsSync.readdirSync(goldenDir) : [];
+for (const file of goldenFiles) {
+  const ext = path.extname(file);
+  const base = path.basename(file, ext);
+  if (!imageBySlug[base]) {
+     imageBySlug[base] = `/images/destinations/golden/${file}`;
+  }
+}
+
+const allSlugs = [
+  'campuhan-ridge-walk', 'goa-gajah', 'jatiluwih-rice-terraces', 'ulun-danu-beratan-temple',
+  'sekumpul-waterfall', 'lovina-beach', 'munduk', 'kelingking-beach', 'broken-beach',
+  'angels-billabong', 'bali-botanic-garden', 'handara-gate', 'banyumala-twin-waterfalls',
+  'banjar-hot-springs', 'brahmavihara-arama', 'ubud-palace', 'ubud-art-market',
+  'saraswati-temple-ubud', 'blanco-renaissance-museum', 'museum-puri-lukisan',
+  'neka-art-museum', 'arma-museum', 'nusa-dua-beach', 'water-blow-nusa-dua',
+  'garuda-wisnu-kencana', 'jimbaran-beach', 'tegenungan-waterfall', 'bali-zoo',
+  'sukawati-art-market', 'celuk-village', 'mas-village', 'batuan-village',
+  'batuan-temple', 'bali-bird-park', 'bali-reptile-park', 'kanto-lampo-waterfall',
+  'kemenuh-butterfly-park', 'tibumana-waterfall', 'tukad-cepung-waterfall',
+  'penglipuran-village', 'kehen-temple', 'besakih-temple', 'tirta-gangga',
+  'virgin-beach', 'lempuyang-temple', 'taman-ujung', 'amed', 'candidasa',
+  'mount-agung', 'tulamben', 'sidemen', 'kusamba-beach', 'goa-lawah-temple',
+  'puputan-klungkung-monument', 'kerta-gosa', 'blue-lagoon-beach', 'padangbai'
+];
+
+for (const slug of allSlugs) {
+  if (phase4Map.has(slug)) {
+    imageBySlug[slug] = phase4Map.get(slug);
+  } else if (!imageBySlug[slug]) {
+    imageBySlug[slug] = `/images/destinations/phase-4/${slug}.webp`; // fallback
+  }
+}
+
 const phase4Metadata = {
   'campuhan-ridge-walk': { idTitle: 'Campuhan Ridge Walk: Panduan Jalur Ubud', enTitle: 'Campuhan Ridge Walk: Ubud Trail Guide', idDescription: 'Panduan Campuhan Ridge Walk di Ubud: waktu terbaik, kondisi jalur, akses, fasilitas, dan tips berjalan aman.', enDescription: 'Plan Campuhan Ridge Walk in Ubud with practical guidance on timing, trail conditions, access, facilities, and walking safely.' },
   'goa-gajah': { idTitle: 'Goa Gajah Bali: Panduan Situs Bersejarah', enTitle: 'Goa Gajah Bali: Elephant Cave Guide', idDescription: 'Panduan mengunjungi Goa Gajah dekat Ubud, mencakup sejarah, tiket, akses tangga, fasilitas, dan etika di kawasan suci.', enDescription: 'Visit Goa Gajah near Ubud with guidance on history, tickets, stairs, facilities, and respectful conduct at this sacred site.' },
@@ -147,7 +135,7 @@ function localizedCommon(text, locale, data) {
   const imageProps = imageBySlug[data.slug]
     ? `\n  imageSrc="${imageBySlug[data.slug]}"\n  imageAlt="${locale === 'id' ? `Pemandangan ${title}` : `View of ${title}`}"`
     : '';
-  result = result.replace(/title="[^"]+"\n  summary="[^"]+"/, `title="${title}"\n  summary="${summary}"${imageProps}`);
+  result = result.replace(/title="[^"]+"\r?\n\s*summary="[^"]+"/, `title="${title}"\n  summary="${summary}"${imageProps}`);
   result = result.replace(/"([^"]+\s\/\s[^"]+)"/g, (_, value) => `"${locale === 'id' ? value.split(' / ')[0] : value.split(' / ').at(-1)}"`);
   if (locale === 'id') {
     const replacements = new Map([

@@ -4,7 +4,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "next dev -H 0.0.0.0 -p 5173",
+    "dev": "next dev -H 0.0.0.0 -p 3005",
     "docs:index": "node ../scripts/build-docs-index.mjs",
     "golden:index": "node ../scripts/build-golden-reference.mjs",
     "prebuild": "npm run golden:index",
@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "lint": "eslint . --max-warnings=0",
     "test": "node --test --experimental-strip-types lib/*.test.ts",
-    "start": "next start -p 5173"
+    "start": "next start -p 3005"
   },
   "dependencies": {
     "@mdx-js/loader": "^3.1.1",
