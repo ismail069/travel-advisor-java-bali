@@ -8,10 +8,13 @@ function applyEnhancement(destination) {
 }
 
 async function apiFetch(path, options = {}) {
+  // Prevent build hangs on Vercel by timing out after 3 seconds if local API is unreachable
+  const signal = AbortSignal.timeout(3000);
   const response = await fetch(`${API_URL}${path}`, {
     ...options,
     headers: { 'Content-Type': 'application/json', ...options.headers },
-    next: options.next || { revalidate: 3600 }
+    next: options.next || { revalidate: 3600 },
+    signal
   });
   if (!response.ok) throw new Error(`API request failed (${response.status})`);
   return response.json();
