@@ -1,0 +1,1 @@
+Verify Google Place ID, coordinates, live rating, review count, access hours, fees, marine conditions, facilities, accessibility, JSON-LD, internal links, and production build.

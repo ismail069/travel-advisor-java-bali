@@ -1,0 +1,1 @@
+Verify Google Place ID, coordinates, rating, review count, admission, opening hours, safety, then validate production build.

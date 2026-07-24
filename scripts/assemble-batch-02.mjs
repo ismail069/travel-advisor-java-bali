@@ -5,7 +5,7 @@ const base = JSON.parse(await fs.readFile('exports/destinations.json', 'utf8')).
 const text = new Map(JSON.parse(await fs.readFile('exports/content-text-batch-02.json', 'utf8')).map((row) => [row.id, row]));
 const images = new Map(JSON.parse(await fs.readFile('exports/image-attributions-batch-02.json', 'utf8')).map((row) => [row.destinationId, row]));
 const today = '2026-07-16';
-const drafts = base.map((row) => ({ ...row, ...text.get(row.id), image_url: images.get(row.id).localPath, image_attribution: images.get(row.id), editorial_status: 'draft_needs_fact_check', author: 'Ismail', updated_at_draft: today }));
+const drafts = base.map((row) => ({ ...row, ...text.get(row.id), image_url: images.get(row.id).localPath, image_attribution: images.get(row.id), editorial_status: 'draft_needs_fact_check', author: 'JawaBali Trip Team', updated_at_draft: today }));
 const enhancements = drafts.map(({ id, short_description_id, description_id, activities_id, best_time_to_visit_id, travel_notes_id, image_url, image_attribution, editorial_status, author, updated_at_draft }) => ({ id, short_description_id, description_id, activities_id, best_time_to_visit_id, travel_notes_id, image_url, image_attribution, editorial_status, author, updated_at_draft }));
 
 const current = JSON.parse(await fs.readFile('client/content/destination-enhancements.json', 'utf8'));

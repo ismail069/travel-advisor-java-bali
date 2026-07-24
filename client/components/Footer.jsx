@@ -22,11 +22,29 @@ export default function Footer() {
     [`/id/kebijakan-cookie`, 'Cookie'], [`/id/ketentuan`, 'Ketentuan'], [`/id/disclaimer`, 'Disclaimer'],
     [`/id/kebijakan-editorial`, 'Editorial'], [`/id/atribusi-gambar`, 'Atribusi gambar']
   ];
-  return <footer className="mt-16 border-t border-slate-200 bg-slate-950 text-slate-300">
-    <div className="mx-auto grid max-w-6xl gap-8 px-4 py-12 sm:px-6 md:grid-cols-[1.2fr_1fr]">
-      <div><p className="text-xl font-black text-white">JawaBali Trip</p><p className="mt-3 max-w-xl text-sm leading-6">{english ? 'Independent travel guides managed by Ismail to help travelers plan clearer trips across Java and Bali.' : 'Panduan perjalanan independen yang dikelola Ismail untuk membantu wisatawan merencanakan perjalanan di Jawa dan Bali secara lebih jelas.'}</p><a href={`mailto:${CONTACT_EMAIL}`} className="mt-4 inline-block text-sm font-bold text-fuchsia-300">{CONTACT_EMAIL}</a></div>
-      <nav className="grid grid-cols-2 gap-3 text-sm" aria-label={english ? 'Site information' : 'Informasi situs'}>{links.map(([href, label]) => <Link key={href} href={href} className="hover:text-white">{label}</Link>)}</nav>
+  return <footer className="mt-20 border-t border-slate-800 bg-slate-950 text-slate-400">
+    <div className="mx-auto grid max-w-7xl gap-12 px-4 py-16 sm:px-6 md:grid-cols-[1.5fr_1fr]">
+      <div>
+        <p className="text-2xl font-black text-white">
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-400 to-fuchsia-400">JawaBali</span> Trip
+        </p>
+        <p className="mt-4 max-w-xl text-base leading-relaxed">
+          {english ? 'Independent travel guides managed by the JawaBali Trip Team to help travelers plan clearer trips across Java and Bali.' : 'Panduan perjalanan independen yang dikelola tim JawaBali Trip untuk membantu wisatawan merencanakan perjalanan di Jawa dan Bali secara lebih jelas dan terstruktur.'}
+        </p>
+        <a href={`mailto:${CONTACT_EMAIL}`} className="mt-6 inline-flex items-center gap-2 rounded-full bg-slate-900 px-4 py-2 text-sm font-bold text-fuchsia-400 transition-colors hover:bg-slate-800 hover:text-fuchsia-300">
+          {CONTACT_EMAIL}
+        </a>
+      </div>
+      <nav className="grid grid-cols-2 gap-x-4 gap-y-4 text-sm font-medium" aria-label={english ? 'Site information' : 'Informasi situs'}>
+        {links.map(([href, label]) => (
+          <Link key={href} href={href} className="transition-colors hover:text-primary-400">
+            {label}
+          </Link>
+        ))}
+      </nav>
     </div>
-    <div className="border-t border-white/10 px-4 py-5 text-center text-xs">© {new Date().getFullYear()} JawaBali Trip · {english ? 'Independently managed by Ismail.' : 'Dikelola secara personal oleh Ismail.'}</div>
+    <div className="border-t border-slate-800/60 px-4 py-6 text-center text-sm">
+      © {new Date().getFullYear()} JawaBali Trip · {english ? 'Managed by the JawaBali Trip Team.' : 'Dikelola oleh tim JawaBali Trip.'}
+    </div>
   </footer>;
 }

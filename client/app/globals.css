@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800;900&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,23 +7,61 @@
 :root { color-scheme: light; }
 .dark { color-scheme: dark; }
 html { scroll-behavior: smooth; }
-body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, sans-serif; @apply bg-sand text-slate-950 antialiased; }
-.dark body { background: #0b1020; color: #f8fafc; }
-.dark .bg-white { background-color: #111827 !important; }
-.dark .bg-slate-50, .dark .bg-slate-100 { background-color: #1e293b !important; }
-.dark .bg-sand { background-color: #0b1020 !important; }
+
+body { 
+  margin: 0; 
+  @apply bg-sand text-slate-900 antialiased font-sans transition-colors duration-300; 
+  /* Faint traditional Anyaman/Woven Batik motif */
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm20 20l20 20v-10L30 20l10-10V0L20 20zM0 20l20-20h-10L0 10v10zm0 0l20 20h-10L0 30V20zm20-20h10L10 20v10L30 10h10L20 30v10l20-20V10L20 30H10l20-20V0L10 20H0v10l20-20z' fill='%236366f1' fill-opacity='0.03' fill-rule='evenodd'/%3E%3C/svg%3E");
+  background-attachment: fixed;
+}
+
+/* Elegant Dark Mode - Deep slate instead of pure black */
+.dark body { 
+  background-color: #0f172a; 
+  color: #f8fafc; 
+  background-image: url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0h40v40H0V0zm20 20l20 20v-10L30 20l10-10V0L20 20zM0 20l20-20h-10L0 10v10zm0 0l20 20h-10L0 30V20zm20-20h10L10 20v10L30 10h10L20 30v10l20-20V10L20 30H10l20-20V0L10 20H0v10l20-20z' fill='%236366f1' fill-opacity='0.04' fill-rule='evenodd'/%3E%3C/svg%3E");
+}
+.dark .bg-white { background-color: #1e293b !important; }
+.dark .bg-slate-50, .dark .bg-slate-100 { background-color: #0f172a !important; }
+.dark .bg-sand { background-color: #020617 !important; }
 .dark .border-slate-200, .dark .border-slate-300 { border-color: #334155 !important; }
 .dark .text-slate-950, .dark .text-slate-900, .dark .text-slate-800 { color: #f8fafc !important; }
 .dark .text-slate-700, .dark .text-slate-600 { color: #cbd5e1 !important; }
 .dark .text-slate-500 { color: #94a3b8 !important; }
-.dark input, .dark textarea, .dark select { background-color: #111827; color: #f8fafc; border-color: #475569; }
-a, button, input, textarea, select { @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2; }
+.dark input, .dark textarea, .dark select { background-color: #1e293b; color: #f8fafc; border-color: #334155; }
+
+a, button, input, textarea, select { 
+  @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 transition-all duration-300; 
+}
+.dark a, .dark button, .dark input, .dark textarea, .dark select {
+  @apply focus-visible:ring-offset-slate-900;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  @apply bg-white/70 backdrop-blur-xl border border-white/20 shadow-glass;
+}
+.dark .glass-panel {
+  @apply bg-slate-900/70 backdrop-blur-xl border-slate-700/50 shadow-glass-dark;
+}
+
+/* Custom Gradient Text */
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-600 to-fuchsia-500;
+}
+.dark .text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-400 to-fuchsia-400;
+}
+
+/* Base formatting */
 .content-copy p { @apply leading-8 text-slate-700; }
 .content-copy h2 { @apply mt-10 text-2xl font-black tracking-tight text-slate-950; }
 .docs-prose > * + * { margin-top: 1.5rem; }
 .docs-prose h2 { margin-top: 3rem; }
 .docs-prose h3 { margin-top: 2rem; }
 .docs-prose input[type='checkbox'] { @apply mr-2 accent-primary; }
+
 .golden-content > * + * { margin-top: 2rem; }
 .golden-content > h2 { @apply mt-12 border-t border-slate-200 pt-10 text-3xl font-black tracking-tight; }
 .golden-content > h3 { @apply mt-8 text-xl font-black; }

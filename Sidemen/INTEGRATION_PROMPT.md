@@ -1,0 +1,1 @@
+Verify Google Place ID, coordinates, live rating, review count, walking routes, guide options, cultural activities, accessibility, JSON-LD, and production build.

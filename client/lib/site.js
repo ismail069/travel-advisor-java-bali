@@ -1,6 +1,6 @@
 export const SITE_URL = 'https://jawabalitrip.web.id';
 export const SITE_NAME = 'JawaBali Trip';
-export const OWNER_NAME = 'Ismail';
+export const OWNER_NAME = 'JawaBali Trip Team';
 export const CONTACT_EMAIL = 'iatechdigital069@gmail.com';
 
 export function absoluteUrl(path = '/') {

@@ -23,7 +23,7 @@ update('client/app/[locale]/kebijakan-cookie/page.jsx', `      <LegalPage title=
 update('client/app/[locale]/kebijakan-editorial/page.jsx', `      <LegalPage title="Editorial Policy" description="Our writing standards.">
         <h2>Editorial principles</h2><p>We prioritize clarity, usefulness, transparency, and independence. Articles are created to answer reader needs, not just chase page volume or keywords.</p>
         <h2>Sources and verification</h2><p>Factual information is prioritized from destination management, government, transport operators, or reputable sources. Highly volatile information is marked with reminders to re-verify.</p>
-        <h2>AI Usage</h2><p>AI can assist in initial research, structuring, and language checking. Ismail is responsible for reviewing, editing, and deciding on publication. Content is not published automatically without human review.</p>
+        <h2>AI Usage</h2><p>AI can assist in initial research, structuring, and language checking. JawaBali Trip Team is responsible for reviewing, editing, and deciding on publication. Content is not published automatically without human review.</p>
         <h2>Corrections</h2><p>Material errors are corrected after verification. The update date is displayed on the article. Readers can send corrections via the Contact page.</p>
         <h2>Independence and monetization</h2><p>Ads, affiliations, or commercial collaborations will be clearly labeled and do not buy positive reviews. Editorial and commercial separation is maintained.</p>
       </LegalPage>`);

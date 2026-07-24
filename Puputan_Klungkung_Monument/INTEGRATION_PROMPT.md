@@ -1,0 +1,1 @@
+Verify Google Place ID, coordinates, live rating, review count, admission, opening hours, facilities, accessibility, photography rules, JSON-LD, internal links, and production build.
