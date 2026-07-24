@@ -2005,42 +2005,66 @@
     "locale": "id",
     "slug": "tenganan-pegringsingan-village",
     "name": "Tenganan Pegringsingan Village",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Cultural Village",
     "lastUpdated": "2026-07-24",
+    "lastVerified": "2026-07-24",
     "faq": []
   },
   {
     "locale": "en",
     "slug": "tenganan-pegringsingan-village",
     "name": "Tenganan Pegringsingan Village",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Cultural Village",
     "lastUpdated": "2026-07-24",
+    "lastVerified": "2026-07-24",
     "faq": []
   },
   {
     "locale": "id",
     "slug": "silayukti-temple",
     "name": "Silayukti Temple",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Temple",
     "lastUpdated": "2026-07-24",
+    "lastVerified": "2026-07-24",
     "faq": []
   },
   {
     "locale": "en",
     "slug": "silayukti-temple",
     "name": "Silayukti Temple",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Temple",
     "lastUpdated": "2026-07-24",
+    "lastVerified": "2026-07-24",
     "faq": []
   },
   {
     "locale": "id",
     "slug": "bias-tugel-beach",
     "name": "Bias Tugel Beach",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Beach",
     "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-24",
     "faq": []
   },
   {
     "locale": "en",
     "slug": "bias-tugel-beach",
     "name": "Bias Tugel Beach",
+    "province": "Bali",
+    "regency": "Karangasem",
+    "category": "Beach",
     "lastUpdated": "2026-07-23",
+    "lastVerified": "2026-07-24",
     "faq": []
   },
   {
