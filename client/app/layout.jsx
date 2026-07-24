@@ -18,6 +18,7 @@ export const metadata = {
   openGraph: { type: 'website', locale: 'id_ID', url: '/', siteName: SITE_NAME, title: 'JawaBali Trip', description: 'Panduan perjalanan independen untuk menjelajahi Jawa dan Bali.', images: [{ url: '/opengraph-image', width: 1200, height: 630, alt: 'JawaBali Trip' }] },
   twitter: { card: 'summary_large_image', title: 'JawaBali Trip', description: 'Panduan perjalanan independen untuk Jawa dan Bali.', images: ['/opengraph-image'] },
   robots: { index: true, follow: true },
+  verification: { other: { 'msvalidate.01': 'EB43B78BAF5249C1994806B5F34F48CD' } },
   category: 'travel'
 };
 
